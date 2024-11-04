@@ -62,4 +62,26 @@ public class SeriesNumericas {
             c = c + 2;
         }
     }
+    
+    public void serieN07() { 
+        a = 1; 
+        repeticiones = 0; 
+        System.out.print("\n- Serie N07.\n"); 
+        for (int i = 0; i < tamanio; i++) { 
+            System.out.print(a + " "); 
+            a += 3; 
+        } 
+        System.out.println();
+    }
+    
+    public void serieN08() { 
+        a = 3; 
+        repeticiones = 0; 
+        System.out.print("\n- Serie N08.\n"); 
+        for (int i = 0; i < tamanio; i++) { 
+            System.out.print(a + " "); 
+            a += 5; 
+        } 
+        System.out.println(); 
+    }
 }
