@@ -25,6 +25,7 @@ public class App {
         op.serieN01();
         op.serieN02();
         op.serieN03();
+        
         op.serieN07();
         op.serieN08();
         op.serieN09();
@@ -35,20 +36,19 @@ public class App {
         
         pk.serieC03();
         pk.serieC04();
-
-        
+        pk.serieC05();
+        pk.serieC06();
         pk.g2_serieCaracteres07();
         pk.g2_serieCaracteres08();
 
 
         // 3. Series Figuras
         fig.lectorF02();
-
-
         fig.serieF01();
         fig.serieF02();
         fig.serieF03();
         fig.serieF04();
+        
         fig.serieF13();
         fig.serieF14();
         fig.serieF15();
