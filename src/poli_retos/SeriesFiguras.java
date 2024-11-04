@@ -13,7 +13,67 @@ public class SeriesFiguras {
         tamanio02 = Integer
                 .parseInt(JOptionPane.showInputDialog("Ingrese dimension para todas sus series con figuras..."));
     }
-
+   // SerieF01
+    public void serieF01() {
+        System.out.print("\n- Serie F01.:\n");
+        for (i = 0; i < tamanio02; i++) {
+            for (j = 0; j < tamanio02; j++) {
+                if (i == 0 || i == tamanio02 - 1 || j == 0 || j == tamanio02 - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    // SerieF02
+    public void serieF02() {
+        System.out.print("\n- Serie F02.:\n");
+        for (i = 0; i < tamanio02; i++) {
+            for (j = 0; j < tamanio02; j++) {
+                if (i == 0 || i == tamanio02 - 1) {
+                    if (j % 2 == 0) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print("+");
+                    }
+                } else if (j == 0 || j == tamanio02 - 1) {
+                    if (i % 2 == 0) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print("+");
+                    }
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    // SerieF03 
+    public void serieF03() {
+        System.out.print("\n- Serie F03.:\n");
+        for (i = 0; i < tamanio02; i++) {
+            for (j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    // SerieF04 
+    public void serieF04() { 
+        System.out.print("\n- Serie F04.:\n"); 
+        for (i = 0; i < tamanio02; i++) { 
+            for (j = 0; j < tamanio02 - i - 1; j++) { 
+                System.out.print(" "); 
+            } 
+            for (j = 0; j <= i; j++) { 
+                System.out.print("*"); 
+            } 
+            System.out.println(); 
+        }
+    }
     // SerieF13
     public void serieF13() {
         j = 1;
