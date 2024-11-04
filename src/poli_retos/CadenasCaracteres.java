@@ -4,6 +4,57 @@ import java.util.Scanner;
 
 public class CadenasCaracteres {
 
+        public void SerieS05() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
+        System.out.print("\nIngrese una palabra o frase:\n  ");
+
+        String frase = scanner.nextLine();
+        String fraseModificada = invertirYMayusculas(frase);
+        System.out.println("\n  Frase invertida con vocales en mayúsculas:\n  " + fraseModificada);
+    }
+
+    public static String invertirYMayusculas(String frase) {
+        StringBuilder builder = new StringBuilder(frase);
+        builder.reverse();
+
+        for (int i = 0; i < builder.length(); i++) {
+            char c = builder.charAt(i);
+            if (esVocal(c)) {
+                builder.setCharAt(i, Character.toUpperCase(c));
+            }
+        }
+        return builder.toString();
+    }
+
+    public static boolean esVocal(char c) {
+        c = Character.toLowerCase(c);
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+    }
+
+    public void SerieS06() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
+        System.out.print("\nIngrese una palabra o frase:\n  ");
+
+        String frase = scanner.nextLine();
+        String fraseModificada = invertirYMayusculasConsonantes(frase);
+        System.out.println("\n  Frase invertida con consonantes en mayúsculas:\n  " + fraseModificada);
+    }
+
+    public static String invertirYMayusculasConsonantes(String frase) {
+        StringBuilder builder = new StringBuilder(frase);
+        builder.reverse();
+
+        for (int i = 0; i < builder.length(); i++) {
+            char c = builder.charAt(i);
+            if (!esVocal(c) && Character.isLetter(c)) {
+                builder.setCharAt(i, Character.toUpperCase(c));
+            }
+        }
+        return builder.toString();
+    }
+    
     public void SerieS07() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S07.");
