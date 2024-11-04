@@ -65,4 +65,31 @@ public class SeriesCaracteres {
             veces++;
         }
     }
+    
+    public void serieC05() { 
+        char[] caracteres = {'|', '\\', '|', '/'}; 
+        System.out.print("\n\n- serie C05. | \\ | / - | \\ | / -... (Vaivén):\n "); 
+        for (int i = 0; i < tamanio; i++) { 
+            for (int j = 0; j < caracteres.length; j++) { 
+                System.out.print(caracteres[j] + " "); 
+            } 
+            if (i < tamanio - 1) { 
+                System.out.print("- "); 
+            } 
+        } 
+        System.out.println();
+    }
+
+    public void serieC06() { 
+        char letra = 'a'; 
+        System.out.print("\n\n- serie C06. a b c d e... (Abecedario):\n "); 
+        for (int i = 0; i < tamanio; i++) { 
+            System.out.print(letra + " "); 
+            letra++; 
+            if (letra > 'z') { 
+                letra = 'a'; 
+            } 
+        } 
+        System.out.println(); 
+    }
 }
