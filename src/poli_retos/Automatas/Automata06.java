@@ -1,4 +1,4 @@
-package poli_retos;
+package poli_retos.Automatas;
 import java.util.Scanner;
 
 public class Automata06 {
