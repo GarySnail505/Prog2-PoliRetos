@@ -62,6 +62,44 @@ public class SeriesNumericas {
         }
     }
 
+    public void g2_serieN04(int cantidadTerminos) {
+        int numerador1 = 0;
+        int numerador2 = 1;
+        int denominador = 2;
+        System.out.println("\n- Serie N04.\n");
+        
+        for (int i = 0; i < cantidadTerminos; i++) {
+            Fraccion fraccionActual = new Fraccion(numerador1, denominador);
+            System.out.println(fraccionActual);
+            int siguiente = numerador1 + numerador2;
+            numerador1 = numerador2;
+            numerador2 = siguiente;
+            denominador += 2;
+        }
+    }    
+    static class Fraccion {
+        private int numerador;
+        private int denominador;
+    
+        public Fraccion(int numerador, int denominador) {
+            this.numerador = numerador;
+            this.denominador = denominador;
+        }
+    
+        public int getDenominador() {
+            return denominador;
+        }
+    
+        public int getNumerador() {
+            return numerador;
+        }
+    
+        @Override
+        public String toString() {
+            return numerador + "/" + denominador;
+        }
+    }
+
     public void g2_serieN07() {
         a = 1;
         repeticiones = 0;
