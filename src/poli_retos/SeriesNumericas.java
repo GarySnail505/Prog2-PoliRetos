@@ -84,4 +84,24 @@ public class SeriesNumericas {
         } 
         System.out.println(); 
     }
+
+    public void serieN09() {
+        int total = 1;
+        System.out.print("\n- Serie N09.\n");
+        for (int i = 0; i < tamanio; i++) {
+            total = total * 2;
+            System.out.print(total + " ");
+        }
+        //System.out.println(" ");
+    }
+
+    public void serieN10() {
+        int total = 1;
+        System.out.print("\n- Serie N010.\n");
+        for (int i = 0; i < tamanio; i++) {
+            total = total * 3;
+            System.out.print(total + " ");
+        }
+        System.out.println(" ");
+    }
 }

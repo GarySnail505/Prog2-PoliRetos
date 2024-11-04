@@ -27,8 +27,8 @@ public class App {
         op.serieN03();
         op.serieN07();
         op.serieN08();
-        
-
+        op.serieN09();
+        op.serieN10();
 
         // 2. Series Caracteres
         pk.lectorDatosC01();
