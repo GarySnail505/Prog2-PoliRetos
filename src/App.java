@@ -21,48 +21,48 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
         // 1. Series Numéricas
-        op.lectorDatos();
-        op.serieN01();
-        op.serieN02();
-        op.serieN03();
+        op.g2_lectorDatos();
+        op.g2_serieN01();
+        op.g2_serieN02();
+        op.g2_serieN03();
         
-        op.serieN07();
-        op.serieN08();
-        op.serieN09();
-        op.serieN10();
+        op.g2_serieN07();
+        op.g2_serieN08();
+        op.g2_serieN09();
+        op.g2_serieN10();
 
         // 2. Series Caracteres
-        pk.lectorDatosC01();
+        pk.g2_lectorDatosC01();
         
-        pk.serieC03();
-        pk.serieC04();
-        pk.serieC05();
-        pk.serieC06();
+        pk.g2_serieC03();
+        pk.g2_serieC04();
+        pk.g2_serieC05();
+        pk.g2_serieC06();
         pk.g2_serieCaracteres07();
         pk.g2_serieCaracteres08();
 
 
         // 3. Series Figuras
-        fig.lectorF02();
-        fig.serieF01();
-        fig.serieF02();
-        fig.serieF03();
-        fig.serieF04();
+        fig.g2_lectorF02();
+        fig.g2_serieF01();
+        fig.g2_serieF02();
+        fig.g2_serieF03();
+        fig.g2_serieF04();
         
-        fig.serieF13();
-        fig.serieF14();
-        fig.serieF15();
-        fig.serieF16();
+        fig.g2_serieF13();
+        fig.g2_serieF14();
+        fig.g2_serieF15();
+        fig.g2_serieF16();
         fig.g2_crearFigura17();
         fig.g2_crearFigura18();
         fig.g2_crearFigura19();
 
         // 4. Cadena Caracteres
         
-        cc.SerieS05();
-        cc.SerieS06();
-        cc.SerieS07();
-        cc.SerieS08();
+        cc.g2_serieS05();
+        cc.g2_serieS06();
+        cc.g2_serieS07();
+        cc.g2_serieS08();
 
 
 
@@ -72,14 +72,14 @@ public class App {
 
 
         // 6. Loadings
-        loa.delay11(11,8);
-        loa.delay12(20);
+        loa.g2_delay11(11,8);
+        loa.g2_delay12(20);
 
 
 
         // 7. Recursividad
-        System.out.println(rec.recursividad_01(5));
-        System.out.println(rec.recursividad_02(2, 5));
+        System.out.println(rec.g2_recursividad_01(5));
+        System.out.println(rec.g2_recursividad_02(2, 5));
 
         // 8. Autómatas
         System.out.println("Ingrese la secuencia a validar (use '-' como separador entre caracteres): ");

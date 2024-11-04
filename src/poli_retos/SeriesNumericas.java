@@ -5,12 +5,12 @@ import javax.swing.JOptionPane;
 public class SeriesNumericas {
     int a, b, c, repeticiones, tamanio;
 
-    public void lectorDatos() {
+    public void g2_lectorDatos() {
         tamanio = Integer
                 .parseInt(JOptionPane.showInputDialog("Ingrese tamanio para las series numericas..."));
     }
 
-    public void serieN01() {
+    public void g2_serieN01() {
         b = 1;
 
         System.out.print("\n- Serie N01.\n");
@@ -26,7 +26,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void serieN02() {
+    public void g2_serieN02() {
         a = 1;
         repeticiones = 0;
 
@@ -42,7 +42,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void serieN03() {
+    public void g2_serieN03() {
         a = 0;
         b = 1;
         c = 1;
@@ -64,7 +64,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void serieN07() {
+    public void g2_serieN07() {
         a = 1;
         repeticiones = 0;
         System.out.print("\n- Serie N07.\n");
@@ -75,7 +75,7 @@ public class SeriesNumericas {
         System.out.println();
     }
 
-    public void serieN08() {
+    public void g2_serieN08() {
         a = 3;
         repeticiones = 0;
         System.out.print("\n- Serie N08.\n");
@@ -86,7 +86,7 @@ public class SeriesNumericas {
         System.out.println();
     }
 
-    public void serieN09() {
+    public void g2_serieN09() {
         int total = 1;
         System.out.print("\n- Serie N09.\n");
         for (int i = 0; i < tamanio; i++) {
@@ -95,7 +95,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void serieN10() {
+    public void g2_serieN10() {
         int total = 1;
         System.out.print("\n- Serie N010.\n");
         for (int i = 0; i < tamanio; i++) {
