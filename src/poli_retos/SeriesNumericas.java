@@ -1,9 +1,12 @@
 package poli_retos;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class SeriesNumericas {
     int a, b, c, repeticiones, tamanio;
+    int cantidadTerminos, inicio;
 
     public void g2_lectorDatos() {
         tamanio = Integer
@@ -62,7 +65,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void g2_serieN04(int cantidadTerminos) {
+    public void g2_serieN04 () {
         int numerador1 = 0;
         int numerador2 = 1;
         int denominador = 2;
@@ -97,6 +100,36 @@ public class SeriesNumericas {
         @Override
         public String toString() {
             return numerador + "/" + denominador;
+        }
+    }
+
+    public void g2_serieN05() {
+        List<Integer> primos = new ArrayList<>();
+        int numero = inicio;
+        System.out.println("\n- Serie N05.\n");
+        while (primos.size() < cantidadTerminos) {
+            if (esPrimo(numero)) {
+                primos.add(numero);
+            }
+            numero++;
+        }
+        for (int primo : primos) {
+            System.out.println(primo);
+        }
+    }
+    private boolean esPrimo(int num) {
+        if (num < 2) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+
+    public void g2_serieN06() {
+        System.out.println("\n- Serie N06.\n");
+        System.out.println(" ");
+        for (int i = 1; i <= cantidadTerminos; i++) {
+            System.out.println(i * i);
         }
     }
 
