@@ -1,13 +1,12 @@
 package poli_retos;
 
 import java.util.Arrays;
-
 import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class SeriesFiguras {
     int a, b, c, i, j, k, tamanio02;
+    int cantidadTerminos, numero;
 
     public void g2_lectorF02() {
         tamanio02 = Integer
@@ -74,6 +73,70 @@ public class SeriesFiguras {
             System.out.println(); 
         }
     }
+
+    public void g2_serieF9() {
+        System.out.println("\nFigura pirámide:");
+        int anchoBase = cantidadTerminos * 4 - 4; 
+
+        for (int i = 1; i <= cantidadTerminos; i++) {
+            int espaciosExteriores = anchoBase - (i - 1) * 4; 
+            int espaciosInteriores = (i - 1) * 4;
+            System.out.print(" ".repeat(espaciosExteriores));
+            System.out.print("_|");
+            if (i > 1) {
+                System.out.print(" ".repeat(espaciosInteriores));
+            }
+            System.out.print(" ".repeat(espaciosInteriores));
+            System.out.println("|_");
+        }
+    }
+
+    public void g2_serieF10() {
+        System.out.println("\nGradas con signos (+ -):");
+
+        for (int i = 1; i <= cantidadTerminos; i++) {
+            int espacios = (i - 1) * 4;
+
+                if (i % 2 == 1) {
+                    System.out.print(" ".repeat(espacios));
+                    System.out.println("_+_");
+                    System.out.print(" ".repeat(espacios));
+                    System.out.println("   |");
+                } else {
+                    System.out.print(" ".repeat(espacios));
+                    System.out.println("_-_");
+                    System.out.print(" ".repeat(espacios));
+                    System.out.println("   |");
+                }
+            }
+            System.out.print("   ");
+    }
+
+    public void g2_serieF11() {
+        System.out.println("\nGradas:");
+
+        for (int i = 1; i <= cantidadTerminos; i++) {
+            int espacios = (i - 1) * 5;
+            String guionesBajos = "_ ".repeat(i);
+            System.out.print(" ".repeat(espacios));
+            System.out.print("|_ ");
+            System.out.print(guionesBajos.trim());
+            System.out.print(" ".repeat(espacios));
+            System.out.println(" ");
+        }
+    }
+
+    public void g2_serieF12() {
+        System.out.println("\nFigura pirámide números:");
+
+        for (int i = numero; i >= 1; i--) {
+            for (int j = 1; j <= i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    
     // g2_SerieF13
     public void g2_serieF13() {
         j = 1;
