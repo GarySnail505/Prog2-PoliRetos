@@ -1,5 +1,7 @@
 package poliretos;
 
+import java.util.Scanner;
+
 public class cadena_caracteres {
     public String palabra;
     public int tipo;
@@ -8,17 +10,13 @@ public class cadena_caracteres {
     public cadena_caracteres(String palabra, int tipo) {
         this.palabra = palabra;
         this.tipo = tipo;
-        girar_palabras();
-        System.out.println(palabra.length());
     }
 
     public cadena_caracteres(String palabra, int tipo, String eliminacion) {
         this.palabra = palabra;
         this.tipo = tipo;
         this.eliminacion = eliminacion;
-        eliminar_vocales();
-        eliminar_letras();
-       
+
     }
 
     private void contar_vocales() {
@@ -59,21 +57,28 @@ public class cadena_caracteres {
     }
 
     private void eliminar_letras() {
-        palabra = palabra.toLowerCase();
-        char eliminacion = this.eliminacion.charAt(0);
+        palabra.replaceAll(eliminacion, " ");
+        System.out.println(palabra);
+    }
+
+    private void girar_palabras() {
         char[] frase = palabra.toCharArray();
-        for (int caracter = 0; caracter < palabra.length(); caracter++) {
-            if (frase[caracter] == eliminacion) {
-                frase[caracter] = ' ';
-            }
+        for (int caracter = (palabra.length() - 1); caracter >= 0; caracter--) {
             System.out.print(frase[caracter]);
         }
-
     }
-    private void girar_palabras(){
-     char[] frase= palabra.toCharArray();
-     for (int caracter = (palabra.length()-1); caracter >= 0; caracter--) {
-                 System.out.print(frase[caracter]);
-     }
+
+    private void convertir_letras() {
+        Scanner separador = new Scanner(palabra.toLowerCase());
+        while (separador.hasNext()) {
+            String frase = separador.next();
+            char[] palabra = frase.toCharArray();
+            for (int contador = 0; contador < frase.length(); contador++) {
+                palabra[contador] = (contador % 2 == 0) ? Character.toUpperCase(palabra[contador])
+                        : Character.toLowerCase(palabra[contador]);
+            }
+            frase = new String(palabra);
+            System.out.print(frase + " ");
+        }
     }
 }

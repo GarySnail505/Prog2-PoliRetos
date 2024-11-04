@@ -7,12 +7,6 @@ public class Series_numericas {
     public Series_numericas(int longitud, int nivel) {
         this.longitud_serie = longitud;
         this.nivel = nivel;
-        serie_1_fibonacci();
-        serie_2();
-        serie_3();
-        serie_4();
-        serie_10();
-        serie_12();
     }
 
     private int serie_1_fibonacci() {
@@ -82,11 +76,11 @@ public class Series_numericas {
 
     private void serie_12() {
         int termino = 0,
-         patron=2;
+                patron = 2;
         for (int contador = 0; contador < longitud_serie; contador++) {
-            termino = termino+patron;
+            termino = termino + patron;
             System.out.print(termino + " ");
-            patron=patron+2;
+            patron = patron + 2;
         }
         System.out.println();
     }

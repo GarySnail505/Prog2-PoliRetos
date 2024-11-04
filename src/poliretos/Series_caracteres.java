@@ -7,8 +7,6 @@ public class Series_caracteres {
     public Series_caracteres(int longitud, int nivel) {
         this.longitud_serie = longitud;
         this.tipo_serie = nivel;
-        serie_3();
-        serie_9();
     }
 
     private void serie_1() {

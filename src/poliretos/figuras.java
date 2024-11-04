@@ -7,12 +7,6 @@ public class figuras {
     public figuras(int tamanio, int nivel) {
         this.tamanio = tamanio;
         this.nivel = nivel;
-        escalera();
-        
-        escalera_subida();
-     
-        escalera_completa();
-        escalera_guion();
     }
 
     private void piramide() {
@@ -94,13 +88,14 @@ public class figuras {
         }
         System.out.println();
     }
-    private void escalera_guion(){
-        int espacios=0;
+
+    private void escalera_guion() {
+        int espacios = 0;
         for (int filas = 1; filas <= tamanio; filas++) {
             for (int i = 0; i < espacios; i++) {
                 System.out.print(" ");
             }
-            espacios=1+filas+espacios;
+            espacios = 1 + filas + espacios;
             System.out.print("|");
             for (int guiones = 0; guiones < filas; guiones++) {
                 System.out.print("_");
