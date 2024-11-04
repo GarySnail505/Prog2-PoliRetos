@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class SeriesCaracteres {
     int a, b, c, i, j, k, l, veces;
     int tamanio;
+    int cantidadTerminos;
     final String Alfabeto = "a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t-u-v-w-x-y-z";
     String letrasSeparadas[] = Alfabeto.split("-");
 
@@ -13,10 +14,42 @@ public class SeriesCaracteres {
                 .parseInt(
                         JOptionPane.showInputDialog("Ingrese dimension para todas sus series con caracteres..."));
     }
+    
     // g2_serieC01
-
+    public void g2_serieC01(){
+        System.out.println("\nSerie de caracteres (+ -):");
+        for (int i = 0; i < cantidadTerminos; i++) {
+            if(i%2==0){
+                System.out.print(" + ");
+            }else{
+                System.out.print(" - ");
+            }
+        }
+        System.out.println("  ");
+    }
+    
     // g2_seriec02
-
+    public void g2_serieC02() {
+        int fib1=1;
+        int fib2=1;
+        System.out.println("\nSerie de Fibonacci con signos (+):");
+        
+        if(cantidadTerminos>=1){
+            System.out.print("+ ");
+        }
+        if(cantidadTerminos>=2){
+            System.out.print("+ ");
+        }
+        for(int i=3; i<=cantidadTerminos; i++){
+            int siguiente=fib1+fib2;
+            System.out.print("+".repeat(siguiente)+" ");
+            fib1=fib2;
+            fib2=siguiente;
+        }
+        System.out.println("  ");
+    }
+}
+    
     // g2_serieC03
     public void g2_serieC03() {
         k = 0;
