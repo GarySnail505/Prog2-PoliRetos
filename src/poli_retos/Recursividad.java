@@ -15,4 +15,15 @@ public class Recursividad {
             return g2_recursividad_02(a+1, b-1);
     }
 
+    public static void g2_recursividad_06(int numero){
+        if (numero < 0) {
+            System.out.println("No válido");
+        } else {
+            System.out.println(numero);
+            if (numero > 0) {
+                g2_CuentaRegresiva(numero - 1);
+            }
+        }
+    }
+
 }
