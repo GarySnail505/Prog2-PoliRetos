@@ -19,7 +19,7 @@ public class Loadings {
         System.out.flush();
     }
 
-    public void delay11(int numBarras, int alturaMaxima) {
+    public void g2_delay11(int numBarras, int alturaMaxima) {
         Random random = new Random();
         int[] alturas = new int[numBarras];
 
@@ -41,7 +41,7 @@ public class Loadings {
     }
     //Delay 12
 
-    public void delay12(int anchoPantalla) {
+    public void g2_delay12(int anchoPantalla) {
         int delayTime = 100; 
         for (int i = 0; i < anchoPantalla; i++) {
             limpiarPantalla();

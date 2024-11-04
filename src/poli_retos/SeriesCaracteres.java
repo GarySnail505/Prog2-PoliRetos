@@ -8,17 +8,17 @@ public class SeriesCaracteres {
     final String Alfabeto = "a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t-u-v-w-x-y-z";
     String letrasSeparadas[] = Alfabeto.split("-");
 
-    public void lectorDatosC01() {
+    public void g2_lectorDatosC01() {
         tamanio = Integer
                 .parseInt(
                         JOptionPane.showInputDialog("Ingrese dimension para todas sus series con caracteres..."));
     }
-    // serieC01
+    // g2_serieC01
 
-    // seriec02
+    // g2_seriec02
 
-    // serieC03
-    public void serieC03() {
+    // g2_serieC03
+    public void g2_serieC03() {
         k = 0;
         System.out.print("\n\n- serie C03. ++ +++ +++++ +++++++... (Primos):\n  ");
 
@@ -47,7 +47,7 @@ public class SeriesCaracteres {
         return true;
     }
 
-    public void serieC04() {
+    public void g2_serieC04() {
         System.out.print("\n\n- serie C04. + - * / + - * /... (Op. básicas):\n  ");
         veces = 1;
         while (veces <= tamanio) {
@@ -68,7 +68,7 @@ public class SeriesCaracteres {
         }
     }
 
-    public void serieC05() {
+    public void g2_serieC05() {
         char[] caracteres = { '|', '\\', '|', '/' };
         System.out.print("\n\n- serie C05. | \\ | / - | \\ | / -... (Vaivén):\n ");
         for (int i = 0; i < tamanio; i++) {
@@ -82,7 +82,7 @@ public class SeriesCaracteres {
         System.out.println();
     }
 
-    public void serieC06() {
+    public void g2_serieC06() {
         char letra = 'a';
         System.out.print("\n\n- serie C06. a b c d e... (Abecedario):\n ");
         for (int i = 0; i < tamanio; i++) {

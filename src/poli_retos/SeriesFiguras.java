@@ -9,12 +9,12 @@ import javax.swing.JOptionPane;
 public class SeriesFiguras {
     int a, b, c, i, j, k, tamanio02;
 
-    public void lectorF02() {
+    public void g2_lectorF02() {
         tamanio02 = Integer
                 .parseInt(JOptionPane.showInputDialog("Ingrese dimension para todas sus series con figuras..."));
     }
-   // SerieF01
-    public void serieF01() {
+   // g2_SerieF01
+    public void g2_serieF01() {
         System.out.print("\n- Serie F01.:\n");
         for (i = 0; i < tamanio02; i++) {
             for (j = 0; j < tamanio02; j++) {
@@ -27,8 +27,8 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
-    // SerieF02
-    public void serieF02() {
+    // g2_SerieF02
+    public void g2_serieF02() {
         System.out.print("\n- Serie F02.:\n");
         for (i = 0; i < tamanio02; i++) {
             for (j = 0; j < tamanio02; j++) {
@@ -51,8 +51,8 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
-    // SerieF03 
-    public void serieF03() {
+    // g2_SerieF03 
+    public void g2_serieF03() {
         System.out.print("\n- Serie F03.:\n");
         for (i = 0; i < tamanio02; i++) {
             for (j = 0; j <= i; j++) {
@@ -61,8 +61,8 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
-    // SerieF04 
-    public void serieF04() { 
+    // g2_SerieF04 
+    public void g2_serieF04() { 
         System.out.print("\n- Serie F04.:\n"); 
         for (i = 0; i < tamanio02; i++) { 
             for (j = 0; j < tamanio02 - i - 1; j++) { 
@@ -74,8 +74,8 @@ public class SeriesFiguras {
             System.out.println(); 
         }
     }
-    // SerieF13
-    public void serieF13() {
+    // g2_SerieF13
+    public void g2_serieF13() {
         j = 1;
         i = 1;
         k = tamanio02 + 1;
@@ -96,8 +96,8 @@ public class SeriesFiguras {
         System.out.print("\n");
     }
 
-    // SerieF14
-    public void serieF14() {
+    // g2_SerieF14
+    public void g2_serieF14() {
         a = 0;
         b = tamanio02;
 
@@ -130,8 +130,8 @@ public class SeriesFiguras {
         }
     }
 
-    // SerieF15
-    public void serieF15() {
+    // g2_SerieF15
+    public void g2_serieF15() {
         int[][] matrix = new int[tamanio02][tamanio02];
 
         System.out.print("\n- Serie F15.:\n");
@@ -152,8 +152,8 @@ public class SeriesFiguras {
         }
     }
 
-    // SerieF16
-    public void serieF16() {
+    // g2_SerieF16
+    public void g2_serieF16() {
 
         System.out.print("\n- Serie F16.\n");
 

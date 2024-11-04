@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CadenasCaracteres {
 
-        public void SerieS05() {
+        public void g2_serieS05() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
         System.out.print("\nIngrese una palabra o frase:\n  ");
@@ -32,7 +32,7 @@ public class CadenasCaracteres {
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 
-    public void SerieS06() {
+    public void g2_serieS06() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
         System.out.print("\nIngrese una palabra o frase:\n  ");
@@ -55,7 +55,7 @@ public class CadenasCaracteres {
         return builder.toString();
     }
     
-    public void SerieS07() {
+    public void g2_serieS07() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
@@ -80,7 +80,7 @@ public class CadenasCaracteres {
     }
 
     private static final String respuesta_s08 = "sapo";
-    public void SerieS08() {
+    public void g2_serieS08() {
         Scanner scanner = new Scanner(System.in);
         String palabra;
         int contador = 1;
