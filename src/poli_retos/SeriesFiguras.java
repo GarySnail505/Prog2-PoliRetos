@@ -176,4 +176,96 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
+
+    //Serie F17
+    public void g2_crearFigura17() {
+        System.out.print("\n- Serie F17:\n");
+        for (int i = 0; i < tamanio02; i++) {
+            for (int j = 0; j < tamanio02; j++) {
+                if (i == j || i == tamanio02 - j - 1) {
+                    if (i % 2 == 0) {
+                        System.out.print("1");
+                    } else {
+                        System.out.print("0");
+                    }
+                } else {
+                    System.out.print(" ");
+                }
+                System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+    
+    //Serie F18
+    public void g2_crearFigura18() {
+        System.out.print("\n- Serie F18:\n");
+        int[][] matriz = new int[tamanio02][tamanio02];
+        for (int fila = 0; fila < tamanio02; fila++) {
+            for (int columna = 0; columna < tamanio02; columna++) {
+
+                if (columna <= fila) {
+                    if (!(fila == columna || (fila > 0 && columna == 0))) {
+                        matriz[fila][columna] = matriz[fila - 1][columna - 1] + matriz[fila - 1][columna];
+                    }
+                    if (fila == columna) {
+                        matriz[fila][columna] = 2;
+                    }
+                    if (fila > 0 && columna == 0) {
+                        matriz[fila][columna] = 1;
+                    }
+                } else {
+                    matriz[fila][columna] = 0;
+                }
+
+                if (matriz[fila][columna] == 0) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print(matriz[fila][columna] + "  ");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+
+    //Serie F19
+    public void g2_crearFigura19() {
+        System.out.print("\n- Serie F19:\n");
+        int[][] matriz = new int[tamanio02][tamanio02];
+        for (int fila = 0; fila < tamanio02; fila++) {
+            for (int columna = 0; columna < tamanio02; columna++) {
+
+                if (columna <= fila) {
+                    if (!(fila == columna || (fila > 0 && columna == 0))) {
+                        matriz[fila][columna] = matriz[fila - 1][columna - 1] + matriz[fila - 1][columna];
+                    }
+                    if (fila == columna) {
+                        matriz[fila][columna] = 2;
+                    }
+                    if (fila > 0 && columna == 0) {
+                        matriz[fila][columna] = 1;
+                    }
+                } else {
+                    matriz[fila][columna] = 0;
+                }
+
+                switch (matriz[fila][columna]) {
+                    case 0:
+                        System.out.print(" ");
+                        break;
+                    case 1:
+                        System.out.print("+  ");
+                        break;
+                    case 2:
+                        System.out.print("*  ");
+                        break;
+                    default:
+                        System.out.print(matriz[fila][columna] + "  ");
+                        break;
+                }
+            }
+            System.out.println(" ");
+        }
+
+    }
 }

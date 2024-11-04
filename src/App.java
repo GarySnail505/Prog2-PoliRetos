@@ -53,7 +53,9 @@ public class App {
         fig.serieF14();
         fig.serieF15();
         fig.serieF16();
-
+        fig.g2_crearFigura17();
+        fig.g2_crearFigura18();
+        fig.g2_crearFigura19();
 
         // 4. Cadena Caracteres
         
