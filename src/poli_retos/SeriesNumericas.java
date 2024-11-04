@@ -13,7 +13,7 @@ public class SeriesNumericas {
                 .parseInt(JOptionPane.showInputDialog("Ingrese tamanio para las series numericas..."));
     }
 
-    public void serieN01() {
+    public void g2_serieN01() {
         a = 0;
         b = 1;
         repeticiones=0;
@@ -30,7 +30,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void serieN02() {
+    public void g2_serieN02() {
 
         System.out.print("\n- Serie N02.\n");
 
