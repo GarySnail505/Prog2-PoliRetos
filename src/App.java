@@ -36,6 +36,9 @@ public class App {
         pk.serieC03();
         pk.serieC04();
 
+        
+        pk.g2_serieCaracteres07();
+        pk.g2_serieCaracteres08();
 
 
         // 3. Series Figuras
