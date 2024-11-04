@@ -11,9 +11,6 @@ public class App {
         String eliminacion;
             /* Series_numericas test= new Series_numericas(longitud,nivel); */
           Scanner teclado = new Scanner(System.in);
-            palabra=teclado.nextLine();
-            cadena_caracteres test2= new cadena_caracteres(palabra,nivel); 
-            arrays letras=new arrays(longitud,palabra,'-');
-
+            recursividad funcion=new recursividad(5, 4);
     }
 }
