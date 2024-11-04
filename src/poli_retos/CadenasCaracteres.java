@@ -4,6 +4,29 @@ import java.util.Scanner;
 
 public class CadenasCaracteres {
 
+        public void g2_serieCC01(String palabra) {
+        System.out.println("\nFrase o palabra ingresada:");
+        int contadorVocales = 0;
+        palabra=palabra.toLowerCase();
+        for (int i = 0; i < palabra.length(); i++){
+            char letra = palabra.charAt(i);
+            
+            if(letra=='a' || letra=='e' || letra=='i' || letra=='o' || letra=='u'){
+                contadorVocales++;
+            }
+        }
+        System.out.println("La palabra o frase tiene: "+contadorVocales+" vocales.");
+    }
+
+        public void g2_serieCC02(String palabra) {
+        int contadorLetras = 0;
+        System.out.println("\nFrase o palabra ingresada: "+palabra);
+        for (int i = 0; i < palabra.length(); i++){
+            contadorLetras++;
+        }
+        System.out.println("La palabra o frase tiene: "+contadorLetras+" letras.");
+    }
+        
         public void g2_serieS05() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
