@@ -57,6 +57,8 @@ public class App {
 
         // 4. Cadena Caracteres
         
+        cc.SerieS05();
+        cc.SerieS06();
         cc.SerieS07();
         cc.SerieS08();
 
