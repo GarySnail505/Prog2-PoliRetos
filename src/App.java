@@ -45,7 +45,10 @@ public class App {
         fig.lectorF02();
 
 
-
+        fig.serieF01();
+        fig.serieF02();
+        fig.serieF03();
+        fig.serieF04();
         fig.serieF13();
         fig.serieF14();
         fig.serieF15();
