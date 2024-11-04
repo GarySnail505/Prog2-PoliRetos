@@ -25,6 +25,8 @@ public class App {
         op.serieN01();
         op.serieN02();
         op.serieN03();
+        op.serieN07();
+        op.serieN08();
         
 
 
