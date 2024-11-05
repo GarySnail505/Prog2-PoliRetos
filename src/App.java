@@ -63,7 +63,8 @@ public class App {
         cc.g2_serieS06();
         cc.g2_serieS07();
         cc.g2_serieS08();
-
+        cc.g2_serieS03();
+        cc.g2_seriesS04();
 
 
         // 5. Arrays

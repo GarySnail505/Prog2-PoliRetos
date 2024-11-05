@@ -4,30 +4,62 @@ import java.util.Scanner;
 
 public class CadenasCaracteres {
 
-        public void g2_serieCC01(String palabra) {
+    String vocales = "a e i o u";
+    String consonantes = "b c d f g h j k l m n p q r s t v w x y z";
+
+    public void g2_serieCC01(String palabra) {
         System.out.println("\nFrase o palabra ingresada:");
         int contadorVocales = 0;
-        palabra=palabra.toLowerCase();
-        for (int i = 0; i < palabra.length(); i++){
+        palabra = palabra.toLowerCase();
+        for (int i = 0; i < palabra.length(); i++) {
             char letra = palabra.charAt(i);
-            
-            if(letra=='a' || letra=='e' || letra=='i' || letra=='o' || letra=='u'){
+
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
                 contadorVocales++;
             }
         }
-        System.out.println("La palabra o frase tiene: "+contadorVocales+" vocales.");
+        System.out.println("La palabra o frase tiene: " + contadorVocales + " vocales.");
     }
 
-        public void g2_serieCC02(String palabra) {
+    public void g2_serieCC02(String palabra) {
         int contadorLetras = 0;
-        System.out.println("\nFrase o palabra ingresada: "+palabra);
-        for (int i = 0; i < palabra.length(); i++){
+        System.out.println("\nFrase o palabra ingresada: " + palabra);
+        for (int i = 0; i < palabra.length(); i++) {
             contadorLetras++;
         }
-        System.out.println("La palabra o frase tiene: "+contadorLetras+" letras.");
+        System.out.println("La palabra o frase tiene: " + contadorLetras + " letras.");
     }
-        
-        public void g2_serieS05() {
+
+    public void g2_serieS03() {
+        System.out.println("Ingrese una frase a la que desea eliminarle una vocal ");
+        Scanner sc = new Scanner(System.in);
+        String frase = sc.nextLine();
+        System.out.println("Ingrese la vocal que desea eliminar");
+        String vocal = sc.next();
+        if (vocales.contains(vocal)) {
+            String fraseNueva = frase.replace(vocal, " ");
+            System.out.println(fraseNueva);
+        } else {
+            System.out.println("No ha ingresado una vocal");
+        }
+    }
+
+    public void g2_serieS04() {
+        System.out.println("Ingrese una frase a la que desea eliminarle una consonante: ");
+        Scanner sc = new Scanner(System.in);
+        String frase = sc.nextLine();
+        System.out.println("Ingrese la consonante que desea eliminar");
+        String letra = sc.next();
+        if (consonantes.contains(letra)) {
+            String fraseNueva = frase.replace(letra, " ");
+            System.out.println(fraseNueva);
+        } else {
+            System.out.println("No ha ingresado una consonante");
+        }
+
+    }
+
+    public void g2_serieS05() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
         System.out.print("\nIngrese una palabra o frase:\n  ");
@@ -77,7 +109,7 @@ public class CadenasCaracteres {
         }
         return builder.toString();
     }
-    
+
     public void g2_serieS07() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S07.");
@@ -103,6 +135,7 @@ public class CadenasCaracteres {
     }
 
     private static final String respuesta_s08 = "sapo";
+
     public void g2_serieS08() {
         Scanner scanner = new Scanner(System.in);
         String palabra;
