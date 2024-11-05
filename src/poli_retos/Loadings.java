@@ -8,7 +8,7 @@ public class Loadings {
 
     public void g2_loading01() {
         char[] simbolos = { '\\', '|', '/', '|' };
-
+        System.out.print("\n- Serie l01.\n");
         for (int i = 0; i < 100; i++) {
             char simbolo = simbolos[i % simbolos.length];
             System.out.print("\r" + simbolo + "Cargando..." + i + "%");
@@ -22,7 +22,8 @@ public class Loadings {
         System.out.println("\rCarga completa: 100%\n");
     }
 
-    public void g2_loading2() {
+    public void g2_loading02() {
+        System.out.print("\n- Serie l02.\n");
         System.out.println("Ingrese el símbolo que desea para la carga: ");
         Scanner sc = new Scanner(System.in);
         String lectura = sc.next();
@@ -48,7 +49,8 @@ public class Loadings {
         System.out.println("\rCarga completa: 100%             ");
     }
 
-    public void g2_loading3() {
+    public void g2_loading03() {
+        System.out.print("\n- Serie l03.\n");
         System.out.println("Ingrese el símbolo que desea para la carga: ");
         Scanner sc = new Scanner(System.in);
         String lectura = sc.next();

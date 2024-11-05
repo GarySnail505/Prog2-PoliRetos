@@ -97,6 +97,7 @@ public class App {
         // 7. Recursividad
         System.out.println(rec.g2_recursividad_01(5));
         System.out.println(rec.g2_recursividad_02(2, 5));
+        rec.g2_recursividad04();
         System.out.println(rec.g2_recursividad_06());
 
         // 8. Autómatas
