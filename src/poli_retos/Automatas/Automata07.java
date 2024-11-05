@@ -1,6 +1,9 @@
 package poli_retos.Automatas;
 
+import java.util.Scanner;
+
 public class Automata07 {
+    
     final int er = -1, 
               e1 = 100,
               e2 = 200; 
@@ -26,7 +29,14 @@ public class Automata07 {
         return -1;  
     }
 
-    public void validar(String clave) {
+    public void validar() {
+        System.out.print("\n- Automata 07.");
+        System.out.println("\nIngrese una clave ");
+        System.out.println("La clave debe tener mínimo 8 dígitos y por lo menos:");
+        System.out.println("- Una letra mayúscula, una letra minúscula, un número y un carácter especial.");
+        Scanner scanner = new Scanner(System.in);
+        String clave = scanner.nextLine();
+
         int q = 0; 
         for (char c : clave.toCharArray()) {
             int tipo = clavef(c);

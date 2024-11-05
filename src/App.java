@@ -105,14 +105,8 @@ public class App {
         rec.g2_recursividad_06(6);
 
         // 8. Autómatas
-        Automata07 automata07 = new Automata07();
-        System.out.print("\n- Automata 07.");
-        System.out.println("\nIngrese una clave ");
-        System.out.println("La clave debe tener mínimo 8 dígitos y por lo menos:");
-        System.out.println("- Una letra mayúscula, una letra minúscula, un número y un carácter especial.");
-        Scanner scanner = new Scanner(System.in);
-        String clave = scanner.nextLine();
-        automata07.validar(clave);
+        Automata07 automata07 = new Automata07();        
+        automata07.validar();
 
         
         System.out.println("Ingrese la secuencia a validar (use '-' como separador entre caracteres): ");
@@ -120,8 +114,6 @@ public class App {
         Automata06 automata06 = new Automata06();
         automata06.validarSecuencia(input);
         
-
-        // Delay
 
     }
 }
