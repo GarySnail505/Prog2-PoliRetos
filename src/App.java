@@ -87,6 +87,9 @@ public class App {
         loa.g2_loading01();
         loa.g2_loading02();
         loa.g2_loading03();
+        loa.g2_loading04(); 
+        loa.g2_loading05();
+        loa.g2_loading06();
         loa.g2_barra07();
         loa.g2_nombre08();
         try{
