@@ -42,7 +42,6 @@ public class SeriesNumericas {
             else
                 System.out.print(0+" ");
         }
-        System.out.println("");
     }
 
     public void g2_serieN03() {
@@ -65,10 +64,9 @@ public class SeriesNumericas {
             }
             c = c + 2;
         }
-        System.out.println("");
     }
 
-    public void g2_serie04() {
+    public void g2_serieN04() {
         a = 1;
         b = 0;
         c = 2;
@@ -89,7 +87,7 @@ public class SeriesNumericas {
         }
     }
 
-    public void g2_serie05() {
+    public void g2_serieN05() {
         System.out.print("\n\n- Serie 05\n  ");
 
         for (int contador = 0, numero = 2; contador < tamanio; numero++) {
@@ -99,6 +97,7 @@ public class SeriesNumericas {
             }
         }
     }
+
     private boolean esPrimo(int num) {
         if (num < 2) return false;
         for (int i = 2; i <= Math.sqrt(num); i++) {
@@ -109,11 +108,15 @@ public class SeriesNumericas {
 
 
     public void g2_serieN06() {
-        System.out.println("\n- Serie N06.\n");
-        System.out.println(" ");
-        for (int i = 1; i <= cantidadTerminos; i++) {
-            System.out.println(i * i);
+        a = 1;
+        repeticiones = 0;
+        System.out.print("\n\n- Serie 06. 1 4 9 16 25 36 49 64... (Al cuadrado):\n  ");
+        while (repeticiones < tamanio) {
+            repeticiones++;
+            a = repeticiones * repeticiones;
+            System.out.print(a + " ");
         }
+        System.out.println("");
     }
 
     public void g2_serieN07() {
@@ -145,6 +148,7 @@ public class SeriesNumericas {
             total = total * 2;
             System.out.print(total + " ");
         }
+        System.out.println("");
     }
 
     public void g2_serieN10() {
@@ -154,5 +158,6 @@ public class SeriesNumericas {
             total = total * 3;
             System.out.print(total + " ");
         }
+        System.out.println("");
     }
 }
