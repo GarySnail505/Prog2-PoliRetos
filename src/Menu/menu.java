@@ -63,6 +63,7 @@ public class menu {
                         break;
                     }
                     case 5: {
+                        gr2_submenu_loadings();
                         break;
                     }
                     case 6: {
@@ -162,14 +163,30 @@ public class menu {
         System.out.println("2. Iniciales del nombre");
         System.out.println("3. Matriz");
         System.out.println("4. Salir");
+        
     }
 
     public void gr2_submenu_loadings() {
-        System.out.println("\u001B[34m" + "\n\t Menu_Loadings");
-        System.out.println("1. Barra de carga");
-        System.out.println("2. Nombre");
-        System.out.println("3. Archivo");
-        System.out.println("4. Salir");
+        Loadings loa = new Loadings();
+        loa.g2_loading01();
+        loa.g2_loading02();
+        loa.g2_loading03();
+        //loa.g2_loading04();
+        //loa.g2_loading05();
+        //loa.g2_loading06();
+        //loa.g2_loading07();
+        //loa.g2_loading08();
+        System.out.println("\n- Serie l11.\n");
+        System.out.println("¿Cuantas barras quieres en tu Barras de Sonido?: ");
+        numero_1 = teclado.nextInt();
+        System.out.println("¿Del 1 al 10, qué tan grande quieres que sean las barras?: ");
+        cuadrado = teclado.nextInt();
+        loa.g2_loading11(numero_1, cuadrado);
+
+        System.out.print("\n- Serie l12.\n");
+        System.out.println("¿Del 1 al 30, qué tanto quieres que se mueva por el ancho de la pantalla?: ");
+        cuadrado = teclado.nextInt();
+        loa.g2_loading12(cuadrado);
     }
 
     public void gr2_submenu_recursion() {
