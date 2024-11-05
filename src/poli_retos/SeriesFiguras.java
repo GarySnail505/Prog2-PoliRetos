@@ -153,11 +153,10 @@ public class SeriesFiguras {
 
 
     public void g2_serieF09() {
-        System.out.println("\nFigura pirámide:");
-        int anchoBase = cantidadTerminos * 4 - 4; 
-
-        for (int i = 1; i <= cantidadTerminos; i++) {
-            int espaciosExteriores = anchoBase - (i - 1) * 4; 
+        System.out.print("\n- Serie F09.:\n");
+        int anchoBase = tamanio * 4 - 4;
+        for (int i = 1; i <= tamanio; i++) {
+            int espaciosExteriores = anchoBase - (i - 1) * 4;
             int espaciosInteriores = (i - 1) * 4;
             System.out.print(" ".repeat(espaciosExteriores));
             System.out.print("_|");
@@ -168,32 +167,31 @@ public class SeriesFiguras {
             System.out.println("|_");
         }
     }
-
     public void g2_serieF10() {
-        System.out.println("\nGradas con signos (+ -):");
+        System.out.print("\n- Serie F10.:\n");
 
-        for (int i = 1; i <= cantidadTerminos; i++) {
+        for (int i = 1; i <= tamanio; i++) {
             int espacios = (i - 1) * 4;
 
-                if (i % 2 == 1) {
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("_+_");
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("   |");
-                } else {
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("_-_");
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("   |");
-                }
+            if (i % 2 == 1) {
+                System.out.print(" ".repeat(espacios));
+                System.out.println("_+_");
+                System.out.print(" ".repeat(espacios));
+                System.out.println("   |");
+            } else {
+                System.out.print(" ".repeat(espacios));
+                System.out.println("_-_");
+                System.out.print(" ".repeat(espacios));
+                System.out.println("   |");
             }
-            System.out.print("   ");
+        }
+        System.out.print("   ");
     }
 
     public void g2_serieF11() {
-        System.out.println("\nGradas:");
+        System.out.print("\n- Serie F11.:\n");
 
-        for (int i = 1; i <= cantidadTerminos; i++) {
+        for (int i = 1; i <= tamanio; i++) {
             int espacios = (i - 1) * 5;
             String guionesBajos = "_ ".repeat(i);
             System.out.print(" ".repeat(espacios));
@@ -205,15 +203,16 @@ public class SeriesFiguras {
     }
 
     public void g2_serieF12() {
-        System.out.println("\nFigura pirámide números:");
+        System.out.print("\n- Serie F12.:\n");
 
         for (int i = numero; i >= 1; i--) {
-            for (int j = 1; j <= i; j++){
+            for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
             System.out.println();
         }
     }
+
     
     // g2_SerieF13
     public void g2_serieF13() {
