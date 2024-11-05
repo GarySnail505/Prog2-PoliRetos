@@ -92,19 +92,6 @@ public class App {
         loa.g2_loading06();
         loa.g2_barra07();
         loa.g2_nombre08();
-        try{
-            System.out.print("\nSe completó la carga...");
-            g2_Barra();
-
-            System.out.print("\nIngresa un nobmre y un apellido: ");
-            String nombre=scanner.nextLine();
-            g2_Barra_nombre(nombre);
-
-        }catch(InterruptedException e){
-            System.out.println("Algo salió mal ");
-        }finally{
-            scanner.close();
-        }
         loa.g2_delay11(11,8);
         loa.g2_delay12(20);
         
