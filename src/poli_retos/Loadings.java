@@ -59,6 +59,9 @@ public class Loadings {
                 ' ', ' ', ']' };
 
         for (int i = 1; i < simbolos.length - 2; i++) {
+            if(i>1){
+                simbolos[i-1]=' ';
+                }
             simbolos[i] = s;
 
             StringBuilder barra = new StringBuilder();
