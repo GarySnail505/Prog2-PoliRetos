@@ -48,7 +48,7 @@ public class SeriesCaracteres {
         }
         System.out.println("  ");
     }
-}
+
     
     // g2_serieC03
     public void g2_serieC03() {
@@ -151,6 +151,5 @@ public class SeriesCaracteres {
             numeroRepeticiones += 2;
         }
     }
-
-    // serie C09
 }
+    // serie C09

@@ -21,7 +21,7 @@ public class Recursividad {
         } else {
             System.out.println(numero);
             if (numero > 0) {
-                g2_CuentaRegresiva(numero - 1);
+                g2_recursividad_06(numero - 1);
             }
         }
     }
