@@ -111,6 +111,7 @@ public class App {
 
         rec.g2_recursividad04();
         rec.g2_recursividad_06(6);
+        rec.g2_recursividad_05();
 
         // 8. Autómatas
         Automata03 automata03 = new Automata03();
