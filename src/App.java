@@ -7,6 +7,8 @@ import poli_retos.CadenasCaracteres;
 import poli_retos.Arrays;
 import poli_retos.Loadings;
 import poli_retos.Recursividad;
+import poli_retos.Automatas.Automata03;
+import poli_retos.Automatas.Automata04;
 import poli_retos.Automatas.Automata06;
 
 public class App {
@@ -18,6 +20,8 @@ public class App {
         Arrays arr = new Arrays();
         Loadings loa = new Loadings();
         Recursividad rec = new Recursividad();
+        Automata03 aut03 = new Automata03();
+        Automata04 aut04 = new Automata04();
         Scanner sc = new Scanner(System.in);
         
         // 1. Series Numéricas
@@ -87,9 +91,6 @@ public class App {
         loa.g2_loading01();
         loa.g2_loading02();
         loa.g2_loading03();
-        loa.g2_loading04(); 
-        loa.g2_loading05();
-        loa.g2_loading06();
         loa.g2_barra07();
         loa.g2_nombre08();
         loa.g2_delay11(11,8);
@@ -111,6 +112,9 @@ public class App {
         String clave = scanner.nextLine();
         automata.validar(clave);
         
+        aut03.g2_automata3();
+        aut04.g2_automata4();
+
         System.out.println("Ingrese la secuencia a validar (use '-' como separador entre caracteres): ");
         String input = sc.nextLine();
         Automata06 automata06 = new Automata06();
