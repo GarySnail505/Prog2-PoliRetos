@@ -28,6 +28,7 @@ public class SeriesNumericas {
                 System.out.print(b + " ");
             }
         }
+        System.out.println("");
     }
 
     public void g2_serieN02() {
@@ -41,6 +42,7 @@ public class SeriesNumericas {
             else
                 System.out.print(0+" ");
         }
+        System.out.println("");
     }
 
     public void g2_serieN03() {
@@ -49,7 +51,29 @@ public class SeriesNumericas {
         c = 1;
         repeticiones = 0;
 
-        System.out.print("\n- Serie N03.\n");
+        System.out.print("\n\n- Serie N03.\n");
+
+        while (repeticiones < tamanio) {
+            repeticiones = repeticiones + 2;
+
+            System.out.print(a + "/" + c + " ");
+            b = b + a;
+            a = a + b;
+            c = c + 2;
+            if (repeticiones <= tamanio) {
+                System.out.print(b + "/" + c + " ");
+            }
+            c = c + 2;
+        }
+        System.out.println("");
+    }
+
+    public void g2_serie04() {
+        a = 1;
+        b = 0;
+        c = 2;
+        repeticiones = 0;
+        System.out.print("\n\n- Serie 04.\n  ");
 
         while (repeticiones < tamanio) {
             repeticiones = repeticiones + 2;
@@ -65,56 +89,14 @@ public class SeriesNumericas {
         }
     }
 
-    public void g2_serieN04 () {
-        int numerador1 = 0;
-        int numerador2 = 1;
-        int denominador = 2;
-        System.out.println("\n- Serie N04.\n");
-        
-        for (int i = 0; i < cantidadTerminos; i++) {
-            Fraccion fraccionActual = new Fraccion(numerador1, denominador);
-            System.out.println(fraccionActual);
-            int siguiente = numerador1 + numerador2;
-            numerador1 = numerador2;
-            numerador2 = siguiente;
-            denominador += 2;
-        }
-    }    
-    static class Fraccion {
-        private int numerador;
-        private int denominador;
-    
-        public Fraccion(int numerador, int denominador) {
-            this.numerador = numerador;
-            this.denominador = denominador;
-        }
-    
-        public int getDenominador() {
-            return denominador;
-        }
-    
-        public int getNumerador() {
-            return numerador;
-        }
-    
-        @Override
-        public String toString() {
-            return numerador + "/" + denominador;
-        }
-    }
+    public void g2_serie05() {
+        System.out.print("\n\n- Serie 05\n  ");
 
-    public void g2_serieN05() {
-        List<Integer> primos = new ArrayList<>();
-        int numero = inicio;
-        System.out.println("\n- Serie N05.\n");
-        while (primos.size() < cantidadTerminos) {
+        for (int contador = 0, numero = 2; contador < tamanio; numero++) {
             if (esPrimo(numero)) {
-                primos.add(numero);
+                System.out.print(numero + " ");
+                contador++;
             }
-            numero++;
-        }
-        for (int primo : primos) {
-            System.out.println(primo);
         }
     }
     private boolean esPrimo(int num) {
@@ -124,6 +106,7 @@ public class SeriesNumericas {
         }
         return true;
     }
+
 
     public void g2_serieN06() {
         System.out.println("\n- Serie N06.\n");

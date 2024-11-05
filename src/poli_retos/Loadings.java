@@ -202,6 +202,7 @@ public class Loadings {
             Thread.currentThread().interrupt();
         }
     }
+    
     public void g2_loading12(int anchoPantalla) {
         int delayTime = 100;
         for (int i = 0; i < anchoPantalla; i++) {
