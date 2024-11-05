@@ -6,41 +6,110 @@ import java.util.Random;
 
 public class Loadings {
 
-    public static void g2_barra07() throws InterruptedException{
+    public void g2_loading01() {
+        char[] simbolos = { '\\', '|', '/', '|' };
+
+        for (int i = 0; i < 100; i++) {
+            char simbolo = simbolos[i % simbolos.length];
+            System.out.print("\r" + simbolo + "Cargando..." + i + "%");
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\rCarga completa: 100%\n");
+    }
+
+    public void g2_loading2() {
+        System.out.println("Ingrese el símbolo que desea para la carga: ");
+        Scanner sc = new Scanner(System.in);
+        String lectura = sc.next();
+        char s = lectura.charAt(0);
+        char[] simbolos = { '[', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+                ' ', ' ', ']' };
+
+        for (int i = 1; i < simbolos.length - 2; i++) {
+            simbolos[i] = s;
+
+            StringBuilder barra = new StringBuilder();
+            for (char simbolo : simbolos) {
+                barra.append(simbolo);
+            }
+            System.out.print("\r" + barra + " " + (float) (i * 5.56) + "%");
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\rCarga completa: 100%             ");
+    }
+
+    public void g2_loading3() {
+        System.out.println("Ingrese el símbolo que desea para la carga: ");
+        Scanner sc = new Scanner(System.in);
+        String lectura = sc.next();
+        char s = lectura.charAt(0);
+        char[] simbolos = { '[', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+                ' ', ' ', ']' };
+
+        for (int i = 1; i < simbolos.length - 2; i++) {
+            simbolos[i] = s;
+
+            StringBuilder barra = new StringBuilder();
+            for (char simbolo : simbolos) {
+                barra.append(simbolo);
+            }
+            System.out.print("\r" + barra + " " + (float) (i * 5.56) + "%");
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\rCarga completa: 100%             ");
+    }
+
+
+    public static void g2_barra07() throws InterruptedException {
         int total = 20;
         System.out.println("Cargando...");
         System.out.print("  [");
-        String[] puntas = {"\\", "|", "//", "-", "|"};
+        String[] puntas = { "\\", "|", "//", "-", "|" };
 
-        for(int i = 0; i <= total; i++){
+        for (int i = 0; i <= total; i++) {
             Thread.sleep(1000);
 
-            if (i < total){
+            if (i < total) {
                 System.out.print("=");
-            }else{
-                System.out.print(puntas[i%puntas.length]);
+            } else {
+                System.out.print(puntas[i % puntas.length]);
             }
             int porcentaje = (i * 100) / total;
-            System.out.print(" ]"+porcentaje+"%\r");
+            System.out.print(" ]" + porcentaje + "%\r");
         }
         System.out.print(" ] 100%");
     }
 
-    public static void g2_nombre08(String nombre) throws InterruptedException{
+    public static void g2_nombre08(String nombre) throws InterruptedException {
         int total = nombre.length();
         System.out.println("Cargando...");
         System.out.print("  [");
 
-        for(int i = 0; i <= total; i++){
+        for (int i = 0; i <= total; i++) {
             Thread.sleep(1000);
             System.out.print(nombre.charAt(i));
-            int porcentaje = ((i+1) * 100) / total;
-            System.out.print(nombre+" ]"+porcentaje+"%\r");
+            int porcentaje = ((i + 1) * 100) / total;
+            System.out.print(nombre + " ]" + porcentaje + "%\r");
         }
         System.out.println(" ] 100%");
-        System.out.println(" [ "+nombre+" ] 100%");
+        System.out.println(" [ " + nombre + " ] 100%");
     }
-    
+
     // Delay 11
     public void delay(int milliseconds) {
         try {
@@ -60,7 +129,7 @@ public class Loadings {
         int[] alturas = new int[numBarras];
 
         for (int i = 0; i < numBarras; i++) {
-            alturas[i] = random.nextInt(alturaMaxima + 1); 
+            alturas[i] = random.nextInt(alturaMaxima + 1);
         }
 
         for (int nivel = alturaMaxima; nivel >= 0; nivel--) {
@@ -75,10 +144,10 @@ public class Loadings {
             delay(200); // Pausa entre cada línea de la animación
         }
     }
-    //Delay 12
+    // Delay 12
 
     public void g2_delay12(int anchoPantalla) {
-        int delayTime = 100; 
+        int delayTime = 100;
         for (int i = 0; i < anchoPantalla; i++) {
             limpiarPantalla();
             imprimirFigura(i);
@@ -94,9 +163,9 @@ public class Loadings {
 
     public void imprimirFigura(int espacios) {
         String figura[] = {
-            "   \\\\| | |//   ",
-            "    ( > < )    ",
-            " ooO-(_)-Ooo "
+                "   \\\\| | |//   ",
+                "    ( > < )    ",
+                " ooO-(_)-Ooo "
         };
 
         for (String linea : figura) {
