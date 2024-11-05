@@ -77,7 +77,7 @@ public class Loadings {
     }
 
 
-    public static void g2_barra07() throws InterruptedException {
+    public void g2_barra07() throws InterruptedException {
         int total = 20;
         System.out.println("Cargando...");
         System.out.print("  [");
@@ -97,7 +97,13 @@ public class Loadings {
         System.out.print(" ] 100%");
     }
 
-    public static void g2_nombre08(String nombre) throws InterruptedException {
+    public void g2_nombre08() throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n- Serie S07.");
+        System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
+
+        String nombre = scanner.nextLine();
+
         int total = nombre.length();
         System.out.println("Cargando...");
         System.out.print("  [");

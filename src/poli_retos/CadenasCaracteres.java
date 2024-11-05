@@ -7,7 +7,13 @@ public class CadenasCaracteres {
     String vocales = "a e i o u";
     String consonantes = "b c d f g h j k l m n p q r s t v w x y z";
 
-    public void g2_serieCC01(String palabra) {
+    public void g2_serieCC01() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n- Serie S01.");
+        System.out.print("Ingrese una frase para contar sus vocales:\n  ");
+
+        String palabra = scanner.nextLine();
+
         System.out.println("\nFrase o palabra ingresada:");
         int contadorVocales = 0;
         palabra = palabra.toLowerCase();
@@ -21,7 +27,13 @@ public class CadenasCaracteres {
         System.out.println("La palabra o frase tiene: " + contadorVocales + " vocales.");
     }
 
-    public void g2_serieCC02(String palabra) {
+    public void g2_serieCC02() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n- Serie S02.");
+        System.out.print("Ingrese una palabra o frase para contar sus letras':\n  ");
+
+        String palabra = scanner.nextLine();
+
         int contadorLetras = 0;
         System.out.println("\nFrase o palabra ingresada: " + palabra);
         for (int i = 0; i < palabra.length(); i++) {

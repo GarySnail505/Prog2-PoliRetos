@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Arrays {
 
-    public void Array01() {
+    public void g2_array01() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese una frase con múltiples palabras:");
         String frase = scanner.nextLine();
@@ -40,7 +40,13 @@ public class Arrays {
     //Array 02
 
 
-    public static void g2_arrays03(String nombre) {
+    public void g2_arrays03() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n- Array 03.");
+        System.out.print("\nIngrese su nombre':\n  ");
+
+        String nombre = scanner.nextLine();
+
         System.out.println("\nPlano de coordenadas para la función f(x) = 2x:");
         int ejeY = nombre.length(); 
         for (int y = 0; y <= ejeY; y++) {

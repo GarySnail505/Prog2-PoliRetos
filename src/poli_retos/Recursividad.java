@@ -38,15 +38,13 @@ public class Recursividad {
         }
     }
 
-    public static void g2_recursividad_06(int numero) {
+    public void g2_recursividad_06(int numero) {
         if (numero < 0) {
-            System.out.println("No válido");
+            return;
         } else {
             System.out.println(numero);
-            if (numero > 0) {
-                g2_recursividad_06(numero - 1);
-            }
+            g2_recursividad_06(numero - 1);
         }
     }
-
 }
+
