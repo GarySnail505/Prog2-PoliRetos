@@ -66,7 +66,8 @@ public class App {
         // 4. Cadena Caracteres
 
         cc.g2_serieCC01();
-        cc.g2_serieCC01();
+        cc.g2_serieCC02();
+        
         cc.g2_serieS05();
         cc.g2_serieS06();
         cc.g2_serieS07();
