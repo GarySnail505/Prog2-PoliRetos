@@ -5,43 +5,43 @@ public class Automata06 {
         final String alfabeto = "a-c-e-f-h-i-l-o-r-s- -(-)- ";
         final int er = -1,          
                   e1 = 100, // if()
-                  e2 = 200, // else()
-                  e3 = 300, // ifelse()
-                  e4 = 400, // foreach()
-                  e5 = 500, // for
+                  e2 = 200, // ifelse()
+                  e3 = 300, // else()
+                  e4 = 400, // for()
+                  e5 = 500, // foreache()
                 mt[][] ={//  a     c     e     f     h     i     l      o    r     s    " "    (     )    enter  esp.
-                            {er   ,er   ,2    ,3    ,er   ,1    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q0
-                           ,{er   ,er   ,er   ,4    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q1
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,5    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q2
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,6    ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q3
-                           ,{er   ,er   ,7    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,8    ,9    ,er   ,er   ,er}//q4
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,11   ,er   ,er   ,er   ,er   ,er}//q5
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,12   ,er   ,er   ,er   ,er   ,er   ,er}//q6
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,10   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q7
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,9    ,er   ,er   ,er}//q8
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,13   ,er   ,er}//q9
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,14   ,er   ,er   ,er   ,er   ,er}//q10
-                           ,{er   ,er   ,15   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q11
-                           ,{er   ,er   ,17   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,31   ,30   ,er   ,er   ,er}//q12
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e1   ,e1}//q13
-                           ,{er   ,er   ,19   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q14
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,16   ,20   ,er   ,er   ,er}//q15
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,20   ,er   ,er   ,er}//q16
-                           ,{18   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q17
-                           ,{er   ,21   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q18
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,22   ,23   ,er   ,er   ,er}//q19
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,24   ,er   ,er}//q20
-                           ,{er   ,er   ,er   ,er   ,26   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q21
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,23   ,er   ,er   ,er}//q22
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,25   ,er   ,er}//q23
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e2   ,e2}//q24
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e3   ,e3}//q25
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,28   ,27   ,er   ,er   ,er}//q26
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,29   ,er   ,er}//q27
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,27   ,er   ,er}//q28
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e4   ,e4}//q29
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,32   ,er   ,er}//q30
-                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,30   ,er   ,er   ,er}//q31
+                            {er   ,er   ,13   ,30   ,er   ,1    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q0
+                           ,{er   ,er   ,er   ,2    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q1
+                           ,{er   ,er   ,6    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,3    ,4    ,er   ,er   ,er}//q2
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,4    ,er   ,er   ,er}//q3
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,5    ,er   ,er}//q4
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e1   ,e1}//q5
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,7    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q6
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,8    ,er   ,er   ,er   ,er   ,er}//q7
+                           ,{er   ,er   ,9    ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q8
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,10   ,11   ,er   ,er   ,er}//q9
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,11   ,er   ,er   ,er}//q10
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,12   ,er   ,er}//q11
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e2   ,e2}//q12
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,14   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q13
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,15   ,er   ,er   ,er   ,er   ,er}//q14
+                           ,{er   ,er   ,16   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q15
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,17   ,18   ,er   ,er   ,er}//q16
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,18   ,er   ,er   ,er}//q17
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,19   ,er   ,er}//q18
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e3   ,e3}//q19
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,21   ,er   ,er   ,er   ,er   ,24   ,er   ,er}//q20
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,22   ,er   ,er   ,er   ,er   ,er   ,er}//q21
+                           ,{er   ,er   ,26   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,23   ,24   ,er   ,er   ,er}//q22
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,24   ,er   ,er   ,er}//q23
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,25   ,er   ,er}//q24
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e4   ,e4}//q25
+                           ,{27   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,28   ,27   ,er   ,er   ,er}//q26
+                           ,{er   ,28   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q27
+                           ,{er   ,er   ,er   ,er   ,29   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er}//q28
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,30   ,31   ,er   ,er   ,er}//q29
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,31   ,er   ,er   ,er}//q30
+                           ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,32   ,er   ,er}//q31
                            ,{er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,er   ,e5   ,e5}//q32
                         };
 
@@ -55,9 +55,14 @@ public class Automata06 {
         }
 
         @SuppressWarnings("resource")
-        public void validarSecuencia(String input) {
+        public void validarSecuencia() {
+            System.out.print("\n- Automata A04.\n");
+            System.out.println("Ingrese el número que desea (utilizando el . para separar decimales): ");
+            int n = 0;
+            Scanner sc = new Scanner(System.in);
+            String lectura = sc.nextLine();
             int q = 0;
-            Scanner w = new Scanner(input).useDelimiter("-");
+            Scanner w = new Scanner(lectura).useDelimiter("-");
             for(int indexAlfa = 0; w.hasNext(); ){
                 indexAlfa = getIndexAlfabeto(w.next());
                 if(indexAlfa < 0 || mt[q][indexAlfa] == er)

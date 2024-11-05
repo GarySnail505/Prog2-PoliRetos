@@ -1,6 +1,7 @@
 package Menu;
 import poli_retos.*;
 import java.util.Scanner;
+import poli_retos.Automatas.*;
 
 public class menu {
     public String frase;
@@ -205,6 +206,36 @@ public class menu {
         System.out.println("5. Validacion bucles");
         System.out.println("6. Validacion clave");
         System.out.println("7. Salir");
-    }
+        opcion = teclado.nextInt();
+        teclado.nextLine();
+
+        switch (opcion) {
+            case 1:{
+                Automata01 automata01 = new Automata01();
+                automata01.validar(); break;
+            }
+            case 2:{
+                Automata02 automata02 = new Automata02();
+                automata02.validar(); break;
+            }
+            case 3:{
+                Automata03 automata03 = new Automata03();
+                automata03.g2_automata3(); break;
+            }
+            case 4:{
+                Automata04 automata04 = new Automata04();
+                automata04.g2_automata4(); break;
+            }
+            case 5:{
+
+            }
+            case 6:{
+                Automata06 automata06 = new Automata06();
+                automata06.validarSecuencia(); break;
+            }
+            default:
+                break;
+            }
+            }
 
 }
