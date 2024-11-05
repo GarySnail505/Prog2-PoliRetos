@@ -59,6 +59,9 @@ public class Loadings {
                 ' ', ' ', ']' };
 
         for (int i = 1; i < simbolos.length - 2; i++) {
+            if (i > 1) {
+                simbolos[i - 1] = ' ';
+            }
             simbolos[i] = s;
 
             StringBuilder barra = new StringBuilder();
@@ -75,8 +78,9 @@ public class Loadings {
         }
         System.out.println("\rCarga completa: 100%             ");
     }
+
     public static void g2_loading04() throws InterruptedException {
-        String[] signos = {"0oo", "o0o", "oo0"};
+        String[] signos = { "0oo", "o0o", "oo0" };
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
@@ -155,7 +159,7 @@ public class Loadings {
     public void g2_nombre08() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nIngresa un nombre y un apellido: ");
-        String nombre=scanner.nextLine();
+        String nombre = scanner.nextLine();
 
         int total = nombre.length();
         System.out.println("Cargando...");
