@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.Random;
 
 public class Loadings {
-
     public void g2_loading01() {
         char[] simbolos = { '\\', '|', '/', '|' };
         System.out.print("\n- Serie l01.\n");
@@ -14,7 +13,7 @@ public class Loadings {
             System.out.print("\r" + simbolo + "Cargando..." + i + "%");
 
             try {
-                Thread.sleep(500);
+                Thread.sleep(150);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

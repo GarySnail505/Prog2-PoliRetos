@@ -12,7 +12,7 @@ public class menu {
             tamanio,
             numero_1,
             numero_2,
-            opcion=0,
+            opcion = 0,
             cuadrado = 10;
     Scanner teclado = new Scanner(System.in);
 
@@ -34,7 +34,7 @@ public class menu {
     public void gr2_presentacion() {
 
         do {
-            System.out.println("\u001B[34m" + "\n\t Menu"+"\u001B[37m");
+            System.out.println("\u001B[34m" + "\n\t Menu" + "\u001B[37m");
             System.out.println("1. Series numericas y de caracteres");
             System.out.println("2. Figuras");
             System.out.println("3. Cadena de caracteres");
@@ -43,10 +43,10 @@ public class menu {
             System.out.println("6. Recursion");
             System.out.println("7. Automatas");
             System.out.println("8. Salir");
-                opcion = teclado.nextInt();
-                teclado.nextLine();
-                switch (opcion) {
-                    case 1: {
+            opcion = teclado.nextInt();
+            teclado.nextLine();
+            switch (opcion) {
+                case 1: {
                     System.out.println("Ingrese la cantidad de terminos");
                     terminos=teclado.nextInt();
                     SeriesNumericas serie_numericas= new SeriesNumericas(terminos);
