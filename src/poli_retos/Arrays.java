@@ -1,6 +1,44 @@
 package poli_retos;
 
+import java.util.Scanner;
+
 public class Arrays {
+
+    public void Array01() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una frase con múltiples palabras:");
+        String frase = scanner.nextLine();
+        
+        String[] palabras = frase.split(" ");
+        int[] porcentajes = new int[palabras.length];
+        
+        System.out.println("Ingrese los porcentajes de carga para cada palabra (separados por comas):");
+        String porcentajesStr = scanner.nextLine();
+        String[] porcentajesArr = porcentajesStr.split(",");
+        
+        for (int i = 0; i < porcentajes.length; i++) {
+            porcentajes[i] = Integer.parseInt(porcentajesArr[i].trim());
+        }
+        
+        for (int i = 0; i < palabras.length; i++) {
+            int longitud = palabras[i].length();
+            int caracteresCargados = (longitud * porcentajes[i]) / 100;
+            
+            System.out.print("[");
+            for (int j = 0; j < longitud; j++) {
+                if (j < caracteresCargados) {
+                    System.out.print("=");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("] " + porcentajes[i] + "% " + palabras[i].substring(0, caracteresCargados));
+            System.out.println();
+        }
+    }
+
+    //Array 02
+
 
     public static void g2_arrays03(String nombre) {
         System.out.println("\nPlano de coordenadas para la función f(x) = 2x:");
@@ -27,7 +65,7 @@ public class Arrays {
         }
         System.out.println();
     }
-    
+
     public void Array04(){
         char nombre[] = {'G','A','R','Y'};
         char apellido[] = {'D','E','F','A','S'};
@@ -49,4 +87,6 @@ public class Arrays {
             System.out.println("");
         }
     }
+
+    //Array 05
 }
