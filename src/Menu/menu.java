@@ -72,7 +72,7 @@ public class menu {
                         break;
                     }
                     case 6: {
-                        gr2_submenu_automatas();
+                        gr2_submenu_recursion();
                         break;
                     }
                     case 7: {
@@ -246,20 +246,66 @@ public class menu {
 
     public void gr2_submenu_recursion() {
         System.out.println("\u001B[34m" + "\n\t Menu_Recursion");
-        System.out.println("1. Factorial y conteo");
-        System.out.println("2. Suma, multiplicacion y potencia");
-        System.out.println("3. Salir");
+        System.out.println("1. Factorial");
+        System.out.println("2. Suma");
+        System.out.println("3. Multiplicacion");
+        System.out.println("4. Potencia");
+        System.out.println("5. Conteo Progresivo");
+        System.out.println("6. Conteo Regresivo");
+        System.out.println("7. Salir");
+
+        opcion = teclado.nextInt();
+        teclado.nextLine();
+        Recursividad rec = new Recursividad();
+
+        switch (opcion) {
+            case 1:{
+                System.out.println("Escribe el numero al que quieres aplicar el factorial:");
+                numero_1 = teclado.nextInt();
+                rec.g2_recursividad_01(numero_1);
+                break;
+            }
+            case 2:{
+                System.out.println("Escribe el primero sumando:");
+                numero_1 = teclado.nextInt();
+                System.out.println("Escribe el segundo sumando:");
+                numero_2 = teclado.nextInt();
+                rec.g2_recursividad_02(numero_1, numero_2);
+                break;
+            }
+            case 3:{
+                break;
+            }
+            case 4:{
+                rec.g2_recursividad04();
+                break;
+            }
+            case 5:{
+                rec.g2_recursividad_05();
+                break;
+            }
+            case 6:{
+                System.out.println("Escribe desde que número empieza el conteo regresivo:");
+                numero_1 = teclado.nextInt();
+                rec.g2_recursividad_06(numero_1);
+            }
+            case 7:{
+                gr2_presentacion();
+            }
+            default:
+                break;
+        }
     }
 
     public void gr2_submenu_automatas() {
         System.out.println("\u001B[34m" + "\n\t Menu_Recursion");
-        System.out.println("1. Validar Cadena de caracteres");
-        System.out.println("2. Validar secuencia de numeros");
-        System.out.println("3. Validacion decimal");
-        System.out.println("4. Validacion variables");
-        System.out.println("5. Validacion bucles");
-        System.out.println("6. Validacion clave");
-        System.out.println("7. Salir");
+        System.out.println("1. Automatas para validar: a*b+c");
+        System.out.println("2. Automatas para validar: ab+ca");
+        System.out.println("3. Automatas para validar: a+/b+/c+");
+        System.out.println("4. Crear un compilador para validar si numero decimal");
+        System.out.println("5. Validacion de variables de en java");
+        System.out.println("6. Validacion bucles");
+        System.out.println("7. Validacion de clave");
         opcion = teclado.nextInt();
         teclado.nextLine();
 
@@ -287,9 +333,15 @@ public class menu {
                 Automata06 automata06 = new Automata06();
                 automata06.g2_automata6(); break;
             }
-            default:
+            case 7:{
+                break;
+            }
+            case 8:{
+                gr2_presentacion();
+            }
+            default:{
                 break;
             }
             }
-
+        }
 }
