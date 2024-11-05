@@ -78,18 +78,23 @@ public class Loadings {
         System.out.println("\rCarga completa: 100%             ");
     }
 
-    public void g2_loading04() throws InterruptedException {
+    public void g2_loading04() {
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
             System.out.print(signos[i % signos.length] + " " + (i * 5) + "%\r");
-            Thread.sleep(500);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println("El hilo fue interrumpido.");
+                Thread.currentThread().interrupt(); 
+            }
         }
         System.out.println(signos[1] + " 100%");
     }
-
-    public void g2_loading05() throws InterruptedException {
+    
+    public void g2_loading05() {
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
@@ -105,32 +110,42 @@ public class Loadings {
                 }
             }
             System.out.print("[" + barra + "] " + progress + "%\r");
-            Thread.sleep(500);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println("El hilo fue interrumpido.");
+                Thread.currentThread().interrupt(); 
+            }
         }
         System.out.println("[====================] 100%");
     }
 
-    public void g2_loading06() throws InterruptedException {
+    public void g2_loading06() {
         int total = 20;
-        int barLength = 5; // Length of "<=>"
+        int barLength = 5; 
         int progress = 0;
-
+    
         for (int i = 0; i <= total - barLength; i++) {
             System.out.print("[");
-
+    
             for (int j = 0; j < i; j++) {
                 System.out.print(" ");
             }
-
+    
             System.out.print("<=>");
-
+    
             for (int j = 0; j < total - i - barLength; j++) {
                 System.out.print(" ");
             }
-
+    
             progress = (i * 100) / (total - barLength);
             System.out.print("] " + progress + "%\r");
-            Thread.sleep(300);
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                System.out.println("El hilo fue interrumpido.");
+                Thread.currentThread().interrupt(); 
+            }
         }
         System.out.print("[====================] 100%");
     }
