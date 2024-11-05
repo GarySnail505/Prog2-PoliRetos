@@ -1,26 +1,26 @@
 package Menu;
-import poli_retos.*;
 import java.util.Scanner;
 import poli_retos.Automatas.*;
-
+import poli_retos.*;
 public class menu {
     public String frase;
     public String[] nombres = { "Carrillo Cristhian", "Cardena Karina", "Defas Condor", "Diaz Pineda",
             "Guerra Melisa" };
     public String caracter;
+    public String porcentajes;
     public int terminos,
             tamanio,
             numero_1,
             numero_2,
-            opcion=0,
+            opcion = 0,
             cuadrado = 10;
     Scanner teclado = new Scanner(System.in);
 
     public menu() {
-
+        gr2_creditos();
+        gr2_presentacion();
     }
-
-    public void gr2_presentacion() {
+    public void gr2_creditos(){
         System.out.println("\u001B[33m" + "\tCREDITOS");
         for (int indice = 0; indice < 5; indice++) {
             System.out.println("\u001B[34m" + "»" + "\u001B[37m" + "  " + this.nombres[indice]);
@@ -29,8 +29,12 @@ public class menu {
             } catch (Exception e) {
             }
         }
+    }
+
+    public void gr2_presentacion() {
+
         do {
-            System.out.println("\u001B[34m" + "\n\t Menu"+"\u001B[37m");
+            System.out.println("\u001B[34m" + "\n\t Menu" + "\u001B[37m");
             System.out.println("1. Series numericas y de caracteres");
             System.out.println("2. Figuras");
             System.out.println("3. Cadena de caracteres");
@@ -39,10 +43,10 @@ public class menu {
             System.out.println("6. Recursion");
             System.out.println("7. Automatas");
             System.out.println("8. Salir");
-                opcion = teclado.nextInt();
-                teclado.nextLine();
-                switch (opcion) {
-                    case 1: {
+            opcion = teclado.nextInt();
+            teclado.nextLine();
+            switch (opcion) {
+                case 1: {
                     System.out.println("Ingrese la cantidad de terminos");
                     terminos=teclado.nextInt();
                     SeriesNumericas serie_numericas= new SeriesNumericas(terminos);
@@ -64,7 +68,6 @@ public class menu {
                         break;
                     }
                     case 5: {
-                        gr2_submenu_loadings();
                         break;
                     }
                     case 6: {
@@ -92,6 +95,10 @@ public class menu {
         System.out.println("3. Anagrama");
         System.out.println("4. Mayusculas");
         System.out.println("5. Salir");
+        while (!(teclado.hasNextInt())) { 
+            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+            teclado.nextLine();
+        }
         opcion = teclado.nextInt();
         teclado.nextLine();
                 switch (opcion) {
@@ -109,7 +116,7 @@ public class menu {
                         CadenasCaracteres vocales_letras=new CadenasCaracteres(frase,caracter);
                         break;
                     }
-                    case 3: {
+                    case 3: { //////
                             String palabra;
                             int contador = 1;
                             boolean ingresa = false;
@@ -155,39 +162,73 @@ public class menu {
                         break;
                     }
                 }
-
     }
 
     public void gr2_submenu_arrays() {
+        int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Arrays");
         System.out.println("1. Barra de carga");
         System.out.println("2. Iniciales del nombre");
         System.out.println("3. Matriz");
         System.out.println("4. Salir");
-        
+        while (!(teclado.hasNextInt())) { 
+            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+            teclado.nextLine();
+        }
+        opcion = teclado.nextInt();
+        teclado.nextLine();
+                switch (opcion) {
+                    case 1: {
+                                System.out.println("Ingrese su nombre completo");
+                                frase=teclado.nextLine();
+                                System.out.println("Ingrese los porcentajes de presentacion de cada palabra");
+                                porcentajes=teclado.nextLine();
+                                Arrays barra_de_carga=new Arrays(frase,porcentajes);
+                                
+                    }
+                    case 2: {
+                        System.out.println("Ingrese su nombre completo:");
+                        frase=teclado.nextLine();
+                        System.out.println("Ingrese el tamaño:");
+                        while (!(teclado.hasNextInt())) { 
+                            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                            teclado.nextLine();
+                        }
+                        tamanio=teclado.nextInt();
+                        teclado.nextLine();
+                        System.out.println("El caracter que desea para las iniciales de su nombre:");
+                        caracter=teclado.nextLine();
+                        Arrays barra_de_carga=new Arrays(tamanio,frase,caracter.charAt(0));
+                    }
+                    case 3: { 
+                        System.out.println("Ingrese su nombre completo:");
+                        frase=teclado.nextLine();
+                        Arrays matriz_=new Arrays(frase);
+                        break;
+                    }
+                    case 4: {
+                        System.out.println("Ingrese una frase"); 
+                            frase=teclado.nextLine();
+                        CadenasCaracteres intercalar=new CadenasCaracteres(frase,1);
+                        break;
+                    }
+                    case 5: {
+                        gr2_presentacion();
+                        break;
+                    }
+                    default: {
+                        System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 5");
+                        break;
+                    }
+                }
     }
 
     public void gr2_submenu_loadings() {
-        Loadings loa = new Loadings();
-        loa.g2_loading01();
-        loa.g2_loading02();
-        loa.g2_loading03();
-        //loa.g2_loading04();
-        //loa.g2_loading05();
-        //loa.g2_loading06();
-        //loa.g2_loading07();
-        //loa.g2_loading08();
-        System.out.println("\n- Serie l11.\n");
-        System.out.println("¿Cuantas barras quieres en tu Barras de Sonido?: ");
-        numero_1 = teclado.nextInt();
-        System.out.println("¿Del 1 al 10, qué tan grande quieres que sean las barras?: ");
-        cuadrado = teclado.nextInt();
-        loa.g2_loading11(numero_1, cuadrado);
-
-        System.out.print("\n- Serie l12.\n");
-        System.out.println("¿Del 1 al 30, qué tanto quieres que se mueva por el ancho de la pantalla?: ");
-        cuadrado = teclado.nextInt();
-        loa.g2_loading12(cuadrado);
+        System.out.println("\u001B[34m" + "\n\t Menu_Loadings");
+        System.out.println("1. Barra de carga");
+        System.out.println("2. Nombre");
+        System.out.println("3. Archivo");
+        System.out.println("4. Salir");
     }
 
     public void gr2_submenu_recursion() {
