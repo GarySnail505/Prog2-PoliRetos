@@ -33,7 +33,8 @@ public class App {
 
         // 2. Series Caracteres
         pk.g2_lectorDatosC01();
-        
+        pk.g2_serieC01();
+        pk.g2_serieC02();
         pk.g2_serieC03();
         pk.g2_serieC04();
         pk.g2_serieC05();
@@ -48,7 +49,10 @@ public class App {
         fig.g2_serieF02();
         fig.g2_serieF03();
         fig.g2_serieF04();
-        
+        fig.g2_serieF9();
+        fig.g2_serieF10();
+        fig.g2_serieF11();
+        fig.g2_serieF12();
         fig.g2_serieF13();
         fig.g2_serieF14();
         fig.g2_serieF15();
@@ -58,6 +62,10 @@ public class App {
         fig.g2_crearFigura19();
 
         // 4. Cadena Caracteres
+
+        cc.g2_serieCC01();
+        cc.g2_serieCC02();
+        
         cc.g2_serieS03();
         cc.g2_serieS04();
         cc.g2_serieS05();
@@ -68,11 +76,16 @@ public class App {
 
 
         // 5. Arrays
+        arr.Array01();
+        
+        arr.g2_arrays03();
         arr.Array04();
         arr.g2_array05();
 
 
         // 6. Loadings
+        loa.g2_barra07();
+        loa.g2_nombre08();
         loa.g2_delay11(11,8);
         loa.g2_delay12(20);
 
@@ -81,8 +94,16 @@ public class App {
         // 7. Recursividad
         System.out.println(rec.g2_recursividad_01(5));
         System.out.println(rec.g2_recursividad_02(2, 5));
+        System.out.println(rec.g2_recursividad_06());
 
         // 8. Autómatas
+        Automatas automata = new Automatas();
+        System.out.println("\nIngrese una clave ");
+        System.out.println("La clave debe tener mínimo 8 dígitos y por lo menos:");
+        System.out.println("- Una letra mayúscula, una letra minúscula, un número y un carácter especial.");
+        String clave = scanner.nextLine();
+        automata.validar(clave);
+        
         System.out.println("Ingrese la secuencia a validar (use '-' como separador entre caracteres): ");
         String input = sc.nextLine();
         Automata06 automata06 = new Automata06();
