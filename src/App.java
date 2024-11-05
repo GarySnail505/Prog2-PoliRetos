@@ -103,6 +103,8 @@ public class App {
         loa.g2_loading06();
         loa.g2_loading07();
         loa.g2_loading08();
+
+        
         loa.g2_loading11(11,8);
         loa.g2_loading12(20);
         
@@ -113,8 +115,8 @@ public class App {
         System.out.println(rec.g2_recursividad_02(2, 5));
 
         rec.g2_recursividad04();
-        rec.g2_recursividad_06(6);
         rec.g2_recursividad_05();
+        rec.g2_recursividad_06(6);
 
         // 8. Autómatas
         Automata01 automata01 = new Automata01(); 
@@ -128,6 +130,9 @@ public class App {
 
         Automata04 automata04 = new Automata04();
         automata04.g2_automata4();
+
+
+        
 
         Automata07 automata07 = new Automata07();        
         automata07.validar();
