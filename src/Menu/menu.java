@@ -68,12 +68,15 @@ public class menu {
                         break;
                     }
                     case 5: {
+                        gr2_submenu_loadings();
                         break;
                     }
                     case 6: {
+                        gr2_submenu_automatas();
                         break;
                     }
                     case 7: {
+                        gr2_submenu_automatas();
                         break;
                     }
                     case 8: {
@@ -224,11 +227,21 @@ public class menu {
     }
 
     public void gr2_submenu_loadings() {
-        System.out.println("\u001B[34m" + "\n\t Menu_Loadings");
-        System.out.println("1. Barra de carga");
-        System.out.println("2. Nombre");
-        System.out.println("3. Archivo");
-        System.out.println("4. Salir");
+        Loadings loa = new Loadings();
+        loa.g2_loading01();
+        loa.g2_loading02();
+        loa.g2_loading03();
+        loa.g2_loading04();
+        loa.g2_loading05();
+        loa.g2_loading06();
+        //loa.g2_loading07();
+        //loa.g2_loading08();
+        
+        numero_1 = teclado.nextInt();
+        loa.g2_loading11(numero_1, cuadrado);
+
+        cuadrado = teclado.nextInt();
+        loa.g2_loading12(cuadrado);
     }
 
     public void gr2_submenu_recursion() {
@@ -268,11 +281,11 @@ public class menu {
                 automata04.g2_automata4(); break;
             }
             case 5:{
-
+                break;
             }
             case 6:{
                 Automata06 automata06 = new Automata06();
-                automata06.validarSecuencia(); break;
+                automata06.g2_automata6(); break;
             }
             default:
                 break;

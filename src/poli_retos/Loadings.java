@@ -78,12 +78,7 @@ public class Loadings {
         System.out.println("\rCarga completa: 100%             ");
     }
 
-<<<<<<< HEAD
-    public void g2_loading04() throws InterruptedException 
- {
-=======
     public void g2_loading04() {
->>>>>>> 8e0e66cb861b0d2e1216b88b3017a5590a6bece7
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("Cargando...");
