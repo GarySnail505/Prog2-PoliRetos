@@ -25,7 +25,9 @@ public class App {
         op.g2_serieN01();
         op.g2_serieN02();
         op.g2_serieN03();
-        
+        op.g2_serieN04();
+        op.g2_serieN05();
+        op.g2_serieN06();
         op.g2_serieN07();
         op.g2_serieN08();
         op.g2_serieN09();
