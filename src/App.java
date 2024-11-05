@@ -7,9 +7,8 @@ import poli_retos.CadenasCaracteres;
 import poli_retos.Arrays;
 import poli_retos.Loadings;
 import poli_retos.Recursividad;
-import poli_retos.Automatas.Automata03;
-import poli_retos.Automatas.Automata04;
 import poli_retos.Automatas.Automata06;
+import poli_retos.Automatas.Automata07;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -20,8 +19,6 @@ public class App {
         Arrays arr = new Arrays();
         Loadings loa = new Loadings();
         Recursividad rec = new Recursividad();
-        Automata03 aut03 = new Automata03();
-        Automata04 aut04 = new Automata04();
         Scanner sc = new Scanner(System.in);
         
         // 1. Series Numéricas
@@ -80,10 +77,10 @@ public class App {
 
 
         // 5. Arrays
-        arr.Array01();
+        arr.g2_array01();
         
         arr.g2_arrays03();
-        arr.Array04();
+        arr.g2_array04();
         arr.g2_array05();
 
 
@@ -91,6 +88,9 @@ public class App {
         loa.g2_loading01();
         loa.g2_loading02();
         loa.g2_loading03();
+        loa.g2_loading04(); 
+        loa.g2_loading05();
+        loa.g2_loading06();
         loa.g2_barra07();
         loa.g2_nombre08();
         loa.g2_delay11(11,8);
@@ -102,19 +102,19 @@ public class App {
         System.out.println(rec.g2_recursividad_01(5));
         System.out.println(rec.g2_recursividad_02(2, 5));
         rec.g2_recursividad04();
-        System.out.println(rec.g2_recursividad_06());
+        rec.g2_recursividad_06(6);
 
         // 8. Autómatas
-        Automatas automata = new Automatas();
+        Automata07 automata07 = new Automata07();
+        System.out.print("\n- Automata 07.");
         System.out.println("\nIngrese una clave ");
         System.out.println("La clave debe tener mínimo 8 dígitos y por lo menos:");
         System.out.println("- Una letra mayúscula, una letra minúscula, un número y un carácter especial.");
+        Scanner scanner = new Scanner(System.in);
         String clave = scanner.nextLine();
-        automata.validar(clave);
-        
-        aut03.g2_automata3();
-        aut04.g2_automata4();
+        automata07.validar(clave);
 
+        
         System.out.println("Ingrese la secuencia a validar (use '-' como separador entre caracteres): ");
         String input = sc.nextLine();
         Automata06 automata06 = new Automata06();

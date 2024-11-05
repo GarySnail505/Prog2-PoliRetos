@@ -72,7 +72,7 @@ public class Arrays {
         System.out.println();
     }
 
-    public void Array04(){
+    public void g2_array04(){
         char nombre[] = {'G','A','R','Y'};
         char apellido[] = {'D','E','F','A','S'};
 

@@ -59,9 +59,6 @@ public class Loadings {
                 ' ', ' ', ']' };
 
         for (int i = 1; i < simbolos.length - 2; i++) {
-            if (i > 1) {
-                simbolos[i - 1] = ' ';
-            }
             simbolos[i] = s;
 
             StringBuilder barra = new StringBuilder();
@@ -78,9 +75,8 @@ public class Loadings {
         }
         System.out.println("\rCarga completa: 100%             ");
     }
-
-    public static void g2_loading04() throws InterruptedException {
-        String[] signos = { "0oo", "o0o", "oo0" };
+    public void g2_loading04() throws InterruptedException {
+        String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
@@ -90,7 +86,7 @@ public class Loadings {
         System.out.println(signos[1] + " 100%");
     }
 
-    public static void g2_loading05() throws InterruptedException {
+    public void g2_loading05() throws InterruptedException {
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
@@ -111,7 +107,7 @@ public class Loadings {
         System.out.println("[====================] 100%");
     }
 
-    public static void g2_loading06() throws InterruptedException {
+    public void g2_loading06() throws InterruptedException {
         int total = 20;
         int barLength = 5; // Length of "<=>"
         int progress = 0;
@@ -139,7 +135,7 @@ public class Loadings {
     public void g2_barra07() throws InterruptedException {
         int total = 20;
         System.out.println("Cargando...");
-        System.out.print("  [===");
+        System.out.print("  [");
         String[] puntas = { "\\", "|", "//", "-", "|" };
 
         for (int i = 0; i <= total; i++) {
@@ -151,14 +147,16 @@ public class Loadings {
                 System.out.print(puntas[i % puntas.length]);
             }
             int porcentaje = (i * 100) / total;
-            System.out.print(" =====]" + porcentaje + "%\r");
+            System.out.print(" ]" + porcentaje + "%\r");
         }
-        System.out.print(" ====================] 100%");
+        System.out.print(" ] 100%");
     }
 
     public void g2_nombre08() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\nIngresa un nombre y un apellido: ");
+        System.out.print("\n- Serie S07.");
+        System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
+
         String nombre = scanner.nextLine();
 
         int total = nombre.length();
