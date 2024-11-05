@@ -37,7 +37,18 @@ public class Arrays {
         }
     }
 
-    //Array 02
+    private void Array02(){
+        for (int filas = 0; filas < tamanio; filas++) {
+            for (int columnas = 0; columnas < tamanio; columnas++) {
+                System.out.print(matriz_letras[0][filas][columnas]);
+            }
+            System.out.print("        ");
+            for (int columnas = 0; columnas < tamanio; columnas++) {
+                System.out.print(matriz_letras[1][filas][columnas]);
+            }
+            System.out.println();
+        }
+}
 
 
     public static void g2_arrays03(String nombre) {

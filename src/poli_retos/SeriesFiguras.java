@@ -1,23 +1,35 @@
 package poli_retos;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import javax.swing.JOptionPane;
-
 public class SeriesFiguras {
-    int a, b, c, i, j, k, tamanio02;
+    int a, b, c, i, j, k, tamanio;
     int cantidadTerminos, numero;
-
-    public void g2_lectorF02() {
-        tamanio02 = Integer
-                .parseInt(JOptionPane.showInputDialog("Ingrese dimension para todas sus series con figuras..."));
+    public SeriesFiguras(int tamanio){
+        this.tamanio=tamanio;
+        g2_serieF01();
+        g2_serieF02();
+        g2_serieF03();
+        g2_serieF04();
+        g2_serieF05();
+        g2_serieF06();
+        g2_serieF07();
+        g2_serieF08();
+        g2_serieF09();
+        g2_serieF10();
+        g2_serieF11();
+        g2_serieF12();
+        g2_serieF13();
+        g2_serieF14();
+        g2_serieF15();
+        g2_serieF16();
+        g2_serieF17();
+        g2_serieF18();
+        g2_serieF19();
     }
-   // g2_SerieF01
     public void g2_serieF01() {
         System.out.print("\n- Serie F01.:\n");
-        for (i = 0; i < tamanio02; i++) {
-            for (j = 0; j < tamanio02; j++) {
-                if (i == 0 || i == tamanio02 - 1 || j == 0 || j == tamanio02 - 1) {
+        for (i = 0; i < tamanio; i++) {
+            for (j = 0; j < tamanio; j++) {
+                if (i == 0 || i == tamanio - 1 || j == 0 || j == tamanio - 1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
@@ -26,18 +38,19 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
+
     // g2_SerieF02
     public void g2_serieF02() {
         System.out.print("\n- Serie F02.:\n");
-        for (i = 0; i < tamanio02; i++) {
-            for (j = 0; j < tamanio02; j++) {
-                if (i == 0 || i == tamanio02 - 1) {
+        for (i = 0; i < tamanio; i++) {
+            for (j = 0; j < tamanio; j++) {
+                if (i == 0 || i == tamanio - 1) {
                     if (j % 2 == 0) {
                         System.out.print("*");
                     } else {
                         System.out.print("+");
                     }
-                } else if (j == 0 || j == tamanio02 - 1) {
+                } else if (j == 0 || j == tamanio - 1) {
                     if (i % 2 == 0) {
                         System.out.print("*");
                     } else {
@@ -50,36 +63,99 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
-    // g2_SerieF03 
+
+    // g2_SerieF03
     public void g2_serieF03() {
         System.out.print("\n- Serie F03.:\n");
-        for (i = 0; i < tamanio02; i++) {
+        for (i = 0; i < tamanio; i++) {
             for (j = 0; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
     }
-    // g2_SerieF04 
-    public void g2_serieF04() { 
-        System.out.print("\n- Serie F04.:\n"); 
-        for (i = 0; i < tamanio02; i++) { 
-            for (j = 0; j < tamanio02 - i - 1; j++) { 
-                System.out.print(" "); 
-            } 
-            for (j = 0; j <= i; j++) { 
-                System.out.print("*"); 
-            } 
-            System.out.println(); 
+
+    // g2_SerieF04
+    public void g2_serieF04() {
+        System.out.print("\n- Serie F04.:\n");
+        for (i = 0; i < tamanio; i++) {
+            for (j = 0; j < tamanio - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 
-    public void g2_serieF9() {
-        System.out.println("\nFigura pirámide:");
-        int anchoBase = cantidadTerminos * 4 - 4; 
+    private void g2_serieF05() {
+        System.out.print("\n- Serie F05.:\n");
+        for (int filas = 0; filas < tamanio; filas++) {
+            for (int columnas = 0; columnas < (tamanio * 2) - 1; columnas++) {
+                if (columnas == (tamanio - 1)
+                        || (columnas <= (tamanio - 1) + filas && columnas >= (tamanio - 1) - filas)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
 
-        for (int i = 1; i <= cantidadTerminos; i++) {
-            int espaciosExteriores = anchoBase - (i - 1) * 4; 
+    private void g2_serieF06() {
+        System.out.print("\n- Serie F06.:\n");
+
+        for (int filas = 1; filas <= tamanio; filas++) {
+            for (int columnas = 1; columnas <= (tamanio * 2) - 1; columnas++) {
+                String caracter = (filas == 1 || (columnas >= filas && columnas <= (tamanio * 2) - filas)) ? "*" : " ";
+                System.out.print(caracter);
+            }
+            System.out.println();
+        }
+    }
+
+    private void g2_serieF07() {
+        System.out.print("\n- Serie F07.:\n");
+
+        int tamanio = 1;
+        int espacios = 1;
+        System.out.println("_");
+        while (tamanio < this.tamanio) {
+            for (int contador = 0; contador < espacios; contador++) {
+                System.out.print(" ");
+            }
+            espacios = espacios + 2;
+            System.out.println("|_");
+            tamanio = tamanio + 1;
+        }
+    }
+
+    private void g2_serieF08() {
+        System.out.print("\n- Serie F08.:\n");
+
+        int espacios = 3;
+        for (int filas = 0; filas < tamanio; filas++) {
+            for (int columnas = 1; columnas < (tamanio * 2); columnas++) {
+                if ((columnas == (tamanio * 2) - 1) && (filas == 0)) {
+                    System.out.print("_");
+                } else if ((columnas == (tamanio * 2) - espacios) && filas != 0) {
+                    System.out.print("_|");
+                    espacios = espacios + 2;
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void g2_serieF09() {
+        System.out.println("\nFigura pirámide:");
+        int anchoBase = tamanio * 4 - 4;
+        for (int i = 1; i <= tamanio; i++) {
+            int espaciosExteriores = anchoBase - (i - 1) * 4;
             int espaciosInteriores = (i - 1) * 4;
             System.out.print(" ".repeat(espaciosExteriores));
             System.out.print("_|");
@@ -90,32 +166,31 @@ public class SeriesFiguras {
             System.out.println("|_");
         }
     }
-
     public void g2_serieF10() {
         System.out.println("\nGradas con signos (+ -):");
 
-        for (int i = 1; i <= cantidadTerminos; i++) {
+        for (int i = 1; i <= tamanio; i++) {
             int espacios = (i - 1) * 4;
 
-                if (i % 2 == 1) {
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("_+_");
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("   |");
-                } else {
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("_-_");
-                    System.out.print(" ".repeat(espacios));
-                    System.out.println("   |");
-                }
+            if (i % 2 == 1) {
+                System.out.print(" ".repeat(espacios));
+                System.out.println("_+_");
+                System.out.print(" ".repeat(espacios));
+                System.out.println("   |");
+            } else {
+                System.out.print(" ".repeat(espacios));
+                System.out.println("_-_");
+                System.out.print(" ".repeat(espacios));
+                System.out.println("   |");
             }
-            System.out.print("   ");
+        }
+        System.out.print("   ");
     }
 
     public void g2_serieF11() {
         System.out.println("\nGradas:");
 
-        for (int i = 1; i <= cantidadTerminos; i++) {
+        for (int i = 1; i <= tamanio; i++) {
             int espacios = (i - 1) * 5;
             String guionesBajos = "_ ".repeat(i);
             System.out.print(" ".repeat(espacios));
@@ -130,18 +205,18 @@ public class SeriesFiguras {
         System.out.println("\nFigura pirámide números:");
 
         for (int i = numero; i >= 1; i--) {
-            for (int j = 1; j <= i; j++){
+            for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
             System.out.println();
         }
     }
-    
+
     // g2_SerieF13
     public void g2_serieF13() {
         j = 1;
         i = 1;
-        k = tamanio02 + 1;
+        k = tamanio + 1;
         System.out.print("\n- Serie F13.:\n");
         while (k >= j) {
             while (j >= i) {
@@ -162,13 +237,13 @@ public class SeriesFiguras {
     // g2_SerieF14
     public void g2_serieF14() {
         a = 0;
-        b = tamanio02;
+        b = tamanio;
 
         System.out.print("\n- Serie F14:\n");
 
-        int[][] matrix = new int[tamanio02][tamanio02];
+        int[][] matrix = new int[tamanio][tamanio];
 
-        for (int i = 0; i < tamanio02; i++) {
+        for (int i = 0; i < tamanio; i++) {
             matrix[i][0] = 1;
             matrix[i][i] = 1;
 
@@ -177,7 +252,7 @@ public class SeriesFiguras {
             }
         }
 
-        for (int i = 0; i < tamanio02; i++) {
+        for (int i = 0; i < tamanio; i++) {
             for (int j = 0; j <= i; j++) {
                 if (j == 0) {
                     while (a < b) {
@@ -195,19 +270,19 @@ public class SeriesFiguras {
 
     // g2_SerieF15
     public void g2_serieF15() {
-        int[][] matrix = new int[tamanio02][tamanio02];
+        int[][] matrix = new int[tamanio][tamanio];
 
         System.out.print("\n- Serie F15.:\n");
-        for (int i = 0; i < tamanio02; i++) {
+        for (int i = 0; i < tamanio; i++) {
             matrix[i][0] = 1;
             matrix[i][i] = 1;
 
             for (int j = 1; j < i; j++) {
-                matrix[i][j] = matrix[i - 1][j - 1] + matrix[i - 1][j]; 
+                matrix[i][j] = matrix[i - 1][j - 1] + matrix[i - 1][j];
             }
         }
 
-        for (int i = 0; i < tamanio02; i++) {
+        for (int i = 0; i < tamanio; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
@@ -220,11 +295,11 @@ public class SeriesFiguras {
 
         System.out.print("\n- Serie F16.\n");
 
-        char[][] matriz = new char[tamanio02][tamanio02];
+        char[][] matriz = new char[tamanio][tamanio];
 
-        for (int i = 0; i < tamanio02; i++) {
-            for (int j = 0; j < tamanio02; j++) {
-                if (i == j || i == (tamanio02 - 1 - j)) {
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio; j++) {
+                if (i == j || i == (tamanio - 1 - j)) {
                     matriz[i][j] = (i % 2 == 0) ? '+' : '-';
                 } else {
                     matriz[i][j] = ' ';
@@ -232,20 +307,20 @@ public class SeriesFiguras {
             }
         }
 
-        for (int i = 0; i < tamanio02; i++) {
-            for (int j = 0; j < tamanio02; j++) {
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio; j++) {
                 System.out.print(matriz[i][j] + "  ");
             }
             System.out.println();
         }
     }
 
-    //Serie F17
-    public void g2_crearFigura17() {
+    // Serie F17
+    public void g2_serieF17() {
         System.out.print("\n- Serie F17:\n");
-        for (int i = 0; i < tamanio02; i++) {
-            for (int j = 0; j < tamanio02; j++) {
-                if (i == j || i == tamanio02 - j - 1) {
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio; j++) {
+                if (i == j || i == tamanio - j - 1) {
                     if (i % 2 == 0) {
                         System.out.print("1");
                     } else {
@@ -259,13 +334,13 @@ public class SeriesFiguras {
             System.out.println();
         }
     }
-    
-    //Serie F18
-    public void g2_crearFigura18() {
+
+    // Serie F18
+    public void g2_serieF18() {
         System.out.print("\n- Serie F18:\n");
-        int[][] matriz = new int[tamanio02][tamanio02];
-        for (int fila = 0; fila < tamanio02; fila++) {
-            for (int columna = 0; columna < tamanio02; columna++) {
+        int[][] matriz = new int[tamanio][tamanio];
+        for (int fila = 0; fila < tamanio; fila++) {
+            for (int columna = 0; columna < tamanio; columna++) {
 
                 if (columna <= fila) {
                     if (!(fila == columna || (fila > 0 && columna == 0))) {
@@ -291,12 +366,12 @@ public class SeriesFiguras {
         }
     }
 
-    //Serie F19
-    public void g2_crearFigura19() {
+    // Serie F19
+    public void g2_serieF19() {
         System.out.print("\n- Serie F19:\n");
-        int[][] matriz = new int[tamanio02][tamanio02];
-        for (int fila = 0; fila < tamanio02; fila++) {
-            for (int columna = 0; columna < tamanio02; columna++) {
+        int[][] matriz = new int[tamanio][tamanio];
+        for (int fila = 0; fila < tamanio; fila++) {
+            for (int columna = 0; columna < tamanio; columna++) {
 
                 if (columna <= fila) {
                     if (!(fila == columna || (fila > 0 && columna == 0))) {
