@@ -76,7 +76,6 @@ public class App {
 
         cc.g2_serieCC01();
         cc.g2_serieCC02();
-        
         cc.g2_serieS03();
         cc.g2_serieS04();
         cc.g2_serieS05();
