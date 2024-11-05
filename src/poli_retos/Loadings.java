@@ -154,11 +154,8 @@ public class Loadings {
 
     public void g2_nombre08() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\nIngresa un nobmre y un apellido: ");
+        System.out.print("\nIngresa un nombre y un apellido: ");
         String nombre=scanner.nextLine();
-        g2_nombre08(nombre);
-
-        String nombre = scanner.nextLine();
 
         int total = nombre.length();
         System.out.println("Cargando...");
