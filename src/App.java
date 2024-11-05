@@ -17,6 +17,7 @@ import poli_retos.Automatas.Automata07;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        
         SeriesNumericas op = new SeriesNumericas();
         SeriesCaracteres pk = new SeriesCaracteres();
         SeriesFiguras fig = new SeriesFiguras();
