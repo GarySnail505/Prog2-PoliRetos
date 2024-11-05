@@ -7,6 +7,8 @@ import poli_retos.CadenasCaracteres;
 import poli_retos.Arrays;
 import poli_retos.Loadings;
 import poli_retos.Recursividad;
+import poli_retos.Automatas.Automata03;
+import poli_retos.Automatas.Automata04;
 import poli_retos.Automatas.Automata06;
 import poli_retos.Automatas.Automata07;
 
@@ -27,6 +29,7 @@ public class App {
         op.g2_serieN02();
         op.g2_serieN03();
         
+
         op.g2_serieN07();
         op.g2_serieN08();
         op.g2_serieN09();
@@ -46,10 +49,13 @@ public class App {
 
         // 3. Series Figuras
         fig.g2_lectorF02();
+
         fig.g2_serieF01();
         fig.g2_serieF02();
         fig.g2_serieF03();
         fig.g2_serieF04();
+
+
         fig.g2_serieF9();
         fig.g2_serieF10();
         fig.g2_serieF11();
@@ -91,20 +97,27 @@ public class App {
         loa.g2_loading04(); 
         loa.g2_loading05();
         loa.g2_loading06();
-        loa.g2_barra07();
-        loa.g2_nombre08();
-        loa.g2_delay11(11,8);
-        loa.g2_delay12(20);
+        loa.g2_loading07();
+        loa.g2_loading08();
+        loa.g2_loading11(11,8);
+        loa.g2_loading12(20);
         
 
 
         // 7. Recursividad
         System.out.println(rec.g2_recursividad_01(5));
         System.out.println(rec.g2_recursividad_02(2, 5));
+
         rec.g2_recursividad04();
         rec.g2_recursividad_06(6);
 
         // 8. Autómatas
+        Automata03 automata03 = new Automata03();
+        automata03.g2_automata3();
+
+        Automata04 automata04 = new Automata04();
+        automata04.g2_automata4();
+
         Automata07 automata07 = new Automata07();        
         automata07.validar();
 

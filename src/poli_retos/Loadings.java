@@ -75,6 +75,7 @@ public class Loadings {
         }
         System.out.println("\rCarga completa: 100%             ");
     }
+
     public void g2_loading04() throws InterruptedException {
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
@@ -132,7 +133,7 @@ public class Loadings {
         System.out.print("[====================] 100%");
     }
 
-    public void g2_barra07() throws InterruptedException {
+    public void g2_loading07() throws InterruptedException {
         int total = 20;
         System.out.println("Cargando...");
         System.out.print("  [");
@@ -152,7 +153,7 @@ public class Loadings {
         System.out.print(" ] 100%");
     }
 
-    public void g2_nombre08() throws InterruptedException {
+    public void g2_loading08() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
@@ -173,21 +174,7 @@ public class Loadings {
         System.out.println(" [ " + nombre + " ] 100%");
     }
 
-    // Delay 11
-    public void delay(int milliseconds) {
-        try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-    }
-
-    public void limpiarPantalla() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
-    public void g2_delay11(int numBarras, int alturaMaxima) {
+    public void g2_loading11(int numBarras, int alturaMaxima) {
         Random random = new Random();
         int[] alturas = new int[numBarras];
 
@@ -207,24 +194,32 @@ public class Loadings {
             delay(200); // Pausa entre cada línea de la animación
         }
     }
-    // Delay 12
 
-    public void g2_delay12(int anchoPantalla) {
+    private void delay(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+    public void g2_loading12(int anchoPantalla) {
         int delayTime = 100;
         for (int i = 0; i < anchoPantalla; i++) {
-            limpiarPantalla();
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             imprimirFigura(i);
             delay(delayTime);
         }
 
         for (int i = anchoPantalla; i >= 0; i--) {
-            limpiarPantalla();
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             imprimirFigura(i);
             delay(delayTime);
         }
     }
 
-    public void imprimirFigura(int espacios) {
+    private static void imprimirFigura(int espacios) {
         String figura[] = {
                 "   \\\\| | |//   ",
                 "    ( > < )    ",
