@@ -151,6 +151,5 @@ public class SeriesCaracteres {
             numeroRepeticiones += 2;
         }
     }
-
-    // serie C09
 }
+    // serie C09

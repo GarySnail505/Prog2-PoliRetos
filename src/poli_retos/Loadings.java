@@ -5,6 +5,42 @@ import java.util.concurrent.TimeUnit;
 import java.util.Random;
 
 public class Loadings {
+
+    public static void g2_barra07() throws InterruptedException{
+        int total = 20;
+        System.out.println("Cargando...");
+        System.out.print("  [");
+        String[] puntas = {"\\", "|", "//", "-", "|"};
+
+        for(int i = 0; i <= total; i++){
+            Thread.sleep(1000);
+
+            if (i < total){
+                System.out.print("=");
+            }else{
+                System.out.print(puntas[i%puntas.length]);
+            }
+            int porcentaje = (i * 100) / total;
+            System.out.print(" ]"+porcentaje+"%\r");
+        }
+        System.out.print(" ] 100%");
+    }
+
+    public static void g2_nombre08(String nombre) throws InterruptedException{
+        int total = nombre.length();
+        System.out.println("Cargando...");
+        System.out.print("  [");
+
+        for(int i = 0; i <= total; i++){
+            Thread.sleep(1000);
+            System.out.print(nombre.charAt(i));
+            int porcentaje = ((i+1) * 100) / total;
+            System.out.print(nombre+" ]"+porcentaje+"%\r");
+        }
+        System.out.println(" ] 100%");
+        System.out.println(" [ "+nombre+" ] 100%");
+    }
+    
     // Delay 11
     public void delay(int milliseconds) {
         try {

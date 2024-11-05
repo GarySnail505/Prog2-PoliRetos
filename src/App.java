@@ -58,18 +58,18 @@ public class App {
         fig.g2_crearFigura19();
 
         // 4. Cadena Caracteres
-        
+        cc.g2_serieS03();
+        cc.g2_serieS04();
         cc.g2_serieS05();
         cc.g2_serieS06();
         cc.g2_serieS07();
         cc.g2_serieS08();
-        cc.g2_serieS03();
-        cc.g2_seriesS04();
+        
 
 
         // 5. Arrays
         arr.Array04();
-        
+        arr.g2_array05();
 
 
         // 6. Loadings
