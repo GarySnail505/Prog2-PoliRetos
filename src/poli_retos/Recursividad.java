@@ -38,6 +38,24 @@ public class Recursividad {
         }
     }
 
+    public void g2_recursividad_05() {
+        System.out.print("\n- Serie R05.\n");
+        System.out.println("Ingrese el número 'n' para realizar el conteo progresivo: ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("Conteo progresivo hasta " + n + ":");
+        conteoProgresivo(n, 1);
+    }
+
+    public void conteoProgresivo(int n, int current) {
+        if (current > n) {
+            return;
+        } else {
+            System.out.println(current);
+            conteoProgresivo(n, current + 1);
+        }
+    }
+
     public void g2_recursividad_06(int numero) {
         if (numero < 0) {
             return;
