@@ -7,8 +7,11 @@ import poli_retos.CadenasCaracteres;
 import poli_retos.Arrays;
 import poli_retos.Loadings;
 import poli_retos.Recursividad;
+import poli_retos.Automatas.Automata01;
+import poli_retos.Automatas.Automata02;
 import poli_retos.Automatas.Automata03;
 import poli_retos.Automatas.Automata04;
+
 import poli_retos.Automatas.Automata06;
 import poli_retos.Automatas.Automata07;
 
@@ -114,6 +117,12 @@ public class App {
         rec.g2_recursividad_05();
 
         // 8. Autómatas
+        Automata01 automata01 = new Automata01(); 
+        automata01.validar();
+
+        Automata02 automata02 = new Automata02(); 
+        automata02.validar();
+        
         Automata03 automata03 = new Automata03();
         automata03.g2_automata3();
 
