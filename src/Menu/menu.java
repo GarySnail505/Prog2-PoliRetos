@@ -1,6 +1,5 @@
 package Menu;
 import java.util.Scanner;
-import poli_retos.Automatas.*;
 import poli_retos.*;
 public class menu {
     public String frase;
@@ -68,6 +67,7 @@ public class menu {
                         break;
                     }
                     case 5: {
+                        gr2_submenu_loadings();
                         break;
                     }
                     case 6: {
@@ -224,11 +224,45 @@ public class menu {
     }
 
     public void gr2_submenu_loadings() {
+        int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Loadings");
         System.out.println("1. Barra de carga");
         System.out.println("2. Nombre");
         System.out.println("3. Archivo");
         System.out.println("4. Salir");
+        while (!(teclado.hasNextInt())) { 
+            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+            teclado.nextLine();
+        }
+        opcion = teclado.nextInt();
+        teclado.nextLine();
+                switch (opcion) {
+                    case 1: {
+                        System.out.println("Ingrese un caracter:");
+                        frase=teclado.next();
+                        Loadings barra = new Loadings(frase);
+                        break;
+                    }
+                    case 2: {
+                        System.out.println("Ingrese el nombre completo:");
+                        frase=teclado.nextLine();
+                        Loadings barra_nombre = new Loadings(frase,1);
+                        break;
+                    }
+                    case 3: { 
+                        System.out.println("Ingrese el nombre del archivo:");
+                        frase=teclado.nextLine();
+                        Loadings barra_nombre = new Loadings(1,frase);
+                        break;
+                    }
+                    case 4: {
+                        gr2_presentacion();break;
+                    }
+                    default: {
+                        System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 4");
+                        break;
+                    }
+                }
     }
 
     public void gr2_submenu_recursion() {
@@ -247,36 +281,6 @@ public class menu {
         System.out.println("5. Validacion bucles");
         System.out.println("6. Validacion clave");
         System.out.println("7. Salir");
-        opcion = teclado.nextInt();
-        teclado.nextLine();
-
-        switch (opcion) {
-            case 1:{
-                Automata01 automata01 = new Automata01();
-                automata01.validar(); break;
-            }
-            case 2:{
-                Automata02 automata02 = new Automata02();
-                automata02.validar(); break;
-            }
-            case 3:{
-                Automata03 automata03 = new Automata03();
-                automata03.g2_automata3(); break;
-            }
-            case 4:{
-                Automata04 automata04 = new Automata04();
-                automata04.g2_automata4(); break;
-            }
-            case 5:{
-
-            }
-            case 6:{
-                Automata06 automata06 = new Automata06();
-                automata06.validarSecuencia(); break;
-            }
-            default:
-                break;
-            }
-            }
+    }
 
 }
