@@ -75,6 +75,8 @@ public class App {
 
 
         // 5. Arrays
+        arr.Array01();
+        
         arr.g2_arrays03();
         arr.Array04();
         
