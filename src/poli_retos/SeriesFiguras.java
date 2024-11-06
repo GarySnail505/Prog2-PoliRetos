@@ -250,7 +250,7 @@ public class SeriesFiguras {
             matrix[i][i] = 1;
 
             for (int j = 1; j < i; j++) {
-                matrix[i][j] = matrix[i - 1][j - 1] + matrix[i - 1][j]; // Suma de los dos números superiores
+                matrix[i][j] = matrix[i - 1][j - 1] + matrix[i - 1][j];
             }
         }
 
