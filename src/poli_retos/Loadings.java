@@ -186,35 +186,38 @@ public class Loadings {
     }
 
     public void g2_loading08() {
-        System.out.print("\n- Serie S07.");
-        System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
-        String nombre = frase;
-        int total = nombre.length();
-        System.out.println("Cargando...");
-        System.out.print("  [");
-
-        for (int i = 0; i < total; i++) {
-                       try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
+        System.out.println("Loading 8");
+        char[] frase = this.frase.toCharArray();
+        for (int carga = 0; carga < this.frase.length(); carga++) {
+            for (int espacio = 0; espacio <= carga; espacio++) {
+             System.out.print(frase[espacio]);
             }
-            System.out.print(nombre.charAt(i));
-            int porcentaje = ((i + 1) * 100) / total;
-            System.out.print(nombre + " ]" + porcentaje + "%\r");
+            for (int espacio = this.frase.length()-carga; espacio >0; espacio--) {
+                System.out.print(" ");
+            }
+            System.out.print(((carga + 1) * 100) / this.frase.length() + "%");
+            try {
+                Thread.sleep(1000);
+                System.out.print("\r");
+                System.out.print("                         ");
+                System.out.print("\r");               
+                
+            } catch (InterruptedException e) {
+                System.err.println("Interrupción durante la carga: " + e.getMessage());
+            }
         }
-        System.out.println(" ] 100%");
-        System.out.println(" [ " + nombre + " ] 100%");
+        System.out.println("[ "+this.frase+" 100%"+" ]");
     }
     private void g2_loading09() {
         char[] frase = this.frase.toCharArray();
+        System.out.println("Carga 09");
         for (int carga = 0; carga < this.frase.length(); carga++) {
             for (int espacio = 0; espacio < carga; espacio++) {
                 System.out.print(" ");
             }
             System.out.print(frase[carga]);
-            for (int espacio = this.frase.length(); espacio >0; espacio--) {
-                System.out.print("+");
-                espacio+=espacio;
+            for (int espacio = this.frase.length()-carga; espacio >0; espacio--) {
+                System.out.print(" ");
             }
             System.out.print(((carga + 1) * 100) / this.frase.length() + "%");
             try {
@@ -227,6 +230,8 @@ public class Loadings {
                 System.err.println("Interrupción durante la carga: " + e.getMessage());
             }
         }       
+        System.out.println("[ "+this.frase+" 100%"+" ]");
+
     }
     private void g2_loading10() {
         double numero_random = Math.floor(((Math.random() * 990) + 10)) / 10;
@@ -301,6 +306,7 @@ public class Loadings {
     }
 
     private static void imprimirFigura(int espacios) {
+        System.out.println();
         String figura[] = {
                 "   \\\\| | |//   ",
                 "    ( > < )    ",

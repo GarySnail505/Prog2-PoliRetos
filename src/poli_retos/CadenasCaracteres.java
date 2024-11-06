@@ -8,9 +8,11 @@ public class CadenasCaracteres {
     String consonantes = "b c d f g h j k l m n p q r s t v w x y z";
     String palabra,frase,letra;
     public CadenasCaracteres(String frase){
-        palabra=frase;
+        this.palabra=frase;
         g2_serieCC01();
         g2_serieCC02();
+        g2_serieS05();
+        g2_serieS06();
         g2_serieS07();
     }
     public CadenasCaracteres(String frase,int indice){
@@ -72,67 +74,41 @@ public class CadenasCaracteres {
 
     public void g2_serieS05() {
         System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
-        System.out.print("\nIngrese una palabra o frase:\n  ");
-        String frase=this.frase;
-        String fraseModificada = invertirYMayusculas(frase);
-        System.out.println("\n  Frase invertida con vocales en mayúsculas:\n  " + fraseModificada);
-    }
-
-    public static String invertirYMayusculas(String frase) {
-        StringBuilder builder = new StringBuilder(frase);
-        builder.reverse();
-        for (int i = 0; i < builder.length(); i++) {
-            char c = builder.charAt(i);
-            if (esVocal(c)) {
-                builder.setCharAt(i, Character.toUpperCase(c));
+        palabra=palabra.toLowerCase();
+        char[] frase=this.palabra.toCharArray();
+        for (int indice = frase.length-1; indice >0; indice--) {
+            if(frase[indice]== 'a' || frase[indice] == 'e' || frase[indice] == 'i' || frase[indice] == 'o' || frase[indice] == 'u'){
+                frase[indice]=Character.toUpperCase(frase[indice]);
             }
+            System.out.print(frase[indice]);
         }
-        return builder.toString();
-    }
-
-    public static boolean esVocal(char c) {
-        c = Character.toLowerCase(c);
-        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+        System.out.println();
     }
 
     public void g2_serieS06() {
-        System.out.print("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
-        String frase2=this.frase;
-        String fraseModificada = invertirYMayusculasConsonantes(frase2);
-        System.out.println("\n  Frase invertida con consonantes en mayúsculas:\n  " + fraseModificada);
+        System.out.println("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
+        palabra=palabra.toLowerCase();
+        char[] frase=this.palabra.toCharArray();
+        for (int indice = frase.length-1; indice >0; indice--) {
+            if(!(frase[indice]== 'a' || frase[indice] == 'e' || frase[indice] == 'i' || frase[indice] == 'o' || frase[indice] == 'u')){
+                frase[indice]=Character.toUpperCase(frase[indice]);
+            }
+            System.out.print(frase[indice]);
+        }
+        System.out.println();
+
     }
 
-    public static String invertirYMayusculasConsonantes(String frase) {
-        StringBuilder builder = new StringBuilder(frase);
-        builder.reverse();
-        for (int i = 0; i < builder.length(); i++) {
-            char c = builder.charAt(i);
-            if (!esVocal(c) && Character.isLetter(c)) {
-                builder.setCharAt(i, Character.toUpperCase(c));
-            }
-        }
-        return builder.toString();
-    }
 
     public void g2_serieS07() {
         System.out.print("\n- Serie S07.");
-        System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
-        String frase=this.frase;
+        System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");     
+         Scanner sc = new Scanner(System.in);
+        String frase = sc.nextLine();
         System.out.print("\n  Su frase aparecerá en mayúsculas y sin la letra previa:\n  ");
-        frase = modificarFrase(frase);
+        frase=frase.toUpperCase();
+        frase=frase.replace('J', ' ');
         System.out.println(frase);
-    }
-
-    public static String modificarFrase(String frase) {
-        StringBuilder builder = new StringBuilder(frase.toUpperCase());
-
-        for (int i = 0; i < builder.length(); i++) {
-            char c = builder.charAt(i);
-            if (c == 'J') {
-                builder.setCharAt(i, ' ');
-            }
-        }
-        return builder.toString();
     }
 
     private static final String respuesta_s08 = "sapo";
