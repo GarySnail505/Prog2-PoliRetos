@@ -15,6 +15,11 @@ public class Loadings {
         g2_loading06();
         g2_loading07();
         g2_loading11(10, 9);
+        System.out.println();
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+        }
         g2_loading12(100);
     }
     public Loadings(String frase,int i){

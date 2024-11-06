@@ -215,12 +215,6 @@ public class menu {
                 break;
             }
             case 4: {
-                System.out.println("Ingrese una frase");
-                frase = teclado.nextLine();
-                CadenasCaracteres intercalar = new CadenasCaracteres(frase, 1);
-                break;
-            }
-            case 5: {
                 gr2_presentacion();
                 break;
             }
