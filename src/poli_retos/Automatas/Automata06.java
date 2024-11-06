@@ -55,10 +55,9 @@ public class Automata06 {
         }
 
         @SuppressWarnings("resource")
-        public void validarSecuencia() {
-            System.out.print("\n- Automata A04.\n");
-            System.out.println("Ingrese el número que desea (utilizando el . para separar decimales): ");
-            int n = 0;
+        public void g2_automata6() {
+            System.out.print("\n- Automata A07.\n");
+            System.out.println("Ingrese el nombre de un bucle con sus () (utilizando el - para separar decimales): ");
             Scanner sc = new Scanner(System.in);
             String lectura = sc.nextLine();
             int q = 0;

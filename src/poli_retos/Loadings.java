@@ -1,17 +1,37 @@
 package poli_retos;
 
-import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
-import java.util.Random;
 
+import java.util.Scanner;
 public class Loadings {
+    public String frase;
+    public float carga_actual = 0.00f;
+    public Loadings(String frase){
+        this.frase=frase;
+        g2_loading01();
+        g2_loading02();
+        g2_loading03();
+        g2_loading04();
+        g2_loading05();
+        g2_loading06();
+        g2_loading07();
+        g2_loading11(10, 9);
+        g2_loading12(500);
+    }
+    public Loadings(String frase,int i){
+        this.frase=frase;
+        g2_loading08();
+        g2_loading09();
+    }
+    public Loadings(int i,String frase){
+        this.frase=frase;
+        g2_loading10();
+    }
     public void g2_loading01() {
         char[] simbolos = { '\\', '|', '/', '|' };
         System.out.print("\n- Serie l01.\n");
         for (int i = 0; i < 100; i++) {
             char simbolo = simbolos[i % simbolos.length];
             System.out.print("\r" + simbolo + "Cargando..." + i + "%");
-
             try {
                 Thread.sleep(150);
             } catch (InterruptedException e) {
@@ -24,8 +44,7 @@ public class Loadings {
     public void g2_loading02() {
         System.out.print("\n- Serie l02.\n");
         System.out.println("Ingrese el símbolo que desea para la carga: ");
-        Scanner sc = new Scanner(System.in);
-        String lectura = sc.next();
+        String lectura = frase;
         char s = lectura.charAt(0);
         char[] simbolos = { '[', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
                 ' ', ' ', ']' };
@@ -51,8 +70,7 @@ public class Loadings {
     public void g2_loading03() {
         System.out.print("\n- Serie l03.\n");
         System.out.println("Ingrese el símbolo que desea para la carga: ");
-        Scanner sc = new Scanner(System.in);
-        String lectura = sc.next();
+        String lectura = frase;
         char s = lectura.charAt(0);
         char[] simbolos = { '[', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
                 ' ', ' ', ']' };
@@ -78,12 +96,7 @@ public class Loadings {
         System.out.println("\rCarga completa: 100%             ");
     }
 
-<<<<<<< HEAD
-    public void g2_loading04() throws InterruptedException 
- {
-=======
     public void g2_loading04() {
->>>>>>> 8e0e66cb861b0d2e1216b88b3017a5590a6bece7
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("Cargando...");
@@ -91,15 +104,13 @@ public class Loadings {
             System.out.print(signos[i % signos.length] + " " + (i * 5) + "%\r");
             try {
                 Thread.sleep(500);
-            } catch (InterruptedException e) {
-                System.out.println("El hilo fue interrumpido.");
-                Thread.currentThread().interrupt(); 
+            } catch (Exception e) {
             }
         }
         System.out.println(signos[1] + " 100%");
     }
-    
-    public void g2_loading05() {
+
+    public void g2_loading05(){
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
@@ -117,9 +128,7 @@ public class Loadings {
             System.out.print("[" + barra + "] " + progress + "%\r");
             try {
                 Thread.sleep(500);
-            } catch (InterruptedException e) {
-                System.out.println("El hilo fue interrumpido.");
-                Thread.currentThread().interrupt(); 
+            } catch (Exception e) {
             }
         }
         System.out.println("[====================] 100%");
@@ -127,42 +136,43 @@ public class Loadings {
 
     public void g2_loading06() {
         int total = 20;
-        int barLength = 5; 
+        int barLength = 5; // Length of "<=>"
         int progress = 0;
-    
+
         for (int i = 0; i <= total - barLength; i++) {
             System.out.print("[");
-    
+
             for (int j = 0; j < i; j++) {
                 System.out.print(" ");
             }
-    
+
             System.out.print("<=>");
-    
+
             for (int j = 0; j < total - i - barLength; j++) {
                 System.out.print(" ");
             }
-    
+
             progress = (i * 100) / (total - barLength);
             System.out.print("] " + progress + "%\r");
             try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                System.out.println("El hilo fue interrumpido.");
-                Thread.currentThread().interrupt(); 
+            Thread.sleep(300);
+            } catch (Exception e) {
             }
         }
         System.out.print("[====================] 100%");
     }
 
-    public void g2_loading07() throws InterruptedException {
+    public void g2_loading07() {
         int total = 20;
         System.out.println("Cargando...");
         System.out.print("  [");
         String[] puntas = { "\\", "|", "//", "-", "|" };
 
         for (int i = 0; i <= total; i++) {
+            try {
             Thread.sleep(1000);
+            } catch (Exception e) {
+            }
 
             if (i < total) {
                 System.out.print("=");
@@ -175,7 +185,7 @@ public class Loadings {
         System.out.print(" ] 100%");
     }
 
-    public void g2_loading08() throws InterruptedException {
+    public void g2_loading08() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
@@ -187,13 +197,61 @@ public class Loadings {
         System.out.print("  [");
 
         for (int i = 0; i <= total; i++) {
-            Thread.sleep(1000);
+                       try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+            }
             System.out.print(nombre.charAt(i));
             int porcentaje = ((i + 1) * 100) / total;
             System.out.print(nombre + " ]" + porcentaje + "%\r");
         }
         System.out.println(" ] 100%");
         System.out.println(" [ " + nombre + " ] 100%");
+    }
+    private void g2_loading09() {
+        char[] frase = this.frase.toCharArray();
+        for (int carga = 0; carga < this.frase.length(); carga++) {
+            for (int espacio = 0; espacio < carga; espacio++) {
+                System.out.print(" ");
+            }
+            System.out.print(frase[carga]);
+            for (int espacio = 0; espacio < this.frase.length() - carga; espacio++) {
+                System.out.print(" ");
+                espacio+=espacio;
+            }
+            System.out.print(((carga + 1) * 100) / this.frase.length() + "%");
+            try {
+                Thread.sleep(1000);
+                System.out.print("\r");
+            } catch (InterruptedException e) {
+                System.err.println("Interrupción durante la carga: " + e.getMessage());
+            }
+        }       
+    }
+    private void g2_loading10() {
+        double numero_random = Math.floor(((Math.random() * 990) + 10)) / 10;
+        float carga_maxima = (float) numero_random;
+        int minimo = 0;
+        System.out.println("Downloading " + frase + " (" + numero_random + " kB)");
+        for(int porcentaje_barra=1;porcentaje_barra<=10;porcentaje_barra++){
+            for (int barra = 0; barra < porcentaje_barra; barra++) {
+            System.out.print("\\033[33m"+"▄");
+            }
+            for (int espacios = 0; espacios < 12-porcentaje_barra; espacios++) {
+                System.out.print(" ");
+            }
+            carga_actual=carga_maxima*0.1f+carga_actual;
+            System.out.print(carga_actual+" / "+carga_maxima);
+            try {
+                Thread.sleep(1000);
+                System.out.print("\r");
+                System.out.print("                             ");
+                System.out.print("\r");
+            } catch (Exception e) {
+                System.err.println("Interrupción durante la carga: " + e.getMessage());
+            }
+        }
+        System.out.println("Descarga completada correctamente");
     }
 
     public void g2_loading11(int numBarras, int alturaMaxima) {
