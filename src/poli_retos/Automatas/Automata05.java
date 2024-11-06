@@ -51,7 +51,7 @@ public class Automata05 {
                         q = matriz_de_transicion[q][j + 2];
                     }
                 }
-                if (q == error | q == 0) {
+                if (q == error) {
                     System.out.println("La variable esta incorrectamente declarada");
                     break;
                 }
