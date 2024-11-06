@@ -13,7 +13,9 @@ public class Automata04 {
             { ee, ee, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ee }, // q2
             { ee, ee, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ee } // q3
     };
-
+    public Automata04(){
+        g2_automata4();
+    }
     public void g2_automata4() {
         System.out.print("\n- Automata A04.\n");
         System.out.println("Ingrese el número que desea (utilizando el . para separar decimales): ");

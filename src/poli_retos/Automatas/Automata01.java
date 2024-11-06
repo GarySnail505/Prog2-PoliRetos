@@ -19,6 +19,11 @@ public class Automata01 {
         {er, er, er}
     };
 
+    public Automata01() {
+        validar();
+    }
+    
+
     private int clavef(char clave) {
         if (clave == 'a') {
             return 0; 
@@ -51,10 +56,5 @@ public class Automata01 {
         } else {
             System.out.println("La cadena ingresada no es válida.");
         }
-    }
-
-    public static void main(String[] args) {
-        Automata01 automata = new Automata01();
-        automata.validar();
     }
 }

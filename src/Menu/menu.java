@@ -2,6 +2,7 @@ package Menu;
 
 import java.util.Scanner;
 import poli_retos.*;
+import poli_retos.Automatas.*;
 
 public class menu {
     public String frase;
@@ -77,11 +78,11 @@ public class menu {
                         gr2_submenu_recursion();
                         break;
                     }
-                    case 7: {
+                    case 7: {gr2_submenu_automatas();
                         break;
                     }
                     case 8: {
-                        break;
+                        return;
                     }
                     default: {
                         System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 8");
@@ -338,18 +339,55 @@ public class menu {
                         break;
                     }
                 }
-
     }
 
     public void gr2_submenu_automatas() {
-        System.out.println("\u001B[34m" + "\n\t Menu_Recursion");
-        System.out.println("1. Validar Cadena de caracteres");
-        System.out.println("2. Validar secuencia de numeros");
-        System.out.println("3. Validacion decimal");
-        System.out.println("4. Validacion variables");
-        System.out.println("5. Validacion bucles");
-        System.out.println("6. Validacion clave");
-        System.out.println("7. Salir");
-    }
+        System.out.println("\u001B[34m" + "\n\t Menu_Automatas");
+        System.out.println("1. Validar Cadena de caracteres a*b+c");
+        System.out.println("2. Validar Cadena de caracteres ab+ca");
+        System.out.println("3. Validar secuencia de numeros 1+/0+1*");
+        System.out.println("4. Validacion decimal");
+        System.out.println("5. Validacion variables");
+        System.out.println("6. Validacion bucles");
+        System.out.println("7. Validacion clave");
+        System.out.println("8. Salir");
+        while (!(teclado.hasNextInt())) { 
+            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+            teclado.nextLine();
+        }
+        opcion = teclado.nextInt();
+        teclado.nextLine();
+                switch (opcion) {
+                    case 1: {
+                        Automata01 autoamata =new Automata01();
+                    }
+                    case 2: {
+                        Automata02 autoamata2 =new Automata02();
+                    }
+                    case 3: { 
+                        Automata03 autoamata3 =new Automata03();
+                    }
+                    case 4: {
+                        Automata04 autoamata4 =new Automata04();
 
+                    }
+                    case 5: { System.out.println("Ingrese la cadena para validar si es una variable");
+                    frase=teclado.nextLine();
+                    Automata05 afd=new Automata05(frase);
+                    }
+                    case 6: {
+                        Automata06 autoamata6 =new Automata06();
+                    }
+                    case 7: {
+                        Automata07 autoamata7 =new Automata07();
+                    }
+                    case 8: {
+                        gr2_presentacion();break;
+                    }
+                    default: {
+                        System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 7");
+                        break;
+                    }
+                }
+    }
 }

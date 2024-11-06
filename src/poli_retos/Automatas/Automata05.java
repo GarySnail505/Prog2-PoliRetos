@@ -22,10 +22,10 @@ public class Automata05 {
 
     public Automata05(String frase) {
         this.frase=frase;
-        compara_alfabeto();
+        g2_compara_alfabeto();
     }
         
-        public void compara_alfabeto(){
+        public void g2_compara_alfabeto(){
             int q = 0;
             for (int i = 0; i < frase.length(); i++) {
                 for (int j = 0; j < letras_L.length; j++) {

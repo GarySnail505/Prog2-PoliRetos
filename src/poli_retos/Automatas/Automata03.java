@@ -11,6 +11,9 @@ public class Automata03 {
             { 2, 3, aceptado },
             { ee, 3, aceptado },
     };
+    public Automata03(){
+        g2_automata3();
+    }
 
     public void g2_automata3() {
         System.out.print("\n- Automata A03.\n");
