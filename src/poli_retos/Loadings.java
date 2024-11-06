@@ -1,7 +1,7 @@
 package poli_retos;
 
 
-import java.util.Scanner;
+import java.util.Random;
 public class Loadings {
     public String frase;
     public float carga_actual = 0.00f;
@@ -15,7 +15,7 @@ public class Loadings {
         g2_loading06();
         g2_loading07();
         g2_loading11(10, 9);
-        g2_loading12(500);
+        g2_loading12(100);
     }
     public Loadings(String frase,int i){
         this.frase=frase;
@@ -186,17 +186,14 @@ public class Loadings {
     }
 
     public void g2_loading08() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("\n- Serie S07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");
-
-        String nombre = scanner.nextLine();
-
+        String nombre = frase;
         int total = nombre.length();
         System.out.println("Cargando...");
         System.out.print("  [");
 
-        for (int i = 0; i <= total; i++) {
+        for (int i = 0; i < total; i++) {
                        try {
                 Thread.sleep(1000);
             } catch (Exception e) {
@@ -215,14 +212,17 @@ public class Loadings {
                 System.out.print(" ");
             }
             System.out.print(frase[carga]);
-            for (int espacio = 0; espacio < this.frase.length() - carga; espacio++) {
-                System.out.print(" ");
+            for (int espacio = this.frase.length(); espacio >0; espacio--) {
+                System.out.print("+");
                 espacio+=espacio;
             }
             System.out.print(((carga + 1) * 100) / this.frase.length() + "%");
             try {
                 Thread.sleep(1000);
                 System.out.print("\r");
+                System.out.print("                         ");
+                System.out.print("\r");               
+                
             } catch (InterruptedException e) {
                 System.err.println("Interrupción durante la carga: " + e.getMessage());
             }

@@ -1,8 +1,27 @@
 package poli_retos;
 
-import java.util.Scanner;
-
 public class Recursividad {
+    public int numero_1,numero_2;
+    public Recursividad(int numero_N){
+        this.numero_1=numero_N;
+        System.out.println("El factorial de:" + numero_1 + "!"+" = "+ g2_recursividad_01(numero_1));
+        g2_recursividad_05();
+        g2_recursividad_06(numero_1);
+    }
+    public Recursividad(int numero1,int numero2){
+        this.numero_1=numero1;
+        this.numero_2=numero2;
+        System.out.println("La suma de " + numero1+" + "+numero2+" = "+g2_recursividad_02(this.numero_1,this.numero_2));
+        System.out.println("La multiplicacion de " + numero1+" * "+numero2+" = "+g2_recursividad_03(this.numero_1,this.numero_2));
+        g2_recursividad04();
+
+    }
+    public Recursividad(int numero1,int numero2,int i){
+        this.numero_1=numero1;
+        this.numero_2=numero2;
+        System.out.println("La suma de " + numero1+" + "+numero2+" = "+g2_recursividad_02(this.numero_1,this.numero_2));
+        System.out.println("La multiplicacion de " + numero1+" * "+numero2+" = "+g2_recursividad_03(this.numero_1,this.numero_2));
+    }
     public int g2_recursividad_01(int n) {
         if (n == 0 || n == 1)
             return 1;
@@ -16,14 +35,18 @@ public class Recursividad {
         else
             return g2_recursividad_02(a + 1, b - 1);
     }
-
+    private int g2_recursividad_03(int numero1,int numero2){
+        if (numero2<=0){
+            return 0;
+        }
+        numero2--;
+        numero1=numero1+g2_recursividad_03(numero1,numero2);
+        return numero1;
+    }
     public void g2_recursividad04() {
         System.out.print("\n- Serie R04.\n");
-        System.out.println("Ingrese la base (a) que quiere elevar: ");
-        Scanner sc = new Scanner(System.in);
-        int base = sc.nextInt();
-        System.out.println("Ingrese el exponente (b) al que desea elevar la base: ");
-        int exponente = sc.nextInt();
+        int base = numero_1;
+        int exponente = numero_2;
         double resultado = potencia(base, exponente);
         System.out.println(base + "^" + exponente + " = " + resultado);
     }
@@ -40,9 +63,7 @@ public class Recursividad {
 
     public void g2_recursividad_05() {
         System.out.print("\n- Serie R05.\n");
-        System.out.println("Ingrese el número 'n' para realizar el conteo progresivo: ");
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int n = numero_1;
         System.out.println("Conteo progresivo hasta " + n + ":");
         conteoProgresivo(n, 1);
     }

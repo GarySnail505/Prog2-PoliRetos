@@ -188,6 +188,7 @@ public class menu {
                 System.out.println("Ingrese los porcentajes de presentacion de cada palabra");
                 porcentajes = teclado.nextLine();
                 Arrays barra_de_carga = new Arrays(frase, porcentajes);
+                break;
 
             }
             case 2: {
@@ -203,6 +204,7 @@ public class menu {
                 System.out.println("El caracter que desea para las iniciales de su nombre:");
                 caracter = teclado.nextLine();
                 Arrays barra_de_carga = new Arrays(tamanio, frase, caracter.charAt(0));
+                break;
             }
             case 3: {
                 System.out.println("Ingrese su nombre completo:");
@@ -270,10 +272,72 @@ public class menu {
     }
 
     public void gr2_submenu_recursion() {
+        int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Recursion");
         System.out.println("1. Factorial y conteo");
-        System.out.println("2. Suma, multiplicacion y potencia");
-        System.out.println("3. Salir");
+        System.out.println("2. Suma y multiplicacion");
+        System.out.println("3. Potencia");
+        System.out.println("4. Salir");
+        while (!(teclado.hasNextInt())) { 
+            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+            teclado.nextLine();
+        }
+        opcion = teclado.nextInt();
+        teclado.nextLine();
+                switch (opcion) {
+                    case 1: {
+                    System.out.println("Ingrese el número 'n' para realizar el conteo y realizar el factorial: ");
+                    while (!(teclado.hasNextInt())) { 
+                        System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                        teclado.nextLine();
+                    }
+                        numero_1= teclado.nextInt();
+                        Recursividad conteo_factorial=new Recursividad(numero_1);
+                        break;
+                    }
+                    case 3: {
+                    System.out.println("Ingrese la base (a) que quiere elevar: ");
+
+                        while (!(teclado.hasNextInt())) { 
+                            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                            teclado.nextLine();
+                        }
+                            numero_1= teclado.nextInt();
+                    System.out.println("Ingrese el exponente (b) al que desea elevar la base: ");
+                    while (!(teclado.hasNextInt())) { 
+                        System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                        teclado.nextLine();
+                    }
+                        numero_2= teclado.nextInt();
+                        Recursividad potencia=new Recursividad(numero_1,numero_2);
+                        break;
+                    }
+                    case 2: { 
+                        System.out.println("Ingrese el primer numero: ");
+                        while (!(teclado.hasNextInt())) { 
+                            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                            teclado.nextLine();
+                        }
+                            numero_1= teclado.nextInt();
+                    System.out.println("Ingrese el segundo numero: ");
+                    while (!(teclado.hasNextInt())) { 
+                        System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                        teclado.nextLine();
+                    }
+                        numero_2= teclado.nextInt();
+                        Recursividad suma_multiplicacion=new Recursividad(numero_1,numero_2,1);
+                        break;
+                            }
+                    case 4: { 
+                gr2_presentacion();
+                        break;
+                    }
+                    default: {
+                        System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 4");
+                        break;
+                    }
+                }
+
     }
 
     public void gr2_submenu_automatas() {
