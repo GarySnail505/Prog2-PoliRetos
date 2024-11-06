@@ -235,7 +235,7 @@ public class Loadings {
         System.out.println("Downloading " + frase + " (" + numero_random + " kB)");
         for(int porcentaje_barra=1;porcentaje_barra<=10;porcentaje_barra++){
             for (int barra = 0; barra < porcentaje_barra; barra++) {
-            System.out.print("\\033[33m"+"▄");
+            System.out.print("\033[33m"+"▄");
             }
             for (int espacios = 0; espacios < 12-porcentaje_barra; espacios++) {
                 System.out.print(" ");

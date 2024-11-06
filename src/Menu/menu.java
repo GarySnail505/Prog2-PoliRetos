@@ -74,6 +74,7 @@ public class menu {
                         break;
                     }
                     case 6: {
+                        gr2_submenu_recursion();
                         break;
                     }
                     case 7: {
