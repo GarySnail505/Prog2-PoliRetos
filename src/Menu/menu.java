@@ -6,10 +6,12 @@ import poli_retos.Automatas.*;
 
 public class menu {
     public String frase;
-    public String[] nombres = { "Carrillo Cristhian", "Cardena Karina", "Defas Condor", "Diaz Pineda",
+    public String frase2;
+    public String[] nombres = { "Carrillo Cristhian", "Cardena Karina", "Defas Condor", "Diaz David",
             "Guerra Melisa" };
     public String caracter;
     public String porcentajes;
+    public String consonante;
     public int terminos,
             tamanio,
             numero_1,
@@ -78,7 +80,8 @@ public class menu {
                         gr2_submenu_recursion();
                         break;
                     }
-                    case 7: {gr2_submenu_automatas();
+                    case 7: {
+                        gr2_submenu_automatas();
                         break;
                     }
                     case 8: {
@@ -114,11 +117,17 @@ public class menu {
                 break;
             }
             case 2: {
-                System.out.println("Ingrese una frase");
-                frase = teclado.next();
-                System.out.println("Ingrese el caracter a eliminar");
-                caracter = teclado.nextLine();
+                System.out.println("Ingrese una frase:");
+                frase = teclado.nextLine();
+                System.out.println("Ingrese la vocal a eliminar:");
+                caracter = teclado.next();
+                teclado.nextLine(); //limpia el bufer de entrada
                 CadenasCaracteres vocales_letras = new CadenasCaracteres(frase, caracter);
+                System.out.println("Ingrese una frase:");
+                frase2 = teclado.nextLine();
+                System.out.println("Ingrese la consonante a eliminar:");
+                consonante = teclado.next();
+                vocales_letras.g2_serieS04(frase, consonante);
                 break;
             }
             case 3: { //////

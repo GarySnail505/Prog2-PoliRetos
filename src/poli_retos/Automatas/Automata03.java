@@ -17,7 +17,7 @@ public class Automata03 {
 
     public void g2_automata3() {
         System.out.print("\n- Automata A03.\n");
-        System.out.println("Ingrese la cadena que desea verificar: ");
+        System.out.println("Ingrese la cadena que desea verificar (separando los números con -): ");
         int n = 0;
         Scanner sc = new Scanner(System.in);
         String lectura = sc.nextLine();

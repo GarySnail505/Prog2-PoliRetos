@@ -48,7 +48,6 @@ public class Loadings {
 
     public void g2_loading02() {
         System.out.print("\n- Serie l02.\n");
-        System.out.println("Ingrese el símbolo que desea para la carga: ");
         String lectura = frase;
         char s = lectura.charAt(0);
         char[] simbolos = { '[', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -64,7 +63,7 @@ public class Loadings {
             System.out.print("\r" + barra + " " + (float) (i * 5.56) + "%");
 
             try {
-                Thread.sleep(500);
+                Thread.sleep(300);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -74,7 +73,6 @@ public class Loadings {
 
     public void g2_loading03() {
         System.out.print("\n- Serie l03.\n");
-        System.out.println("Ingrese el símbolo que desea para la carga: ");
         String lectura = frase;
         char s = lectura.charAt(0);
         char[] simbolos = { '[', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -93,7 +91,7 @@ public class Loadings {
             System.out.print("\r" + barra + " " + (float) (i * 5.56) + "%");
 
             try {
-                Thread.sleep(500);
+                Thread.sleep(300);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -102,6 +100,7 @@ public class Loadings {
     }
 
     public void g2_loading04() {
+        System.out.print("\n- Serie l04.\n");
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("Cargando...");
@@ -116,6 +115,7 @@ public class Loadings {
     }
 
     public void g2_loading05(){
+        System.out.print("\n- Serie l05.\n");
         int total = 20;
         System.out.println("Cargando...");
         for (int i = 0; i <= total; i++) {
@@ -140,6 +140,7 @@ public class Loadings {
     }
 
     public void g2_loading06() {
+        System.out.print("\n- Serie l06.\n");
         int total = 20;
         int barLength = 5; // Length of "<=>"
         int progress = 0;
@@ -168,6 +169,7 @@ public class Loadings {
     }
 
     public void g2_loading07() {
+        System.out.print("\n- Serie l07.\n");
         int total = 20;
         System.out.println("Cargando...");
         System.out.print("  [");

@@ -6,7 +6,7 @@ public class CadenasCaracteres {
 
     String vocales = "a e i o u";
     String consonantes = "b c d f g h j k l m n p q r s t v w x y z";
-    String palabra,frase,letra;
+    String palabra,frase,vocal, consonante;
     public CadenasCaracteres(String frase){
         this.palabra=frase;
         g2_serieCC01();
@@ -20,12 +20,13 @@ public class CadenasCaracteres {
         g2_serieCC09();
     }
     
-    public CadenasCaracteres(String frase,String letra){
+    public CadenasCaracteres(String frase,String vocal){
         this.frase=frase;
-        this.letra=letra;
+        this.vocal=vocal;
         g2_serieS03();
-        g2_serieS04();
+        
     }
+
 
     public void g2_serieCC01( ) {
         System.out.println("\nFrase o palabra ingresada:");
@@ -50,21 +51,17 @@ public class CadenasCaracteres {
     }
 
     public void g2_serieS03() {
-        System.out.println("Ingrese una frase a la que desea eliminarle una vocal ");
-        System.out.println("Ingrese la vocal que desea eliminar");
-        if (vocales.contains(letra)) {
-            String fraseNueva = frase.replace(letra, " ");
+        if (vocales.contains(vocal)) {
+            String fraseNueva = frase.replace(vocal, " ");
             System.out.println(fraseNueva);
         } else {
             System.out.println("No ha ingresado una vocal");
         }
     }
 
-    public void g2_serieS04() {
-        System.out.println("Ingrese una frase a la que desea eliminarle una consonante: ");
-        System.out.println("Ingrese la consonante que desea eliminar");
-        if (consonantes.contains(letra)) {
-            String fraseNueva = frase.replace(letra, " ");
+    public void g2_serieS04(String frase, String consonante) {
+        if (consonantes.contains(consonante)) {
+            String fraseNueva = frase.replace(consonante, " ");
             System.out.println(fraseNueva);
         } else {
             System.out.println("No ha ingresado una consonante");
