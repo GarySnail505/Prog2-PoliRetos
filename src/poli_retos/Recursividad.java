@@ -11,8 +11,6 @@ public class Recursividad {
     public Recursividad(int numero1,int numero2){
         this.numero_1=numero1;
         this.numero_2=numero2;
-        System.out.println("La suma de " + numero1+" + "+numero2+" = "+g2_recursividad_02(this.numero_1,this.numero_2));
-        System.out.println("La multiplicacion de " + numero1+" * "+numero2+" = "+g2_recursividad_03(this.numero_1,this.numero_2));
         g2_recursividad04();
 
     }
@@ -44,7 +42,7 @@ public class Recursividad {
         return numero1;
     }
     public void g2_recursividad04() {
-        System.out.print("\n- Serie R04.\n");
+        System.out.print("\n- Potencia.\n");
         int base = numero_1;
         int exponente = numero_2;
         double resultado = potencia(base, exponente);
