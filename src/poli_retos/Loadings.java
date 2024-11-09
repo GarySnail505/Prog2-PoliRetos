@@ -169,28 +169,34 @@ public class Loadings {
     }
 
     public void g2_loading07() {
-        System.out.print("\n- Serie l07.\n");
-        int total = 20;
-        System.out.println("Cargando...");
-        System.out.print("  [");
-        String[] puntas = { "\\", "|", "//", "-", "|" };
+      int total = 20;
+      int barLength = 5;
+      String[] puntas = new String[]{"\\", "|", "//", "-", "|"};
+      int progreso = false;
+      System.out.println("\nCargando...");
 
-        for (int i = 0; i <= total; i++) {
-            try {
-            Thread.sleep(1000);
-            } catch (Exception e) {
-            }
+      for(int i = 0; i <= total - barLength; ++i) {
+         System.out.print("[");
 
-            if (i < total) {
-                System.out.print("=");
-            } else {
-                System.out.print(puntas[i % puntas.length]);
-            }
-            int porcentaje = (i * 100) / total;
-            System.out.print(" ]" + porcentaje + "%\r");
-        }
-        System.out.print(" ] 100%");
-    }
+         int j;
+         for(j = 0; j < i; ++j) {
+            System.out.print("=");
+         }
+
+         System.out.print(puntas[i % puntas.length]);
+
+         for(j = 0; j < total - i - barLength - 1; ++j) {
+            System.out.print(" ");
+         }
+
+         int progreso = i * 100 / (total - barLength);
+         System.out.print("]" + progreso + "%\r");
+
+         try {
+            Thread.sleep(500L);
+         } catch (Exception var7) {
+         }
+      }
 
     public void g2_loading08() {
         System.out.println("Loading 8");
