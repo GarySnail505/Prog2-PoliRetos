@@ -14,6 +14,7 @@ public class Loadings {
         g2_loading05();
         g2_loading06();
         g2_loading07();
+        g2_loading08();
         g2_loading11(10, 9);
         System.out.println();
         try {
@@ -198,29 +199,31 @@ public class Loadings {
          }
       }
 
-    public void g2_loading08() {
-        System.out.println("Loading 8");
-        char[] frase = this.frase.toCharArray();
-        for (int carga = 0; carga < this.frase.length(); carga++) {
-            for (int espacio = 0; espacio <= carga; espacio++) {
-             System.out.print(frase[espacio]);
-            }
-            for (int espacio = this.frase.length()-carga; espacio >0; espacio--) {
-                System.out.print(" ");
-            }
-            System.out.print(((carga + 1) * 100) / this.frase.length() + "%");
-            try {
-                Thread.sleep(1000);
-                System.out.print("\r");
-                System.out.print("                         ");
-                System.out.print("\r");               
-                
-            } catch (InterruptedException e) {
-                System.err.println("Interrupción durante la carga: " + e.getMessage());
-            }
-        }
-        System.out.println("[ "+this.frase+" 100%"+" ]");
-    }
+    public void g2_loading08(String frase) {
+      int total = frase.length();
+      System.out.println("\nCargando...");
+      System.out.print("[");
+
+      for(int i = 0; i < total; ++i) {
+         try {
+            Thread.sleep(500L);
+         } catch (Exception var6) {
+         }
+
+         System.out.print(frase.charAt(i));
+         int porcentaje = (i + 1) * 100 / total;
+
+         for(int j = 0; j < total - i - 1; ++j) {
+            System.out.print(" ");
+         }
+
+         System.out.println("] " + porcentaje + "%\r");
+      }
+
+      System.out.println(" ] 100%");
+      System.out.println(" [ " + frase + " ] 100%");
+   }
+        
     private void g2_loading09() {
         char[] frase = this.frase.toCharArray();
         System.out.println("Carga 09");
