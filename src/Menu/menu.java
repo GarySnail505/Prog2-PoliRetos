@@ -8,7 +8,7 @@ public class menu {
     public String frase;
     public String frase2;
     public String[] nombres = { "Carrillo Cristhian", "Cardena Karina", "Defas Condor", "Diaz David",
-            "Guerra Melisa" };
+            "Guerra Melissa" };
     public String caracter;
     public String porcentajes;
     public String consonante;
