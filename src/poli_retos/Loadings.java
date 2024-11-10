@@ -13,9 +13,8 @@ public class Loadings {
         g2_loading04();
         g2_loading05();
         g2_loading06();
-        g2_loading07();
-        g2_loading08();
-        g2_loading11(10, 9);
+        //g2_loading07();
+        //g2_loading08();
         System.out.println();
         try {
             Thread.sleep(3000);
@@ -25,12 +24,15 @@ public class Loadings {
     }
     public Loadings(String frase,int i){
         this.frase=frase;
-        g2_loading08();
+        //g2_loading08();
         g2_loading09();
     }
     public Loadings(int i,String frase){
         this.frase=frase;
         g2_loading10();
+    }
+    public Loadings(int base, int altura){
+        g2_loading11(base, altura);
     }
     public void g2_loading01() {
         char[] simbolos = { '\\', '|', '/', '|' };
@@ -169,35 +171,35 @@ public class Loadings {
         System.out.print("[====================] 100%");
     }
 
-    public void g2_loading07() {
-      int total = 20;
-      int barLength = 5;
-      String[] puntas = new String[]{"\\", "|", "//", "-", "|"};
-      int progreso = false;
-      System.out.println("\nCargando...");
+    // public void g2_loading07() {
+    //   int total = 20;
+    //   int barLength = 5;
+    //   String[] puntas = new String[]{"\\", "|", "//", "-", "|"};
+    //   int progreso = false;
+    //   System.out.println("\nCargando...");
 
-      for(int i = 0; i <= total - barLength; ++i) {
-         System.out.print("[");
+    //   for(int i = 0; i <= total - barLength; ++i) {
+    //      System.out.print("[");
 
-         int j;
-         for(j = 0; j < i; ++j) {
-            System.out.print("=");
-         }
+    //      int j;
+    //      for(j = 0; j < i; ++j) {
+    //         System.out.print("=");
+    //      }
 
-         System.out.print(puntas[i % puntas.length]);
+    //      System.out.print(puntas[i % puntas.length]);
 
-         for(j = 0; j < total - i - barLength - 1; ++j) {
-            System.out.print(" ");
-         }
+    //      for(j = 0; j < total - i - barLength - 1; ++j) {
+    //         System.out.print(" ");
+    //      }
 
-         int progreso = i * 100 / (total - barLength);
-         System.out.print("]" + progreso + "%\r");
+    //      int progreso = i * 100 / (total - barLength);
+    //      System.out.print("]" + progreso + "%\r");
 
-         try {
-            Thread.sleep(500L);
-         } catch (Exception var7) {
-         }
-      }
+    //      try {
+    //         Thread.sleep(500L);
+    //      } catch (Exception var7) {
+    //      }
+    //   }
 
     public void g2_loading08(String frase) {
       int total = frase.length();
