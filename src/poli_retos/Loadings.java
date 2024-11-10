@@ -197,29 +197,29 @@ public class Loadings {
             System.out.println("[====================] 100%");
     }
 
-    public void g2_loading08(String frase) {
+    public void g2_loading08() {
       int total = frase.length();
       System.out.println("\nCargando...");
-      System.out.print("[");
 
-      for(int i = 0; i < total; ++i) {
+      for(int i = 0; i < total; i++) {
          try {
-            Thread.sleep(500L);
-         } catch (Exception var6) {
-         }
-
-         System.out.print(frase.charAt(i));
-         int porcentaje = (i + 1) * 100 / total;
-
-         for(int j = 0; j < total - i - 1; ++j) {
+            Thread.sleep(500);
+         } catch (InterruptedException e) {
             System.out.print(" ");
          }
-
-         System.out.println("] " + porcentaje + "%\r");
-      }
-
-      System.out.println(" ] 100%");
-      System.out.println(" [ " + frase + " ] 100%");
+         System.out.print("\r[");
+         for (int j = 0; j <= i; j++){
+            System.out.print(frase.charAt(j));
+         }
+         for(int j = i + 1; j < total; j++){
+            System.out.print(" ");
+         }
+         int porcentaje = (i + 1) * 100 / total;
+         System.out.print("] " + porcentaje + "%");
+        }
+        System.out.print("\r[");
+        System.out.print(frase);
+        System.out.println("] 100%");
    }
         
     private void g2_loading09() {
