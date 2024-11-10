@@ -65,6 +65,7 @@ public class Arrays {
     }
     //Array 02
     private void g2_arrays02(){
+        System.out.print("\n- Array A02.\n");
         frase=frase.toLowerCase();
         char letra1=frase.charAt(0),
             letra2=frase.charAt(frase.indexOf(' ')+1);
@@ -84,7 +85,7 @@ public class Arrays {
 }
 
     public void g2_arrays03() {
-        System.out.print("\n- Array 03.");
+        System.out.print("\n- Array A03.");
         System.out.println("\nPlano de coordenadas para la función f(x) = 2x:");
         int ejeY = frase.length(); 
         for (int y = 0; y <= ejeY; y++) {
@@ -111,6 +112,7 @@ public class Arrays {
     }
 
     public void g2_array04(){
+        System.out.print("\n- Array A04.\n");
         matriz_=frase.split(" ");
         char nombre[] = matriz_[0].toCharArray();
         char apellido[] = matriz_[1].toCharArray();
@@ -134,7 +136,7 @@ public class Arrays {
 
     //Array 05
     public void g2_array05() {
-        System.out.print("\n- Serie A05.\n");
+        System.out.print("\n- Array A05.\n");
         String nombreCompleto = frase;
         System.out.println("");
         String[] palabras = nombreCompleto.split(" ");

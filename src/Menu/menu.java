@@ -182,10 +182,11 @@ public class menu {
     public void gr2_submenu_arrays() {
         int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Arrays");
-        System.out.println("1. Barra de carga");
-        System.out.println("2. Iniciales del nombre");
-        System.out.println("3. Matriz");
+        System.out.println("1. Barra de carga con tu nombre (Array 01)");
+        System.out.println("2. Iniciales del nombre (Array 02 y 03)");
+        System.out.println("3. Nombre en cruz y letras del nombre de manera random (Array 04 y 05)");
         System.out.println("4. Salir");
+
         while (!(teclado.hasNextInt())) {
             System.out.println("\u001B[31m" + "Ingrese un número entero");
             teclado.nextLine();
@@ -194,9 +195,10 @@ public class menu {
         teclado.nextLine();
         switch (opcion) {
             case 1: {
-                System.out.println("Ingrese su nombre completo");
+                System.out.print("\n- Array A01.\n");
+                System.out.println("Ingrese su nombre completo: (dos nombres y dos apellidos)");
                 frase = teclado.nextLine();
-                System.out.println("Ingrese los porcentajes de presentacion de cada palabra");
+                System.out.println("Ingrese 4 porcentajes de presentacion de cada palabra (x x x x: donde x son numers naturales)");
                 porcentajes = teclado.nextLine();
                 Arrays barra_de_carga = new Arrays(frase, porcentajes);
                 break;
