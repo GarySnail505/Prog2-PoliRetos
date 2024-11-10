@@ -127,10 +127,10 @@ public class menu {
                 frase2 = teclado.nextLine();
                 System.out.println("Ingrese la consonante a eliminar:");
                 consonante = teclado.next();
-                vocales_letras.g2_serieS04(frase, consonante);
+                vocales_letras.g2_serieCC04(frase, consonante);
                 break;
             }
-            case 3: { //////
+            case 3: { 
                 String palabra;
                 int contador = 1;
                 boolean ingresa = false;

@@ -11,9 +11,9 @@ public class CadenasCaracteres {
         this.palabra=frase;
         g2_serieCC01();
         g2_serieCC02();
-        g2_serieS05();
-        g2_serieS06();
-        g2_serieS07();
+        g2_serieCC05();
+        g2_serieCC06();
+        g2_serieCC07();
     }
     public CadenasCaracteres(String frase,int indice){
         this.palabra=frase;
@@ -23,7 +23,7 @@ public class CadenasCaracteres {
     public CadenasCaracteres(String frase,String vocal){
         this.frase=frase;
         this.vocal=vocal;
-        g2_serieS03();
+        g2_serieCC03();
         
     }
 
@@ -50,7 +50,7 @@ public class CadenasCaracteres {
         System.out.println("La palabra o frase tiene: " + contadorLetras + " letras.");
     }
 
-    public void g2_serieS03() {
+    public void g2_serieCC03() {
         if (vocales.contains(vocal)) {
             String fraseNueva = frase.replace(vocal, " ");
             System.out.println(fraseNueva);
@@ -59,7 +59,7 @@ public class CadenasCaracteres {
         }
     }
 
-    public void g2_serieS04(String frase, String consonante) {
+    public void g2_serieCC04(String frase, String consonante) {
         if (consonantes.contains(consonante)) {
             String fraseNueva = frase.replace(consonante, " ");
             System.out.println(fraseNueva);
@@ -69,7 +69,7 @@ public class CadenasCaracteres {
 
     }
 
-    public void g2_serieS05() {
+    public void g2_serieCC05() {
         System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
         palabra=palabra.toLowerCase();
         char[] frase=this.palabra.toCharArray();
@@ -82,7 +82,7 @@ public class CadenasCaracteres {
         System.out.println();
     }
 
-    public void g2_serieS06() {
+    public void g2_serieCC06() {
         System.out.println("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
         palabra=palabra.toLowerCase();
         char[] frase=this.palabra.toCharArray();
@@ -97,7 +97,7 @@ public class CadenasCaracteres {
     }
 
 
-    public void g2_serieS07() {
+    public void g2_serieCC07() {
         System.out.print("\n- Serie S07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");     
          Scanner sc = new Scanner(System.in);
@@ -110,7 +110,7 @@ public class CadenasCaracteres {
 
     private static final String respuesta_s08 = "sapo";
 
-    public void g2_serieS08() {
+    public void g2_serieCC08() {
         String palabra=this.palabra;
         int contador = 1;
         boolean ingresa = false;
