@@ -127,7 +127,7 @@ public class letras {
     }
 
     private void pintar_d(int j, int i, int num) {
-        if (j == 0 | j == columnas - 1 | i == (filas - 1)) {
+        if (j == 1 | j == columnas - 1 | i == (filas - 1) || i==0) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
