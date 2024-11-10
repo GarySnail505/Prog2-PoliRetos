@@ -14,7 +14,6 @@ public class Loadings {
         g2_loading05();
         g2_loading06();
         g2_loading07();
-        g2_loading08();
         System.out.println();
         try {
             Thread.sleep(3000);
@@ -24,7 +23,7 @@ public class Loadings {
     }
     public Loadings(String frase,int i){
         this.frase=frase;
-        //g2_loading08();
+        g2_loading08();
         g2_loading09();
     }
     public Loadings(int i,String frase){
