@@ -1,29 +1,36 @@
 package poli_retos.Automatas;
-
 import java.util.Scanner;
 
 public class Automata07 {
     
     final int er = -1, 
-              e1 = 100,
-              e2 = 200; 
+              e0 = 0,
+              e1 = 1,
+              e2 = 2,
+              e3 = 3,
+              e4 = 4,
+              e5 = 5; 
               
     final int[][] mt = {
-        {1, 1, 1, 1},  
-        {2, 2, 2, 2},  
-        {3, 3, 3, 3},  
-        {4, 4, 4, 4},  
-        {e1, e1, e1, e1} 
+        {e1, e2, e3, e4},  
+        {e1, e2, e3, e4},  
+        {e1, e2, e3, e4},  
+        {e1, e2, e3, e4},  
+        {e5, e5, e5, e5} 
     };
 
+    public Automata07(){
+        validar();
+    }
+
     private int clavef(char clave) {
-        if (Character.isUpperCase(clave)) {
+        if (Character.isLowerCase(clave)) {
             return 0; 
-        } else if (Character.isLowerCase(clave)) {
+        } else if (Character.isUpperCase(clave)) {
             return 1; 
         } else if (Character.isDigit(clave)) {
             return 2; 
-        } else if ("@!#·~$€%¬&/=?¡'.,_-".indexOf(clave) != -1) {
+        } else if (!Character.isLetterOrDigit(clave)) {
             return 3;  
         }
         return -1;  
@@ -37,20 +44,23 @@ public class Automata07 {
         Scanner scanner = new Scanner(System.in);
         String clave = scanner.nextLine();
 
-        int q = 0; 
+        int q = e0; 
+        boolean[] requisitosCumplidos={false, false, false, false};
         for (char c : clave.toCharArray()) {
             int tipo = clavef(c);
-            if (tipo == -1 || mt[q][tipo] == er) {
-                q = e2; 
-                break;
+            if (tipo == -1) {
+                System.out.println("Caracter no valido. ");
+                return;
             }
-            q = mt[q][tipo];
-        }
-
-        if (clave.length() >= 8 && q == e1) {
-            System.out.println("Clave válida");
-        } else {
-            System.out.println("La clave ingresada no es válida");
-        }
+            if (mt[q][tipo]==e5){
+                requisitosCumplidos[tipo] = true;
+            }
+        q = mt[q][tipo];
     }
+    if (requisitosCumplidos[0] && requisitosCumplidos[1] && requisitosCumplidos[2] && requisitosCumplidos[3]) {
+        System.out.println("La cadena no es válida.");
+    } else {
+        System.out.println("La cadena es válida.");
+    }
+}
 }
