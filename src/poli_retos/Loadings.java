@@ -13,8 +13,8 @@ public class Loadings {
         g2_loading04();
         g2_loading05();
         g2_loading06();
-        //g2_loading07();
-        //g2_loading08();
+        g2_loading07();
+        g2_loading08();
         System.out.println();
         try {
             Thread.sleep(3000);
@@ -171,11 +171,11 @@ public class Loadings {
         System.out.print("[====================] 100%");
     }
 
-    // public void g2_loading07() {
-    //   int total = 20;
-    //   int barLength = 5;
-    //   String[] puntas = new String[]{"\\", "|", "//", "-", "|"};
-    //   int progreso = false;
+     public void g2_loading07() {
+       int total = 20;
+       int barLength = 5;
+       String[] puntas = new String[]{"\\", "|", "//", "-", "|"};
+       int progreso;
     //   System.out.println("\nCargando...");
 
     //   for(int i = 0; i <= total - barLength; ++i) {
