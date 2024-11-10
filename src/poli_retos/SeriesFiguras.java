@@ -191,14 +191,14 @@ public class SeriesFiguras {
     public void g2_serieF11() {
         System.out.print("\n- Serie F11.:\n");
 
-        for (int i = 1; i <= tamanio; i++) {
-            int espacios = (i - 1) * 5;
+        int desplazamiento = 0;
+        for (int i = 1; i <= tamanio; i++){
             String guionesBajos = "_ ".repeat(i);
-            System.out.print(" ".repeat(espacios));
+            System.out.print(" ".repeat(desplazamiento));
             System.out.print("|_ ");
             System.out.print(guionesBajos.trim());
-            System.out.print(" ".repeat(espacios));
-            System.out.println(" ");
+            System.out.println();
+            desplazamiento += guionesBajos.length() + 2;
         }
     }
 
