@@ -204,7 +204,7 @@ public class SeriesFiguras {
 
     public void g2_serieF12() {
         System.out.print("\n- Serie F12.:\n");
-        for (int i = numero; i >= 1; i--) {
+        for (int i = tamanio; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
