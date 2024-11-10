@@ -84,32 +84,34 @@ public class Arrays {
         }
 }
 
-    public void g2_arrays03() {
+     public void g2_arrays03() {
         System.out.print("\n- Array A03.");
         System.out.println("\nPlano de coordenadas para la función f(x) = 2x:");
+        
         int ejeY = frase.length(); 
-        for (int y = 0; y <= ejeY; y++) {
-            if (y < ejeY) {
-                System.out.printf("%3d |", ejeY - y);
-            } else {
-                System.out.printf("%3d |", 0);
-                System.out.print(" _");
-            }
-            for (int x = 0; x < frase.length(); x++) {
-                if (y == x) { 
+        for (int y = ejeY - 1; y >= 0; y--) {
+            System.out.printf("%3d |", y);
+
+            for(int x = 0; x < frase.length(); x++){
+                if(y == x){
                     System.out.print(" " + frase.charAt(x) + " ");
-                } else {
-                    System.out.print("   "); 
+                }else{
+                    System.out.print("   ");
                 }
             }
-            System.out.println(); 
-        }
-        System.out.print("      ");
-        for (int x = 0; x < frase.length(); x++) {
-            System.out.printf("%3d", x); 
-        }
         System.out.println();
     }
+    System.out.print("   ");
+    for( int x = 0; x < frase.length(); x++){
+        System.out.print(" _ ");
+    }
+    System.out.println();
+    System.out.print("   ");
+    for(int x = 0; x < frase.length(); x ++){
+        System.out.printf("  %d", x);
+    }
+    System.out.println();
+}
 
     public void g2_array04(){
         System.out.print("\n- Array A04.\n");
