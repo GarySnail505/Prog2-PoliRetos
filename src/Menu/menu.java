@@ -183,7 +183,7 @@ public class menu {
         int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Arrays");
         System.out.println("1. Barra de carga con tu nombre (Array 01)");
-        System.out.println("2. Iniciales del nombre (Array 02 y 03)");
+        System.out.println("2. Iniciales y nombre (Array 02 y 03)");
         System.out.println("3. Nombre en cruz y letras del nombre de manera random (Array 04 y 05)");
         System.out.println("4. Salir");
 
