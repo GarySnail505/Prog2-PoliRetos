@@ -194,7 +194,6 @@ public class Loadings {
                 System.out.println(" ");
             }
         }
-            System.out.println("Carga completa");
             System.out.println("[====================] 100%");
     }
 
