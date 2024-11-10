@@ -175,7 +175,6 @@ public class Loadings {
         int total = 20;
         int progreso = 0;
         String[] puntas = { "\\", "|", "/", "-", "|" };
-
         for (int i = 0; i <= total; i++) {
             System.out.print("[");
             for (int j = 0; j < i; j++){
@@ -195,7 +194,8 @@ public class Loadings {
                 System.out.println(" ");
             }
         }
-            System.out.print("[====================] 100%");
+            System.out.println("Carga completa");
+            System.out.println("[====================] 100%");
     }
 
     public void g2_loading08(String frase) {
