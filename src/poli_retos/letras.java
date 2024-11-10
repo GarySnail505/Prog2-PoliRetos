@@ -8,7 +8,7 @@ public class letras {
     public char letra2;
     char[][][] letras_matriz;
 
-    public letras(int tamanio, char letra1,char letra2, char caracter) {
+    public letras(int tamanio, char letra1, char letra2, char caracter) {
         this.filas = tamanio;
         this.columnas = tamanio;
         this.letra1 = letra1;
@@ -17,7 +17,7 @@ public class letras {
         letras_matriz = new char[2][tamanio][tamanio];
     }
 
-    public  char [][][]  matriz() {
+    public char[][][] matriz() {
         for (int numero_letra = 0; numero_letra < 2; numero_letra++) {
             for (int filas = 0; filas < this.filas; filas++) {
                 for (int columnas = 0; columnas < this.columnas; columnas++) {
@@ -70,6 +70,9 @@ public class letras {
                         case 'p':
                             pintar_p(columnas, filas, numero_letra);
                             break;
+                        case 'q':
+                            pintar_q(columnas, filas, numero_letra);
+                            break;
                         case 'r':
                             pintar_r(columnas, filas, numero_letra);
                             break;
@@ -91,19 +94,25 @@ public class letras {
                         case 'x':
                             pintar_x(columnas, filas, numero_letra);
                             break;
+                        case 'y':
+                            pintar_y(columnas, filas, numero_letra);
+                            break;
+                        case 'z':
+                            pintar_z(columnas, filas, numero_letra);
+                            break;
                         default:
                             System.out.println("error");
                             ;
                     }
                 }
             }
-            letra1=letra2;
+            letra1 = letra2;
         }
         return letras_matriz;
     }
 
     private void pintar_a(int j, int i, int num) {
-        if (j == 0 | i == (filas / 2) | j == columnas - 1|i==0) {
+        if (j == 1 | i == (filas / 2) | j == columnas - 1 | i == 0) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
@@ -111,7 +120,7 @@ public class letras {
     }
 
     private void pintar_b(int j, int i, int num) {
-        if (j == 0 | i == (filas / 2) | j == columnas - 1 | i == (filas - 1)|i==0) {
+        if (j == 0 | i == (filas / 2) | j == columnas - 1 | i == (filas - 1) | i == 0) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
@@ -127,7 +136,7 @@ public class letras {
     }
 
     private void pintar_d(int j, int i, int num) {
-        if (j == 1 | j == columnas - 1 | i == (filas - 1) || i==0) {
+        if (j == 1 | j == columnas - 1 | i == (filas - 1) || i == 0) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
@@ -135,7 +144,7 @@ public class letras {
     }
 
     private void pintar_e(int j, int i, int num) {
-        if (j == 0 | i == (filas - 1) | i == (filas / 2)|i==0) {
+        if (j == 0 | i == (filas - 1) | i == (filas / 2) | i == 0) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
@@ -176,7 +185,7 @@ public class letras {
     }
 
     private void pintar_j(int j, int i, int num) {
-        if (i == 0 | j == ((columnas + 1) / 2) - 1 | (i == (filas - 1) && j <= (columnas / 2))) {
+        if (i == 0 | j == ((columnas + 1) / 2) | (i == (filas - 1) && j <= (columnas / 2))) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
@@ -223,6 +232,14 @@ public class letras {
         }
     }
 
+    private void pintar_q(int j, int i, int num) {
+        if (j == columnas - 1 | i == 0 || i == (filas - 1) / 2 || (j == 0 && i <= (filas - 1) / 2)) {
+            letras_matriz[num][i][j] = caracter;
+        } else {
+            letras_matriz[num][i][j] = ' ';
+        }
+    }
+
     private void pintar_p(int j, int i, int num) {
         if (j == 0 | i == ((filas + 2) / 2) - 1 | i == 0 | (j == (columnas - 1) && i <= (filas / 2))) {
             letras_matriz[num][i][j] = caracter;
@@ -241,7 +258,7 @@ public class letras {
     }
 
     private void pintar_s(int j, int i, int num) {
-        if (i == 0 | (j == 0 && i <= (filas / 2)) | i == ((filas + 1) / 2) - 1
+        if (i == 0 | (j == 0 && i < (filas / 2)) | i == ((filas + 1) / 2) - 1
                 | (j == columnas - 1 && i >= ((filas + 1) / 2))
                 | i == filas - 1) {
             letras_matriz[num][i][j] = caracter;
@@ -251,7 +268,7 @@ public class letras {
     }
 
     private void pintar_t(int j, int i, int num) {
-        if (i == (filas / 2) | j == (columnas / 2) | i == (filas - 1)) {
+        if (j == (columnas / 2) | i == 0) {
             letras_matriz[num][i][j] = caracter;
         } else {
             letras_matriz[num][i][j] = ' ';
@@ -289,4 +306,22 @@ public class letras {
             letras_matriz[num][i][j] = ' ';
         }
     }
+
+    private void pintar_y(int j, int i, int num) {
+        if ((j == i && i <= (filas / 2)) | (j == (columnas - 1) - i && i <= (filas / 2))
+                || ((j == (columnas / 2)||j==(columnas/2)-1) && i > filas / 2)) {
+            letras_matriz[num][i][j] = caracter;
+        } else {
+            letras_matriz[num][i][j] = ' ';
+        }
+    }
+
+    private void pintar_z(int j, int i, int num) {
+        if (i == 0 || i == filas || j == columnas - i) {
+            letras_matriz[num][i][j] = caracter;
+        } else {
+            letras_matriz[num][i][j] = ' ';
+        }
+    }
+
 }
