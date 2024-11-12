@@ -48,11 +48,19 @@ public class menu {
             System.out.println("6. Recursion");
             System.out.println("7. Automatas");
             System.out.println("8. Salir");
+            while (!(teclado.hasNextInt())) {
+                System.out.println("\u001B[31m" + "Ingrese un número entero");
+                teclado.nextLine();
+            }
             opcion = teclado.nextInt();
             teclado.nextLine();
             switch (opcion) {
                 case 1: {
                     System.out.println("Ingrese la cantidad de terminos");
+                    while (!(teclado.hasNextInt())) {
+                        System.out.println("\u001B[31m" + "Ingrese un número entero");
+                        teclado.nextLine();
+                    }
                     terminos=teclado.nextInt();
                     SeriesNumericas serie_numericas= new SeriesNumericas(terminos);
                     SeriesCaracteres serie_Caracteres=new SeriesCaracteres(terminos);
