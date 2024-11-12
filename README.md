@@ -3,7 +3,7 @@
 
 ### Integrantes:
 Karin Cárdenas
-Christian Carrillo
+Cristhian Carrillo
 Gary Defas
 David Díaz
 Melissa Guerra
