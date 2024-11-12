@@ -370,26 +370,33 @@ public class menu {
                 switch (opcion) {
                     case 1: {
                         Automata01 autoamata =new Automata01();
+                        break;
                     }
                     case 2: {
                         Automata02 autoamata2 =new Automata02();
+                        break;
                     }
                     case 3: { 
                         Automata03 autoamata3 =new Automata03();
+                        break;
                     }
                     case 4: {
                         Automata04 autoamata4 =new Automata04();
+                        break;
 
                     }
                     case 5: { System.out.println("Ingrese la cadena para validar si es una variable");
                     frase=teclado.nextLine();
-                    Automata05 afd=new Automata05(frase);
+                    Automata05 variable=new Automata05(frase);
+                    break;
                     }
                     case 6: {
                         Automata06 autoamata6 =new Automata06();
+                        break;
                     }
                     case 7: {
                         Automata07 autoamata7 =new Automata07();
+                        break;
                     }
                     case 8: {
                         gr2_presentacion();break;
