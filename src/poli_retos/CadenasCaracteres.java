@@ -110,7 +110,7 @@ public class CadenasCaracteres {
     public void g2_serieCC07() {
         System.out.print("\n- Serie CC07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");     
-         Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String frase = sc.nextLine();
         System.out.print("\n  Su frase aparecerá en mayúsculas y sin la letra previa:\n  ");
         frase=frase.toUpperCase();
