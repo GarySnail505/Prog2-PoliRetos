@@ -2,6 +2,7 @@ package poli_retos;
 
 
 import java.util.Random;
+
 public class Loadings {
     public String frase;
     public float carga_actual = 0.00f;
@@ -14,12 +15,7 @@ public class Loadings {
         g2_loading05();
         g2_loading06();
         g2_loading07();
-        System.out.println();
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e) {
-        }
-        g2_loading12(100);
+
     }
     public Loadings(String frase,int i){
         this.frase=frase;
@@ -32,6 +28,12 @@ public class Loadings {
     }
     public Loadings(int base, int altura){
         g2_loading11(base, altura);
+        System.out.println();
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+        }
+        g2_loading12(100);
     }
     public void g2_loading01() {
         char[] simbolos = { '\\', '|', '/', '|' };
@@ -168,6 +170,7 @@ public class Loadings {
             }
         }
         System.out.print("[====================] 100%");
+        System.out.println("");
     }
 
     public void g2_loading07() {
@@ -199,6 +202,7 @@ public class Loadings {
 
     public void g2_loading08() {
       int total = frase.length();
+      System.out.print("\n- Serie l08.\n");
       System.out.println("\nCargando...");
 
       for(int i = 0; i < total; i++) {
@@ -224,7 +228,7 @@ public class Loadings {
         
     private void g2_loading09() {
         char[] frase = this.frase.toCharArray();
-        System.out.println("Carga 09");
+        System.out.print("\n- Serie l09.\n");
         for (int carga = 0; carga < this.frase.length(); carga++) {
             for (int espacio = 0; espacio < carga; espacio++) {
                 System.out.print(" ");
@@ -248,6 +252,7 @@ public class Loadings {
 
     }
     private void g2_loading10() {
+        System.out.print("\n- Serie l10.\n");
         double numero_random = Math.floor(((Math.random() * 990) + 10)) / 10;
         float carga_maxima = (float) numero_random;
         int minimo = 0;
@@ -274,6 +279,7 @@ public class Loadings {
     }
 
     public void g2_loading11(int numBarras, int alturaMaxima) {
+        System.out.print("\n- Serie l11.\n");
         Random random = new Random();
         int[] alturas = new int[numBarras];
 
@@ -290,8 +296,9 @@ public class Loadings {
                 }
             }
             System.out.println();
-            delay(200); // Pausa entre cada línea de la animación
+            delay(200);
         }
+        System.out.print("\n- Serie l12.\n");
     }
 
     private void delay(int milliseconds) {

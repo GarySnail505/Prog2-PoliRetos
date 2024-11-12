@@ -85,6 +85,7 @@ public class CadenasCaracteres {
     public void g2_serieCC06() {
         System.out.println("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
         palabra=palabra.toLowerCase();
+        
         char[] frase=this.palabra.toCharArray();
         for (int indice = frase.length-1; indice >0; indice--) {
             if(!(frase[indice]== 'a' || frase[indice] == 'e' || frase[indice] == 'i' || frase[indice] == 'o' || frase[indice] == 'u')){

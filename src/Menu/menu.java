@@ -239,10 +239,11 @@ public class menu {
     public void gr2_submenu_loadings() {
         int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Loadings");
-        System.out.println("1. Barra de carga");
-        System.out.println("2. Nombre");
-        System.out.println("3. Archivo");
-        System.out.println("4. Salir");
+        System.out.println("1. Barra de carga (Series l01-l07)");
+        System.out.println("2. Nombre (Series l08-l09)");
+        System.out.println("3. Archivo (Serie l10)");
+        System.out.println("4. Animaciones (Serie l11-l12)");
+        System.out.println("5. Salir");
         while (!(teclado.hasNextInt())) { 
             System.out.println("\u001B[31m"+ "Ingrese un número entero");
             teclado.nextLine();
@@ -269,7 +270,11 @@ public class menu {
                         break;
                     }
                     case 4: {
-                        gr2_presentacion();break;
+                        Loadings barra_nombre = new Loadings(10,20);
+                        break;
+                    }
+                    case 5: {
+                        gr2_presentacion(); break;
                     }
                     default: {
                         System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 4");
