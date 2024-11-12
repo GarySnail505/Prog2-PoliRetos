@@ -15,20 +15,23 @@ public class CadenasCaracteres {
         g2_serieCC06();
         g2_serieCC07();
     }
+
+    public CadenasCaracteres(String frase,String vocal){
+        this.frase=frase;
+        this.vocal=vocal;
+        g2_serieCC03();
+        g2_serieCC04(frase, vocal);
+    }
+
     public CadenasCaracteres(String frase,int indice){
         this.palabra=frase;
         g2_serieCC09();
     }
     
-    public CadenasCaracteres(String frase,String vocal){
-        this.frase=frase;
-        this.vocal=vocal;
-        g2_serieCC03();
-        
-    }
 
 
     public void g2_serieCC01( ) {
+        System.out.println("\n- Serie CC01:");
         System.out.println("\nFrase o palabra ingresada:");
         int contadorVocales = 0;
         palabra = palabra.toLowerCase();
@@ -43,6 +46,8 @@ public class CadenasCaracteres {
 
     public void g2_serieCC02() {
         int contadorLetras = 0;
+        System.out.println("\n- Serie CC02:");
+
         System.out.println("\nFrase o palabra ingresada: " + palabra);
         for (int i = 0; i < palabra.length(); i++) {
             contadorLetras++;
@@ -51,6 +56,8 @@ public class CadenasCaracteres {
     }
 
     public void g2_serieCC03() {
+        System.out.println("\n- Serie CC03:");
+
         if (vocales.contains(vocal)) {
             String fraseNueva = frase.replace(vocal, " ");
             System.out.println(fraseNueva);
@@ -60,6 +67,8 @@ public class CadenasCaracteres {
     }
 
     public void g2_serieCC04(String frase, String consonante) {
+        System.out.println("\n- Serie CC04:");
+
         if (consonantes.contains(consonante)) {
             String fraseNueva = frase.replace(consonante, " ");
             System.out.println(fraseNueva);
@@ -70,7 +79,7 @@ public class CadenasCaracteres {
     }
 
     public void g2_serieCC05() {
-        System.out.print("\n- Serie S05. Invertir frase con vocales en mayúsculas:");
+        System.out.println("\n- Serie CC05. Invertir frase con vocales en mayúsculas:");
         palabra=palabra.toLowerCase();
         char[] frase=this.palabra.toCharArray();
         for (int indice = frase.length-1; indice >0; indice--) {
@@ -83,7 +92,7 @@ public class CadenasCaracteres {
     }
 
     public void g2_serieCC06() {
-        System.out.println("\n- Serie S06. Invertir frase con consonantes en mayúsculas:");
+        System.out.println("\n- Serie CC06. Invertir frase con consonantes en mayúsculas:");
         palabra=palabra.toLowerCase();
         
         char[] frase=this.palabra.toCharArray();
@@ -99,7 +108,7 @@ public class CadenasCaracteres {
 
 
     public void g2_serieCC07() {
-        System.out.print("\n- Serie S07.");
+        System.out.print("\n- Serie CC07.");
         System.out.print("Ingrese una palabra o frase la letra con 'J' o 'j':\n  ");     
          Scanner sc = new Scanner(System.in);
         String frase = sc.nextLine();
@@ -109,19 +118,19 @@ public class CadenasCaracteres {
         System.out.println(frase);
     }
 
-    private static final String respuesta_s08 = "sapo";
+    private static final String respuesta_CC08 = "sapo";
 
     public void g2_serieCC08() {
         String palabra=this.palabra;
         int contador = 1;
         boolean ingresa = false;
-        System.out.print("\n- Serie S08.\n");
+        System.out.print("\n- Serie CC08.\n");
         System.out.print("Anagrama de palabras...");
         do {
             System.out.print("  Anagrama: paso - poas - sapo - opas.-\n");
             System.out.print("  Adivina y escribe en cual de estas palabras está pensando el computador.\n");
             System.out.print("  Únicamente tienes 3 intentos juas juas.\n  ");
-            if (palabra.equals(respuesta_s08)) {
+            if (palabra.equals(respuesta_CC08)) {
                 ingresa = true;
                 System.out.print("________________________________________________________\n");
             } else {
@@ -139,6 +148,7 @@ public class CadenasCaracteres {
         }
     }
     private void g2_serieCC09() {
+        System.out.println("\n- Serie CC09:");
         Scanner separador = new Scanner(this.palabra.toLowerCase());
         while (separador.hasNext()) {
             String frases = separador.next();

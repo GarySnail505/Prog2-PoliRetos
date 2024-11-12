@@ -98,10 +98,10 @@ public class menu {
     public void gr2_submenu_cadena() {
         int opcion;
         System.out.println("\u001B[34m" + "\n\t Menu_Caracteres");
-        System.out.println("1. Contar Vocales y Letras e Invertir");
-        System.out.println("2. Eliminar Vocales y letras");
-        System.out.println("3. Anagrama");
-        System.out.println("4. Mayusculas");
+        System.out.println("1. Contar Vocales y Letras e Invertir (Series CC01-CC02-C05-CC06-CC07)");
+        System.out.println("2. Eliminar Vocales y letras (Series CC03-CC04)");
+        System.out.println("3. Anagrama (Serie CC08)");
+        System.out.println("4. Mayusculas (Series CC09)");
         System.out.println("5. Salir");
         while (!(teclado.hasNextInt())) {
             System.out.println("\u001B[31m" + "Ingrese un número entero");
@@ -121,7 +121,7 @@ public class menu {
                 frase = teclado.nextLine();
                 System.out.println("Ingrese la vocal a eliminar:");
                 caracter = teclado.next();
-                teclado.nextLine(); //limpia el bufer de entrada
+                teclado.nextLine();
                 CadenasCaracteres vocales_letras = new CadenasCaracteres(frase, caracter);
                 System.out.println("Ingrese una frase:");
                 frase2 = teclado.nextLine();
