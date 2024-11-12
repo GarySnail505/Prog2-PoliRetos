@@ -20,7 +20,6 @@ public class CadenasCaracteres {
         this.frase=frase;
         this.vocal=vocal;
         g2_serieCC03();
-        g2_serieCC04(frase, vocal);
     }
 
     public CadenasCaracteres(String frase,int indice){
