@@ -1,7 +1,7 @@
 # Poli_Retos Grupo 2 GR2CC
 
 ## *Integrantes*:
-- Karin Cárdenas
+- Karina Cárdenas
 - Cristhian Carrillo
 - Gary Defas
 - David Díaz
