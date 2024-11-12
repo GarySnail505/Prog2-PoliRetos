@@ -2,22 +2,22 @@ package poli_retos.Automatas;
 
 public class Automata05 {
          private char[]  letras_L = {'a','b','c','d','e','f','g','h','i','j','k','l','n','m','o','p','q','r','s','t','u','v','w','x','y','z'} ;
-         public int error= -1;         
-         public int aceptacion=25;
+         public int er= -1;         
+         public int e1=25;
          public String frase;
          public char[] alfabeto={'$','_',' ',',',';','=','-'};
          public char[] numero={'0','1','2','3','4','5','6','7','8','9'};
          public int [][]matriz_de_transicion=
-         {// l n $ _ "" , ; = -
-            {1,error,1,1,1,error,error,error,error},//q0
-            {2,2,2,2,7,0,5,3,error},//q1
-            {2,2,2,2,6,0,5,3,error},//q2
-            {4,4,error,error,4,error,error,error,error},//q3
-            {4,4,error,error,8,0,5,8,error},//q4
-            {error,error,error,error,error,error,aceptacion,error,aceptacion},//q5
-            {error,error,error,error,6,0,5,3,error},//q6
-            {error,error,error,error,7,0,5,3,error},//q7
-            {error,error,error,error,error,0,5,error,error},//q8
+         {// l     n   $    _    ""   ,    ;    =    -
+            {1,   er  ,1   ,1   ,1   ,er  ,er  ,er  ,er}, //q0
+            {2,   2   ,2   ,2   ,7   ,0   ,5   ,3   ,er}, //q1
+            {2,   2   ,2   ,2   ,6   ,0   ,5   ,3   ,er}, //q2
+            {4,   4   ,er  ,er  ,4   ,er  ,er  ,er  ,er}, //q3
+            {4,   4   ,er  ,er  ,8   ,0   ,5   ,8   ,er}, //q4
+            {er,  er  ,er  ,er  ,er  ,er  ,e1  ,er  ,e1}, //q5
+            {er,  er  ,er  ,er  ,6   ,0   ,5   ,3   ,er}, //q6
+            {er,  er  ,er  ,er  ,7   ,0   ,5   ,3   ,er}, //q7
+            {er,  er  ,er  ,er  ,er  ,0   ,5   ,er  ,er}, //q8
         };
 
     public Automata05(String frase) {
@@ -33,7 +33,7 @@ public class Automata05 {
                         q = matriz_de_transicion[q][0];
                     }
                 }
-                if (q == error) {
+                if (q == er) {
                     System.out.println("La variable esta incorrectamente declarada");
                     break;
                 }
@@ -42,7 +42,7 @@ public class Automata05 {
                         q = matriz_de_transicion[q][1];
                     }
                 }
-                if (q == error) {
+                if (q == er) {
                     System.out.println("La variable esta incorrectamente declarada");
                     break;
                 }
@@ -51,12 +51,12 @@ public class Automata05 {
                         q = matriz_de_transicion[q][j + 2];
                     }
                 }
-                if (q == error) {
+                if (q == er) {
                     System.out.println("La variable esta incorrectamente declarada");
                     break;
                 }
             }
-            if (q == aceptacion) {
+            if (q == e1) {
                 System.out.println("La variable esta correctamente declarada");
             }
         }         

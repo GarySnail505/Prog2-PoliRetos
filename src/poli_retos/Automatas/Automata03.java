@@ -3,13 +3,13 @@ package poli_retos.Automatas;
 import java.util.Scanner;
 
 public class Automata03 {
-    final int ee = 100, aceptado = 500;
+    final int ee = 100, ac = 500;
     final String alfabeto3 = "0-1- ";
     int[][] matriz3 = {
-            { 2, 1, ee }, // q0
-            { ee, 1, aceptado }, // q1
-            { 2, 3, aceptado },
-            { ee, 3, aceptado },
+            { 2 , 1, ee }, // q0
+            { ee, 1, ac }, // q1
+            { 2 , 3, ac }, // q2
+            { ee, 3, ac }, // q3
     };
     public Automata03(){
         g2_automata3();
@@ -48,7 +48,7 @@ public class Automata03 {
             case 3:
                 System.out.println("Cadena aceptada");
                 break;
-            case aceptado:
+            case ac:
                 System.out.println("Cadena aceptada");
                 break;
             default:
