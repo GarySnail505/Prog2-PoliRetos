@@ -113,7 +113,7 @@ public class CadenasCaracteres {
         String frase = sc.nextLine();
         System.out.print("\n  Su frase aparecerá en mayúsculas y sin la letra previa:\n  ");
         String nueva_frase=frase.replaceAll("[J,j]", "");
-        System.out.println(nueva_frase);
+        System.out.println(nueva_frase.toUpperCase());
     }
 
     private static final String respuesta_CC08 = "sapo";

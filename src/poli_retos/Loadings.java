@@ -146,7 +146,7 @@ public class Loadings {
     public void g2_loading06() {
         System.out.print("\n- Serie l06.\n");
         int total = 20;
-        int barLength = 5; // Length of "<=>"
+        int barLength = 5;
         int progress = 0;
 
         for (int i = 0; i <= total - barLength; i++) {
