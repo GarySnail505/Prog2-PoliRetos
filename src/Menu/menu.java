@@ -299,7 +299,9 @@ public class menu {
         System.out.println("1. Factorial y conteo");
         System.out.println("2. Suma y multiplicacion");
         System.out.println("3. Potencia");
-        System.out.println("4. Salir");
+        System.out.println("4. Conteo Progresivo");
+        System.out.println("5. Conteo Regresivo");
+        System.out.println("6. Salir");
         while (!(teclado.hasNextInt())) { 
             System.out.println("\u001B[31m"+ "Ingrese un número entero");
             teclado.nextLine();
@@ -335,27 +337,62 @@ public class menu {
                         break;
                     }
                     case 2: { 
-                        System.out.println("Ingrese el primer numero: ");
+                        System.out.println("Ingrese el primer número: ");
                         while (!(teclado.hasNextInt())) { 
-                            System.out.println("\u001B[31m"+ "Ingrese un número entero");
+                            System.out.println("\u001B[31m" + "Ingrese un número entero");
                             teclado.nextLine();
                         }
-                            numero_1= teclado.nextInt();
-                    System.out.println("Ingrese el segundo numero: ");
-                    while (!(teclado.hasNextInt())) { 
-                        System.out.println("\u001B[31m"+ "Ingrese un número entero");
-                        teclado.nextLine();
-                    }
-                        numero_2= teclado.nextInt();
-                        Recursividad suma_multiplicacion=new Recursividad(numero_1,numero_2,1);
+                        numero_1 = teclado.nextInt();
+                    
+                        System.out.println("Ingrese el segundo número: ");
+                        while (!(teclado.hasNextInt())) { 
+                            System.out.println("\u001B[31m" + "Ingrese un número entero");
+                            teclado.nextLine();
+                        }
+                        numero_2 = teclado.nextInt();
+                    
+                        Recursividad operacionesRecursivas = new Recursividad(numero_1, numero_2);
+                    
+                       
+                        int resultadoSuma = operacionesRecursivas.g2_recursividad_02(numero_1, numero_2);
+                        System.out.println("La suma recursiva de " + numero_1 + " y " + numero_2 + " es: " + resultadoSuma);
+                    
+                    
+                        int resultadoMultiplicacion = operacionesRecursivas.g2_recursividad_multiplicacion(numero_1, numero_2);
+                        System.out.println("La multiplicación recursiva de " + numero_1 + " y " + numero_2 + " es: " + resultadoMultiplicacion);
+                    
                         break;
-                            }
+                    }
+                    
                     case 4: { 
+                        System.out.println("Ingrese el número hasta el cual se contará progresivamente: ");
+                        while (!teclado.hasNextInt()) { 
+                            System.out.println("\u001B[31m" + "Ingrese un número entero");
+                            teclado.nextLine();
+                        }
+                        numero_1 = teclado.nextInt();
+                        Recursividad conteoProgresivo = new Recursividad(numero_1);
+                        conteoProgresivo.g2_recursividad_05();
+                        break;
+                    }
+        
+                    case 5: { 
+                        System.out.println("Ingrese el número desde el cual se contará regresivamente: ");
+                        while (!teclado.hasNextInt()) { 
+                            System.out.println("\u001B[31m" + "Ingrese un número entero");
+                            teclado.nextLine();
+                        }
+                        numero_1 = teclado.nextInt();
+                        Recursividad conteoRegresivo = new Recursividad(numero_1);
+                        conteoRegresivo.g2_recursividad_06(numero_1);
+                        break;
+                    }
+                    case 6: { 
                 gr2_presentacion();
                         break;
                     }
                     default: {
-                        System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 4");
+                        System.out.println("\u001B[31m"+"\tIngrese un numero entero entre el 1 y el 6");
                         break;
                     }
                 }
