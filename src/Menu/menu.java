@@ -206,9 +206,9 @@ public class menu {
         switch (opcion) {
             case 1: {
                 System.out.print("\n- Array A01.\n");
-                System.out.println("Ingrese su nombre completo: (dos nombres y dos apellidos)");
+                System.out.println("Ingrese su nombre completo:");
                 frase = teclado.nextLine();
-                System.out.println("Ingrese 4 porcentajes de presentacion de cada palabra (x x x x: donde x son numers naturales)");
+                System.out.println("Ingrese porcentajes de presentacion de cada palabra (unicamente los numeros separados por espacios)");
                 porcentajes = teclado.nextLine();
                 Arrays barra_de_carga = new Arrays(frase, porcentajes);
                 break;

@@ -31,7 +31,7 @@ public class CadenasCaracteres {
 
     public void g2_serieCC01( ) {
         System.out.println("\n- Serie CC01:");
-        System.out.println("\nFrase o palabra ingresada:" + pañabra);
+        System.out.println("\nFrase o palabra ingresada:" + palabra);
         int contadorVocales = 0;
         palabra = palabra.toLowerCase();
         for (int i = 0; i < palabra.length(); i++) {
