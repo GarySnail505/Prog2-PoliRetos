@@ -44,14 +44,16 @@ public class CadenasCaracteres {
     }
 
     public void g2_serieCC02() {
-        int contadorLetras = 0;
+        int contadorConsonantes = 0;
         System.out.println("\n- Serie CC02:");
-
         System.out.println("\nFrase o palabra ingresada: " + palabra);
         for (int i = 0; i < palabra.length(); i++) {
-            contadorLetras++;
+            char letra = Character.toLowerCase(palabra.charAt(i));
+            if (Character.isLetter(letra) && "aeiou".indexOf(letra) == -1){
+                contadorConsonantes++;
+            }
         }
-        System.out.println("La palabra o frase tiene: " + contadorLetras + " letras.");
+        System.out.println("La palabra o frase tiene: " + contadorConsonantes + " consonantes.");
     }
 
     public void g2_serieCC03() {
