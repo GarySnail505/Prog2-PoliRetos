@@ -48,6 +48,8 @@ public class menu {
             System.out.println("6. Recursion");
             System.out.println("7. Automatas");
             System.out.println("8. Salir");
+            System.out.println(" ");
+            System.out.println("Ingrese el numero de la opcion deseada: ");
             while (!(teclado.hasNextInt())) {
                 System.out.println("\u001B[31m" + "Ingrese un número entero");
                 teclado.nextLine();
